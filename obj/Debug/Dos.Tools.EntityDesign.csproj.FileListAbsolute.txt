@@ -26,12 +26,10 @@ D:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\obj\Debug\Dos.T
 D:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\bin\Debug\databaseconfig.xml
 D:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\bin\Debug\dbtype.xml
 D:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\bin\Debug\sysconfig.xml
-D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Dos.Tools.EntityDesign.exe.config
-D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.exe
-D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.pdb
 D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\databaseconfig.xml
 D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\dbtype.xml
 D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\sysconfig.xml
+D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Dos.Tools.EntityDesign.exe.config
 D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Dos.Tools.EntityDesign.exe
 D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Dos.Tools.EntityDesign.pdb
 D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Dos.ORM.dll
@@ -52,3 +50,5 @@ D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Hxj.Tools.EntityDesign.LogShow
 D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Hxj.Tools.EntityDesign.MainForm.resources
 D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.Properties.Resources.resources
 D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.csproj.GenerateResource.Cache
+D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.exe
+D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.pdb

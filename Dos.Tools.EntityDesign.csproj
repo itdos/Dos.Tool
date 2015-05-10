@@ -82,16 +82,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.cs">
+    <Compile Include="Forms\About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="About.Designer.cs">
+    <Compile Include="Forms\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="BatchForm.cs">
+    <Compile Include="Forms\BatchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BatchForm.Designer.cs">
+    <Compile Include="Forms\BatchForm.Designer.cs">
       <DependentUpon>BatchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DbDAL\MySql\DbObject.cs" />
@@ -114,10 +114,10 @@
     <Compile Include="DbSelect\DbSqlite.Designer.cs">
       <DependentUpon>DbSqlite.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogShow.cs">
+    <Compile Include="Forms\LogShow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogShow.Designer.cs">
+    <Compile Include="Forms\LogShow.Designer.cs">
       <DependentUpon>LogShow.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ColumnInfo.cs" />
@@ -134,16 +134,16 @@
     </Compile>
     <Compile Include="Common\EntityBuilder.cs" />
     <Compile Include="Model\Connection.cs" />
-    <Compile Include="ContentForm.cs">
+    <Compile Include="Forms\ContentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ContentForm.Designer.cs">
+    <Compile Include="Forms\ContentForm.Designer.cs">
       <DependentUpon>ContentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseSelect.cs">
+    <Compile Include="Forms\DatabaseSelect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatabaseSelect.Designer.cs">
+    <Compile Include="Forms\DatabaseSelect.Designer.cs">
       <DependentUpon>DatabaseSelect.cs</DependentUpon>
     </Compile>
     <Compile Include="DbSelect\DBSqlServer.cs">
@@ -152,34 +152,34 @@
     <Compile Include="DbSelect\DBSqlServer.Designer.cs">
       <DependentUpon>DBSqlServer.cs</DependentUpon>
     </Compile>
-    <Compile Include="LeftPanel.cs">
+    <Compile Include="Forms\LeftPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LeftPanel.Designer.cs">
+    <Compile Include="Forms\LeftPanel.Designer.cs">
       <DependentUpon>LeftPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Sysconfig.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="About.resx">
+    <EmbeddedResource Include="Forms\About.resx">
       <DependentUpon>About.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="BatchForm.resx">
+    <EmbeddedResource Include="Forms\BatchForm.resx">
       <DependentUpon>BatchForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ContentForm.resx">
+    <EmbeddedResource Include="Forms\ContentForm.resx">
       <DependentUpon>ContentForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="DatabaseSelect.resx">
+    <EmbeddedResource Include="Forms\DatabaseSelect.resx">
       <DependentUpon>DatabaseSelect.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -198,13 +198,13 @@
     <EmbeddedResource Include="DbSelect\DBSqlServer.resx">
       <DependentUpon>DBSqlServer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LeftPanel.resx">
+    <EmbeddedResource Include="Forms\LeftPanel.resx">
       <DependentUpon>LeftPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogShow.resx">
+    <EmbeddedResource Include="Forms\LogShow.resx">
       <DependentUpon>LogShow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
