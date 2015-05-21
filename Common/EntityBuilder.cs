@@ -114,7 +114,7 @@ namespace Hxj.Tools.EntityDesign
             plus.AppendSpaceLine(1, "/// 实体类" + ClassName + " 。(属性说明自动提取数据库字段的描述信息)");
             plus.AppendSpaceLine(1, "/// </summary>");
             plus.AppendSpaceLine(1, "[Serializable]");
-            plus.AppendSpaceLine(1, "public class " + ClassName + " : Entity ");
+            plus.AppendSpaceLine(1, "public partial class " + ClassName + " : Entity ");
             plus.AppendSpaceLine(1, "{");
             plus.AppendSpaceLine(2, "public " + ClassName + "():base(\"" + TableName + "\") {}");
             plus.AppendLine();

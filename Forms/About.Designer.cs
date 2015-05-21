@@ -54,7 +54,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(215, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "实体代码生成器（V1.8.0）";
+            this.label3.Text = "实体代码生成器（V1.8.1）";
             // 
             // button1
             // 

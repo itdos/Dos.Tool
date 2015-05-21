@@ -219,7 +219,7 @@ namespace Hxj.Tools.EntityDesign
             }
             if (!Directory.Exists(txtPath.Text))
             {
-                MessageBox.Show("该文件夹路劲不存在!");
+                MessageBox.Show("该文件夹路径不存在!");
                 return;
             }
 
@@ -249,13 +249,14 @@ namespace Hxj.Tools.EntityDesign
         /// <param name="e"></param>
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
+
             EntityBuilder builder;
 
             foreach (object o in lbright.Items)
             {
-                builder = new EntityBuilder(o.ToString(), txtNamaspace.Text, o.ToString(), Utils.GetColumnInfos(dbObject.GetColumnInfoList(DatabaseName, o.ToString())), tableview[o.ToString()], cbToupperFrstword.Checked);
+                builder = new EntityBuilder(o.ToString(), txtNamaspace.Text, o.ToString().Trim().Replace(' ', '_'), Utils.GetColumnInfos(dbObject.GetColumnInfoList(DatabaseName, o.ToString())), tableview[o.ToString()], cbToupperFrstword.Checked);
 
-                using (StreamWriter sw = new StreamWriter(Path.Combine(txtPath.Text, o.ToString() + ".cs"), false, Encoding.UTF8))
+                using (StreamWriter sw = new StreamWriter(Path.Combine(txtPath.Text, o.ToString().Trim().Replace(' ', '_') + ".cs"), false, Encoding.UTF8))
                 {
                     sw.Write(builder.Builder());
                     sw.Close();

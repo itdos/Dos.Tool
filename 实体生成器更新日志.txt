@@ -1,0 +1,8 @@
+﻿2015-05-21 Dos.Tools.EntityDesign(v1.8.1)
+	*）解决“路劲”错别字。
+	*）解决“批量生成实体类”未把表名中的空格以“_”替代的Bug。
+	*）现在生成实体类会加上partial，以便多表关联查询返回实体增加“扩展字段”。
+ 
+2015-05-10 Dos.Tools.EntityDesign(v1.8.0)
+	*）实体生成器正式更名为Dos.Tools.EntityDesign
+	*）字段char(36)类型现在是生成Guid，不再是string。
