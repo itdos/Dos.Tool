@@ -378,6 +378,10 @@ namespace Hxj.Tools.EntityDesign
                     {
                         column.TypeName = types["uniqueidentifier"];
                     }
+                    else if (column.TypeName.Trim().ToLower() == "tinyint" && column.Length == "1")
+                    {
+                        column.TypeName = types["bit"];
+                    }
                     else
                     {
                         column.TypeName = types[column.TypeName.Trim().ToLower()];

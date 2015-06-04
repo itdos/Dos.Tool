@@ -52,3 +52,4 @@ D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.Propert
 D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.csproj.GenerateResource.Cache
 D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.exe
 D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.pdb
+D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.csprojResolveAssemblyReference.cache

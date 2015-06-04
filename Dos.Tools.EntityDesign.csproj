@@ -238,6 +238,7 @@
     </Content>
     <Content Include="dbtype.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Ico\batch.ICO" />
     <Content Include="Ico\bdata.ICO" />
