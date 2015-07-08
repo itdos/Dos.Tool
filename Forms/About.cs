@@ -28,7 +28,7 @@ namespace Hxj.Tools.EntityDesign
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.ITdos.com/");   
+            System.Diagnostics.Process.Start("http://ITdos.com/Dos/ORM/Index.html");   
         }
     }
 }

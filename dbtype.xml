@@ -22,9 +22,9 @@
   <type dbtype="bigint" cstype="long" />
   <type dbtype="tinyint" cstype="int" />
   <type dbtype="integer" cstype="int" />
-  <type dbtype="smallint" cstype="int" />
+  <type dbtype="smallint" cstype="short" />
   <type dbtype="single" cstype="Single" />
-  <type dbtype="float" cstype="decimal" />
+  <type dbtype="float" cstype="double" />
   <type dbtype="double" cstype="decimal" />
   <type dbtype="numeric" cstype="decimal" />
   <type dbtype="decimal" cstype="decimal" />
@@ -32,7 +32,6 @@
   <type dbtype="smallmoney" cstype="decimal" />
   <type dbtype="real" cstype="decimal" />
   <type dbtype="bit" cstype="bool" />
-<type dbtype="tinyint" cstype="bool" />
   <type dbtype="binary" cstype="byte[]" />
   <type dbtype="varbinary" cstype="byte[]" />
   <type dbtype="image" cstype="byte[]" />

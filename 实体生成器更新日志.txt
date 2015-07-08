@@ -1,4 +1,5 @@
-﻿2015-05-21 Dos.Tools.EntityDesign(v1.8.3)
+﻿2015-05-21 Dos.Tools.EntityDesign(v1.8.4)
+	*）smallint现在是生成short类型，不再是int类型。
 	*）tinyint(1)现在是生成bool类型，不再是int类型。
 	*）datetime2现在是生成DateTime类型，不再是object。
 

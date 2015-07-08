@@ -33,6 +33,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tp1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbToupperFrstword = new System.Windows.Forms.CheckBox();
             this.btnRemovePrimarykey = new System.Windows.Forms.Button();
             this.btnAddPrimarykey = new System.Windows.Forms.Button();
             this.txtClassName = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.saveEntity = new System.Windows.Forms.SaveFileDialog();
-            this.cbToupperFrstword = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tp1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -104,6 +104,16 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "生成配置";
+            // 
+            // cbToupperFrstword
+            // 
+            this.cbToupperFrstword.AutoSize = true;
+            this.cbToupperFrstword.Location = new System.Drawing.Point(509, 91);
+            this.cbToupperFrstword.Name = "cbToupperFrstword";
+            this.cbToupperFrstword.Size = new System.Drawing.Size(84, 16);
+            this.cbToupperFrstword.TabIndex = 6;
+            this.cbToupperFrstword.Text = "首字母大写";
+            this.cbToupperFrstword.UseVisualStyleBackColor = true;
             // 
             // btnRemovePrimarykey
             // 
@@ -230,13 +240,13 @@
             this.contextMenuStripSave.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.保存ToolStripMenuItem});
             this.contextMenuStripSave.Name = "contextMenuStripSave";
-            this.contextMenuStripSave.Size = new System.Drawing.Size(139, 26);
+            this.contextMenuStripSave.Size = new System.Drawing.Size(142, 26);
             // 
             // 保存ToolStripMenuItem
             // 
             this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
             this.保存ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.保存ToolStripMenuItem.Text = "保存";
             this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
             // 
@@ -247,16 +257,6 @@
             this.imageList1.Images.SetKeyName(0, "pz.ICO");
             this.imageList1.Images.SetKeyName(1, "cs.ICO");
             // 
-            // cbToupperFrstword
-            // 
-            this.cbToupperFrstword.AutoSize = true;
-            this.cbToupperFrstword.Location = new System.Drawing.Point(509, 91);
-            this.cbToupperFrstword.Name = "cbToupperFrstword";
-            this.cbToupperFrstword.Size = new System.Drawing.Size(84, 16);
-            this.cbToupperFrstword.TabIndex = 6;
-            this.cbToupperFrstword.Text = "首字母大写";
-            this.cbToupperFrstword.UseVisualStyleBackColor = true;
-            // 
             // ContentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -265,6 +265,7 @@
             this.Controls.Add(this.tabControl1);
             this.DockAreas = WeifenLuo.WinFormsUI.Docking.DockAreas.Document;
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "ContentForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
