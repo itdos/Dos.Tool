@@ -80,7 +80,7 @@ namespace Hxj.Tools.EntityDesign.DbSelect
                 MessageBox.Show("登陆名不能为空!");
                 return;
             }
-            Hxj.IDBO.IDbObject dbObejct = new Hxj.DbObjects.MySQL.DbObject(false, cbbServer.Text, txtUserName.Text, txtPassword.Text);
+            Hxj.IDBO.IDbObject dbObejct = new Hxj.DbObjects.MySQL.DbObject(false, cbbServer.Text, txtUserName.Text, txtPassword.Text, txtport.Text);
             string tempconnectionstring = dbObejct.DbConnectStr;
 
             try

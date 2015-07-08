@@ -30,5 +30,15 @@ namespace Hxj.Tools.EntityDesign
         {
             System.Diagnostics.Process.Start("http://ITdos.com/Dos/ORM/Index.html");   
         }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.cnblogs.com/jswjia/");   
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://jq.qq.com/?_wv=1027&k=UlJ53g");   
+        }
     }
 }
