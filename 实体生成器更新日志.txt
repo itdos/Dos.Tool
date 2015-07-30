@@ -1,0 +1,17 @@
+﻿2015-05-21 Dos.Tools.EntityDesign(v1.8.5)
+	*）解决MySql连接域名数据库地址错误的Bug。（感谢群友：贾世唯，博客园：http://www.cnblogs.com/jswjia/）
+	*）smallint现在是生成short类型，不再是int类型。
+	*）tinyint(1)现在是生成bool类型，不再是int类型。
+	*）datetime2现在是生成DateTime类型，不再是object。
+
+2015-05-21 Dos.Tools.EntityDesign(v1.8.2)
+	*）SqlServer数据库字段ntext类型现在是生成string类型，不再是object。
+
+2015-05-21 Dos.Tools.EntityDesign(v1.8.1)
+	*）解决“路劲”错别字。
+	*）解决“批量生成实体类”未把表名中的空格以“_”替代的Bug。
+	*）现在生成实体类会加上partial，以便多表关联查询返回实体增加“扩展字段”。
+ 
+2015-05-10 Dos.Tools.EntityDesign(v1.8.0)
+	*）实体生成器正式更名为Dos.Tools.EntityDesign
+	*）字段char(36)类型现在是生成Guid，不再是string。

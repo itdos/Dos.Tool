@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<servers>
+  <server id="A47834F1-5505-4004-8669-E822DE0EE346" name="127.0.0.1\ITdos(SQL Server2000)" database="ITdos_Com" dbtype="SqlServer">
+    <connectionstring><![CDATA[Data Source=ricci\hu;Initial Catalog=Northwind;Integrated Security=True]]></connectionstring>
+  </server>
+  <server id="5bec52ff-213e-42a1-853a-480c9269e662" name="127.0.0.1(MySql)[DrivingExam]" database="DrivingExam" dbtype="MySql">
+    <connectionstring><![CDATA[server=127.0.0.1;user id=root; password=root; Port=3306;database=mysql; pooling=false]]></connectionstring>
+  </server>
+  <server id="79165f81-3225-4576-ad58-1ac31e2d56ed" name="192.168.2.150(MySql)[all]" database="all" dbtype="MySql">
+    <connectionstring><![CDATA[server=192.168.2.150;user id=root; password=root; Port=3306;database=mysql; pooling=false]]></connectionstring>
+  </server>
+</servers>

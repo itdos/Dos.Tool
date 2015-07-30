@@ -1,0 +1,98 @@
+DateTime:2015/5/9 22:45:00
+Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 26 - 定位指定的服务器/实例时出错)
+Source:Dos.Tools.EntityDesign
+StackTrace:   在 Hxj.DbObjects.SQL2000.DbObject.Query(String DbName, String SQLString) 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\DbDAL\SQL2000\DbObject.cs:行号 581
+   在 Hxj.DbObjects.SQL2000.DbObject.GetTables(String DbName) 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\DbDAL\SQL2000\DbObject.cs:行号 390
+   在 Hxj.Tools.EntityDesign.LeftPanel.getDatabaseinfo() 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\LeftPanel.cs:行号 283
+   在 Hxj.Tools.EntityDesign.LeftPanel.连接ToolStripMenuItem_Click(Object sender, EventArgs e) 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\LeftPanel.cs:行号 202
+   在 System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+--------------------------------------------------------------
+DateTime:2015/5/9 22:45:45
+Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 26 - 定位指定的服务器/实例时出错)
+Source:Dos.Tools.EntityDesign
+StackTrace:   在 Hxj.DbObjects.SQL2000.DbObject.Query(String DbName, String SQLString) 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\DbDAL\SQL2000\DbObject.cs:行号 581
+   在 Hxj.DbObjects.SQL2000.DbObject.GetTables(String DbName) 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\DbDAL\SQL2000\DbObject.cs:行号 390
+   在 Hxj.Tools.EntityDesign.LeftPanel.getDatabaseinfo() 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\LeftPanel.cs:行号 283
+   在 Hxj.Tools.EntityDesign.LeftPanel.刷新ToolStripMenuItem1_Click(Object sender, EventArgs e) 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\LeftPanel.cs:行号 212
+   在 System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+--------------------------------------------------------------
+DateTime:2015/5/9 23:05:27
+Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 26 - 定位指定的服务器/实例时出错)
+Source:Dos.Tools.EntityDesign
+StackTrace:   在 Hxj.DbObjects.SQL2000.DbObject.Query(String DbName, String SQLString) 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\DbDAL\SQL2000\DbObject.cs:行号 581
+   在 Hxj.DbObjects.SQL2000.DbObject.GetTables(String DbName) 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\DbDAL\SQL2000\DbObject.cs:行号 390
+   在 Hxj.Tools.EntityDesign.LeftPanel.getDatabaseinfo() 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\LeftPanel.cs:行号 283
+   在 Hxj.Tools.EntityDesign.LeftPanel.连接ToolStripMenuItem_Click(Object sender, EventArgs e) 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\LeftPanel.cs:行号 202
+   在 System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+--------------------------------------------------------------
+DateTime:2015/5/9 23:07:30
+Message:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 26 - 定位指定的服务器/实例时出错)
+Source:Dos.Tools.EntityDesign
+StackTrace:   在 Hxj.DbObjects.SQL2000.DbObject.Query(String DbName, String SQLString) 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\DbDAL\SQL2000\DbObject.cs:行号 581
+   在 Hxj.DbObjects.SQL2000.DbObject.GetTables(String DbName) 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\DbDAL\SQL2000\DbObject.cs:行号 390
+   在 Hxj.Tools.EntityDesign.LeftPanel.getDatabaseinfo() 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\LeftPanel.cs:行号 283
+   在 Hxj.Tools.EntityDesign.LeftPanel.连接ToolStripMenuItem_Click(Object sender, EventArgs e) 位置 d:\工作\其它\Hxj.Data Source(1.7.4.7)\Hxj.Tools.EntityDesign\LeftPanel.cs:行号 202
+   在 System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+--------------------------------------------------------------
+DateTime:2015/5/21 16:14:28
+Message:获取列数据失败You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'aaa     bbb' at line 1
+Source:Dos.Tools.EntityDesign
+StackTrace:   在 Hxj.DbObjects.MySQL.DbObject.GetColumnInfoList(String DbName, String TableName) 位置 d:\工作\GitHub\Dos.Tools.EntityDesign\DbDAL\MySql\DbObject.cs:行号 735
+   在 Hxj.Tools.EntityDesign.ContentForm.ContentForm_Load(Object sender, EventArgs e) 位置 d:\工作\GitHub\Dos.Tools.EntityDesign\Forms\ContentForm.cs:行号 94
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+--------------------------------------------------------------
+DateTime:2015/5/21 16:14:38
+Message:获取列数据失败You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'aaa     bbb' at line 1
+Source:Dos.Tools.EntityDesign
+StackTrace:   在 Hxj.DbObjects.MySQL.DbObject.GetColumnInfoList(String DbName, String TableName) 位置 d:\工作\GitHub\Dos.Tools.EntityDesign\DbDAL\MySql\DbObject.cs:行号 735
+   在 Hxj.Tools.EntityDesign.ContentForm.ContentForm_Load(Object sender, EventArgs e) 位置 d:\工作\GitHub\Dos.Tools.EntityDesign\Forms\ContentForm.cs:行号 94
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+--------------------------------------------------------------

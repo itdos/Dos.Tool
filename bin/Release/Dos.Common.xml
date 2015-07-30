@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dos.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Dos.Common.IPHelper">
+            <summary>
+            IP帮助类
+            </summary>
+        </member>
+        <member name="M:Dos.Common.IPHelper.GetVisitorIP">
+            <summary>
+            获取访问者IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Dos.Common.HttpHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.GetStream(System.String,System.String,System.Int32,System.Text.Encoding,System.Net.CookieContainer,System.String)">
+            <summary>
+            Get方式获取响应流
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.Get(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.Get``1(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.Get(System.String,System.String,System.Int32,System.Text.Encoding,System.Net.CookieContainer,System.String)">
+            <summary>
+            Get方式获取字符串
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.Get(System.String,Dos.Common.HttpParam,System.Int32,System.Text.Encoding,System.Net.CookieContainer,System.String)">
+            <summary>
+            Get方式获取字符串
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.Get``1(System.String,Dos.Common.HttpParam,System.Int32,System.Text.Encoding,System.Net.CookieContainer,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.Get``1(System.String,System.String,System.Int32,System.Text.Encoding,System.Net.CookieContainer,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.PostStream(System.String,System.String,System.Int32,System.Text.Encoding,System.Net.CookieContainer,System.String)">
+            <summary>
+            Post方式获取响应流
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.Post(System.String,Dos.Common.HttpParam,Dos.Common.HttpParam,System.Int32,System.Text.Encoding,System.Net.CookieContainer,System.String)">
+            <summary>
+            以post方式提交，将响应编码为字串。
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.Post(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.Post``1(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.Post(System.String,System.String,System.String,System.Int32,System.Text.Encoding,System.Net.CookieContainer,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.CreateRequest(System.String)">
+            <summary>
+            创建一个请求
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.Upload(System.String,Dos.Common.HttpParam,System.String)">
+            <summary>
+            上传文件。formData参数附加到url
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpHelper.HeadHttpCode(System.String,System.String,System.Int32,System.Text.Encoding,System.Net.CookieContainer,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Dos.Common.HttpParam">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.HttpParam.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:Dos.Common.HttpParam.Format">
+            <summary>
+            转换为http form格式字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Dos.Common.QueueHelper.SleepNumber">
+            <summary>
+            睡眠时间（毫秒）
+            </summary>
+        </member>
+        <member name="M:Dos.Common.QueueHelper.Join(System.String)">
+            <summary>
+            加入队列
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dos.Common.QueueHelper.Join(System.String,System.Object)">
+            <summary>
+            加入队列。
+            </summary>
+            <param name="key">资源Key</param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dos.Common.QueueHelper.TryGet(System.String,System.Object)">
+            <summary>
+            抢资源
+            </summary>
+            <param name="key"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dos.Common.QueueHelper.Free(System.String)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="key"></param>
+        </member>
+    </members>
+</doc>

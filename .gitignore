@@ -1,0 +1,7 @@
+obj/
+*.suo
+/*.suo
+*.nupkg
+*.nuspec.txt
+*.nuspec
+NuGet.exe

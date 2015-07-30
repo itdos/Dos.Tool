@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<types>
+  <type dbtype="varchar" cstype="string" />
+  <type dbtype="varchar2" cstype="string" />
+  <type dbtype="nvarchar" cstype="string" />
+  <type dbtype="nvarchar2" cstype="string" />
+  <type dbtype="char" cstype="string" />
+  <type dbtype="nchar" cstype="string" />
+  <type dbtype="text" cstype="string" />
+  <type dbtype="ntext" cstype="string" />
+  <type dbtype="longtext" cstype="string" />
+  <type dbtype="string" cstype="string" />
+  <type dbtype="clob" cstype="string" />
+  <type dbtype="nclob" cstype="string" />
+  <type dbtype="date" cstype="DateTime" />
+  <type dbtype="datetime" cstype="DateTime" />
+<type dbtype="datetime2" cstype="DateTime" />
+  <type dbtype="smalldatetime" cstype="DateTime" />
+  <type dbtype="timestamp" cstype="DateTime" />
+  <type dbtype="int" cstype="int" />
+  <type dbtype="number" cstype="int" />
+  <type dbtype="bigint" cstype="long" />
+  <type dbtype="tinyint" cstype="int" />
+  <type dbtype="integer" cstype="int" />
+  <type dbtype="smallint" cstype="short" />
+  <type dbtype="single" cstype="Single" />
+  <type dbtype="float" cstype="double" />
+  <type dbtype="double" cstype="decimal" />
+  <type dbtype="numeric" cstype="decimal" />
+  <type dbtype="decimal" cstype="decimal" />
+  <type dbtype="money" cstype="decimal" />
+  <type dbtype="smallmoney" cstype="decimal" />
+  <type dbtype="real" cstype="decimal" />
+  <type dbtype="bit" cstype="bool" />
+  <type dbtype="binary" cstype="byte[]" />
+  <type dbtype="varbinary" cstype="byte[]" />
+  <type dbtype="image" cstype="byte[]" />
+  <type dbtype="raw" cstype="byte[]" />
+  <type dbtype="long" cstype="byte[]" />
+  <type dbtype="longraw" cstype="byte[]" />
+  <type dbtype="blob" cstype="byte[]" />
+  <type dbtype="bfile" cstype="byte[]" />
+  <type dbtype="uniqueidentifier" cstype="Guid" />
+  <type dbtype="null" cstype="object" />
+  <type dbtype="enum" cstype="Enum" />
+  <type dbtype="variant" cstype="object" />
+</types>
