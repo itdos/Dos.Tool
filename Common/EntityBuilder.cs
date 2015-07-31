@@ -140,6 +140,15 @@ namespace Hxj.Tools.EntityDesign
                     var val = column.DefaultVal;
                     if (column.TypeName.ToLower().Contains("bool"))
                     {
+                        switch (val)
+                        {
+                            case "b'0'":
+                                val = "0";
+                                break;
+                            case "b'1'":
+                                val = "1";
+                                break;
+                        }
                         val = DataUtils.ConvertValue<bool>(val) ? "true" : "false";
                     }
                     else if (column.TypeName.ToLower().Contains("string"))
