@@ -1,4 +1,9 @@
-﻿2015-05-21 Dos.Tools.EntityDesign(v1.8.5)
+﻿即将更新：
+	*）右键刷新单个数据库异常，需要整个连接刷新。
+	
+
+2015-05-21 Dos.Tools.EntityDesign(v1.8.6)
+	*）生成的实体现在会加上数据库默认值。如：private bool IsCan = true;
 	*）解决MySql连接域名数据库地址错误的Bug。（感谢群友：贾世唯，博客园：http://www.cnblogs.com/jswjia/）
 	*）smallint现在是生成short类型，不再是int类型。
 	*）tinyint(1)现在是生成bool类型，不再是int类型。

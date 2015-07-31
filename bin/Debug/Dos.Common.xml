@@ -4,6 +4,18 @@
         <name>Dos.Common</name>
     </assembly>
     <members>
+        <member name="T:Dos.CmdHelper">
+            <summary>
+            Dos cmd命令执行帮助类
+            </summary>
+        </member>
+        <member name="M:Dos.CmdHelper.Run(System.String)">
+            <summary>
+            运行dos命令
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
         <member name="T:Dos.Common.IPHelper">
             <summary>
             IP帮助类
@@ -111,6 +123,217 @@
             转换为http form格式字符串
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:ZH.Common.ShoppingCart.AddToShoppingCart(System.String,System.Int32)">
+             <summary>
+            加入购物车
+             </summary>
+        </member>
+        <member name="M:ZH.Common.ShoppingCart.RemoveShoppingCart">
+            <summary> 
+            移除购物车所有项 
+            </summary> 
+        </member>
+        <member name="M:ZH.Common.ShoppingCart.RemoveShoppingCart(System.String[])">
+            <summary> 
+            移除购物车子项 
+            </summary> 
+        </member>
+        <member name="M:ZH.Common.ShoppingCart.RemoveShoppingCart(System.String)">
+            <summary> 
+            移除购物车子项 
+            </summary> 
+        </member>
+        <member name="M:ZH.Common.ShoppingCart.UpdateShoppingCart(System.String,System.Int32)">
+            <summary>
+            更新购物车
+            </summary>
+        </member>
+        <member name="M:ZH.Common.ShoppingCart.GetShoppingCartProNumber">
+            <summary>
+            获取购物车产品ID数组
+            </summary>
+        </member>
+        <member name="M:ZH.Common.ShoppingCart.GetShoppingCartCount">
+            <summary>
+            获取购物车总数量
+            </summary>
+        </member>
+        <member name="M:ZH.Common.ShoppingCart.GetShoppingCartCount(System.String)">
+            <summary>
+            获取购物车某个产品的数量
+            </summary>
+        </member>
+        <member name="M:ZH.Common.ShoppingCart.GetShoppingCartString">
+            <summary>
+            获取购物车cookie字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Dos.Common.Helper.XLinqHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.AllElements(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.AllElements(System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement},System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.AnyAttribute(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.AnyElement(System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement},System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.AnyElement(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.AssertElementHasValue(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.FirstElement(System.Xml.Linq.XElement)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetBool(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetBoolOrDefault(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetDateTime(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetDateTimeOrDefault(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetDecimal(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetDecimalOrDefault(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetElement(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetElementValueOrDefault``1(System.Xml.Linq.XElement,System.String,System.Func{System.Xml.Linq.XElement,``0})">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetGuid(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetGuidOrDefault(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetInt(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetIntOrDefault(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetLong(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetLongOrDefault(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetNullableBool(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetNullableDateTime(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetNullableDecimal(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetNullableGuid(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetNullableInt(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetNullableLong(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetNullableTimeSpan(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetString(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetTimeSpan(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetTimeSpanOrDefault(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dos.Common.Helper.XLinqHelper.GetValues(System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement})">
+            <summary>
+            
+            </summary>
         </member>
         <member name="F:Dos.Common.QueueHelper.SleepNumber">
             <summary>

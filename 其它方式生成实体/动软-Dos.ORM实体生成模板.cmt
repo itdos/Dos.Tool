@@ -1,0 +1,136 @@
+﻿<#@ template language="c#" HostSpecific="True" #>
+<#@ output extension= ".cs" #>
+<#
+	TableHost host = (TableHost)(Host);
+	host.Fieldlist.Sort(CodeCommon.CompareByintOrder);
+#>
+using System;
+using System.Data;
+using System.Data.Common;
+using Dos.ORM;
+using Dos.ORM.Common;
+namespace <#= host.NameSpace #>.DosModel
+{
+	<# if( host.TableDescription.Length > 0) {#>
+ 	//<#= host.TableDescription #>
+	<# } #>
+	[Serializable]
+	public partial class <#=host.TableName#>:Entity 
+	{
+	#region colomn
+   		public <#=host.TableName#>():base("<#=host.TableName#>") {} 
+   		<# foreach (ColumnInfo c in host.Fieldlist)
+		{ #>
+		private <#= CodeCommon.DbTypeToCS(c.TypeName) #> _<#= c.ColumnName.ToString() #>;
+		<# } #>
+		
+      	<# foreach (ColumnInfo c in host.Fieldlist)
+		{ #>/// <summary>
+		/// <#= string.IsNullOrEmpty(c.Description) ? c.ColumnName : c.Description #>
+        /// </summary>
+        public <#= CodeCommon.DbTypeToCS(c.TypeName) #> <#= c.ColumnName #>
+        { 
+            get{ return _<#= c.ColumnName.ToString()#>; }
+            set
+            {
+	            this.OnPropertyValueChange(_.<#= c.ColumnName.ToString()#>,_<#= c.ColumnName.ToString()#>,value);
+	            this._<#= c.ColumnName.ToString()#>=value;
+            }
+        }        
+		<# } #>
+		#endregion
+		#region Method
+		/// <summary>
+		/// 获取实体中的标识列
+		/// </summary>
+		public override Field GetIdentityField()
+		{
+		<# for(int i=0;i<host.Keys.Count;i++) { #>
+		  <# if(host.Keys[i].IsIdentity) { #>
+			return _.<#= host.Keys[i].ColumnName #>; 
+			<#break;#>
+			<#} else if( i == host.Keys.Count-1) { #>
+				return null;
+			<#} #>
+		<#} #>
+		}
+		/// <summary>
+		/// 获取实体中的主键列
+		/// </summary>
+		public override Field[] GetPrimaryKeyFields()
+		{
+			return new Field[] {
+				<# for(int i=0;i<host.Keys.Count;i++) { #>
+				 <# if(!host.Keys[i].IsIdentity) { #>
+					  _.<#= host.Keys[i].ColumnName #>,
+					<#} #>
+				<#} #>
+			};
+		}
+		/// <summary>
+		/// 获取列信息
+		/// </summary>
+		public override Field[] GetFields()
+		{
+			return new Field[] {
+				<# foreach (ColumnInfo c in host.Fieldlist)
+				{ #>
+				_.<#= c.ColumnName.ToString()#>,
+				<#} #>
+			 };
+		}
+		/// <summary>
+		/// 获取值信息
+		/// </summary>
+		public override object[] GetValues()
+		{
+			return new object[] {				
+				<# foreach (ColumnInfo c in host.Fieldlist)
+				{ #>
+				this._<#= c.ColumnName.ToString()#>,
+				<#} #>
+			};
+		}
+		/// <summary>
+		/// 给当前实体赋值
+		/// </summary>
+		public override void SetPropertyValues(IDataReader reader)
+		{
+				<# foreach (ColumnInfo c in host.Fieldlist)
+				{ #>
+				this._<#= c.ColumnName.ToString()#>=DataUtils.ConvertValue<<#= CodeCommon.DbTypeToCS(c.TypeName) #>>(reader["<#= c.ColumnName.ToString()#>"]);
+				<#} #>
+			 
+		}
+		/// <summary>
+		/// 给当前实体赋值
+		/// </summary>
+		public override void SetPropertyValues(DataRow row)
+		{
+				<# foreach (ColumnInfo c in host.Fieldlist)
+				{ #>
+				this._<#= c.ColumnName.ToString()#>=DataUtils.ConvertValue<<#= CodeCommon.DbTypeToCS(c.TypeName) #>>(row["<#= c.ColumnName.ToString()#>"]);
+				<#} #> 
+		}
+		#endregion
+
+		#region _Field
+		/// <summary>
+		/// 字段信息
+		/// </summary>
+		public class _
+		{
+			/// <summary>
+			/// * 
+			/// </summary>
+			public readonly static Field All = new Field("*","<#=host.TableName#>"); 
+			<# foreach (ColumnInfo c in host.Fieldlist)
+			{ #>
+			public readonly static Field <#= c.ColumnName.ToString()#> = new Field("<#= c.ColumnName.ToString()#>","<#=host.TableName#>","<#= c.ColumnName.ToString()#>");
+			<#} #> 
+		}
+		#endregion
+		
+   
+	}
+}

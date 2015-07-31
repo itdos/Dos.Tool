@@ -6,6 +6,7 @@ using System.Data.Common;
 using Hxj.Tools.EntityDesign.Model;
 using System.Xml;
 using System.Windows.Forms;
+using Dos.ORM.Common;
 
 namespace Hxj.Tools.EntityDesign
 {
@@ -50,7 +51,7 @@ namespace Hxj.Tools.EntityDesign
                 {
                     col.ColumnName = Utils.ToUpperFirstword(col.ColumnName);
                 }
-                
+
                 col.DeText = Utils.ReplaceSpace(col.DeText);
                 _columns.Add(col);
             }
@@ -134,7 +135,27 @@ namespace Hxj.Tools.EntityDesign
             plus.AppendSpaceLine(2, "#region Model");
             foreach (ColumnInfo column in Columns)
             {
-                plus2.AppendSpaceLine(2, "private " + column.TypeName + " _" + column.ColumnName + ";");
+                if (!string.IsNullOrWhiteSpace(column.DefaultVal))
+                {
+                    var val = column.DefaultVal;
+                    if (column.TypeName.ToLower().Contains("bool"))
+                    {
+                        val = DataUtils.ConvertValue<bool>(val) ? "true" : "false";
+                    }
+                    else if (column.TypeName.ToLower().Contains("string"))
+                    {
+                        val = "\"" + val + "\"";
+                    }
+                    else if (column.TypeName.ToLower().Contains("guid"))
+                    {
+                        val = "Guid.Parse(\"" + val + "\")";
+                    }
+                    plus2.AppendSpaceLine(2, "private " + column.TypeName + " _" + column.ColumnName + " = " + val + ";");
+                }
+                else
+                {
+                    plus2.AppendSpaceLine(2, "private " + column.TypeName + " _" + column.ColumnName + ";");
+                }
                 plus3.AppendSpaceLine(2, "/// <summary>");
                 plus3.AppendSpaceLine(2, "/// " + column.DeText);
                 plus3.AppendSpaceLine(2, "/// </summary>");

@@ -56,13 +56,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Dos.Common, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\其它\Hxj.Data Source(1.7.4.7)\OrmTest\OrmTest\packages\Dos.Common.1.0.1.0\lib\net40\Dos.Common.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Dos.Common, Version=1.0.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\其它\Hxj.Data Source(1.7.4.7)\OrmTest\OrmTest\packages\Dos.Common.1.0.1.6\lib\net40\Dos.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Dos.ORM, Version=1.9.8.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\其它\Hxj.Data Source(1.7.4.7)\OrmTest\OrmTest\packages\Dos.ORM.1.9.8.2\lib\net40\Dos.ORM.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Dos.ORM, Version=1.9.8.8, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\其它\Hxj.Data Source(1.7.4.7)\OrmTest\OrmTest\packages\Dos.ORM.1.9.8.8\lib\net40\Dos.ORM.dll</HintPath>
     </Reference>
     <Reference Include="Dos.ORM.MySql, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\其它\Hxj.Data Source(1.7.4.7)\OrmTest\OrmTest\packages\Dos.ORM.MySql.1.1.1.0\lib\net40\Dos.ORM.MySql.dll</HintPath>
@@ -245,6 +245,8 @@
     <Compile Include="Common\StringPlus.cs" />
     <Compile Include="Common\Utils.cs" />
     <None Include="README.md" />
+    <None Include="其它方式生成实体\T4模板\T4 Msql 实体生成抛砖引玉版.zip" />
+    <None Include="其它方式生成实体\动软-Dos.ORM实体生成模板.cmt" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="databaseconfig.xml">
@@ -254,7 +256,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Dos.ORM更新日志.txt" />
     <Content Include="Ico\batch.ICO" />
     <Content Include="Ico\bdata.ICO" />
     <Content Include="Ico\cs.ICO" />
@@ -300,6 +301,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
