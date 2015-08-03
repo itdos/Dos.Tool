@@ -137,7 +137,7 @@ namespace Hxj.Tools.EntityDesign
             {
                 if (!string.IsNullOrWhiteSpace(column.DefaultVal))
                 {
-                    var val = column.DefaultVal;
+                    var val = "";
                     if (column.TypeName.ToLower().Contains("bool"))
                     {
                         switch (val)
@@ -149,17 +149,28 @@ namespace Hxj.Tools.EntityDesign
                                 val = "1";
                                 break;
                         }
-                        val = DataUtils.ConvertValue<bool>(val) ? "true" : "false";
+                        val = DataUtils.ConvertValue<bool>(column.DefaultVal) ? "true" : "false";
                     }
                     else if (column.TypeName.ToLower().Contains("string"))
                     {
-                        val = "\"" + val + "\"";
+                        val = "\"" + column.DefaultVal + "\"";
                     }
                     else if (column.TypeName.ToLower().Contains("guid"))
                     {
-                        val = "Guid.Parse(\"" + val + "\")";
+                        val = "Guid.Parse(\"" + column.DefaultVal + "\")";
                     }
-                    plus2.AppendSpaceLine(2, "private " + column.TypeName + " _" + column.ColumnName + " = " + val + ";");
+                    else if (column.TypeName.ToLower().Contains("int") || column.TypeName.ToLower().Contains("decimal") || column.TypeName.ToLower().Contains("float"))
+                    {
+                        val = column.DefaultVal;
+                    }
+                    if (string.IsNullOrWhiteSpace(val))
+                    {
+                        plus2.AppendSpaceLine(2, "private " + column.TypeName + " _" + column.ColumnName + ";");
+                    }
+                    else
+                    {
+                        plus2.AppendSpaceLine(2, "private " + column.TypeName + " _" + column.ColumnName + " = " + val + ";");
+                    }
                 }
                 else
                 {
