@@ -159,9 +159,17 @@ namespace Hxj.Tools.EntityDesign
                     {
                         val = "Guid.Parse(\"" + column.DefaultVal + "\")";
                     }
-                    else if (column.TypeName.ToLower().Contains("int") || column.TypeName.ToLower().Contains("decimal") || column.TypeName.ToLower().Contains("float"))
+                    else if (column.TypeName.ToLower().Contains("int"))
                     {
                         val = column.DefaultVal;
+                    }
+                    else if (column.TypeName.ToLower().Contains("decimal"))
+                    {
+                        val = column.DefaultVal+"M";
+                    }
+                    else if (column.TypeName.ToLower().Contains("float"))
+                    {
+                        val = column.DefaultVal + "F";
                     }
                     if (string.IsNullOrWhiteSpace(val))
                     {
