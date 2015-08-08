@@ -41,6 +41,7 @@
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
+            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label3
@@ -49,9 +50,9 @@
             this.label3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(212, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(215, 16);
+            this.label3.Size = new System.Drawing.Size(233, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "实体代码生成器（V1.8.5）";
+            this.label3.Text = "实体代码生成器（V1.8.6.3）";
             // 
             // button1
             // 
@@ -174,11 +175,23 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "侯伟彬";
             // 
+            // linkLabel7
+            // 
+            this.linkLabel7.AutoSize = true;
+            this.linkLabel7.Location = new System.Drawing.Point(247, 193);
+            this.linkLabel7.Name = "linkLabel7";
+            this.linkLabel7.Size = new System.Drawing.Size(47, 12);
+            this.linkLabel7.TabIndex = 16;
+            this.linkLabel7.TabStop = true;
+            this.linkLabel7.Text = "jgl5981";
+            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 394);
+            this.Controls.Add(this.linkLabel7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.linkLabel6);
             this.Controls.Add(this.linkLabel5);
@@ -220,5 +233,6 @@
         private System.Windows.Forms.LinkLabel linkLabel5;
         private System.Windows.Forms.LinkLabel linkLabel6;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.LinkLabel linkLabel7;
     }
 }

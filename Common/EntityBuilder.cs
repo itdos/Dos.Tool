@@ -157,7 +157,15 @@ namespace Hxj.Tools.EntityDesign
                     }
                     else if (column.TypeName.ToLower().Contains("guid"))
                     {
-                        val = "Guid.Parse(\"" + column.DefaultVal + "\")";
+                        Guid tempGuid;
+                        if (Guid.TryParse(column.DefaultVal, out tempGuid))
+                        {
+                            val = "Guid.Parse(\"" + column.DefaultVal + "\")";
+                        }
+                        else
+                        {
+                            val = "Guid.NewGuid()";
+                        }
                     }
                     else if (column.TypeName.ToLower().Contains("int"))
                     {
@@ -165,7 +173,7 @@ namespace Hxj.Tools.EntityDesign
                     }
                     else if (column.TypeName.ToLower().Contains("decimal"))
                     {
-                        val = column.DefaultVal+"M";
+                        val = column.DefaultVal + "M";
                     }
                     else if (column.TypeName.ToLower().Contains("float"))
                     {

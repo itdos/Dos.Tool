@@ -50,5 +50,10 @@ namespace Hxj.Tools.EntityDesign
         {
             System.Diagnostics.Process.Start("http://www.zsbadminton.com");
         }
+
+        private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.cnblogs.com/jgl5981/");
+        }
     }
 }
