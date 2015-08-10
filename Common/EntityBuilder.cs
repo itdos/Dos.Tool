@@ -300,29 +300,30 @@ namespace Hxj.Tools.EntityDesign
             plus.AppendLine("};");
             plus.AppendSpaceLine(2, "}");
 
+            //2015-08-10注释
+            //plus.AppendSpaceLine(2, "/// <summary>");
+            //plus.AppendSpaceLine(2, "/// 给当前实体赋值");
+            //plus.AppendSpaceLine(2, "/// </summary>");
+            //plus.AppendSpaceLine(2, "public override void SetPropertyValues(IDataReader reader)");
+            //plus.AppendSpaceLine(2, "{");
+            //foreach (ColumnInfo col in Columns)
+            //{
+            //    plus.AppendSpaceLine(3, "this._" + col.ColumnName + " = DataUtils.ConvertValue<" + col.TypeName + ">(reader[\"" + col.ColumnNameRealName + "\"]);");
+            //}
+            //plus.AppendSpaceLine(2, "}");
 
-            plus.AppendSpaceLine(2, "/// <summary>");
-            plus.AppendSpaceLine(2, "/// 给当前实体赋值");
-            plus.AppendSpaceLine(2, "/// </summary>");
-            plus.AppendSpaceLine(2, "public override void SetPropertyValues(IDataReader reader)");
-            plus.AppendSpaceLine(2, "{");
-            foreach (ColumnInfo col in Columns)
-            {
-                plus.AppendSpaceLine(3, "this._" + col.ColumnName + " = DataUtils.ConvertValue<" + col.TypeName + ">(reader[\"" + col.ColumnNameRealName + "\"]);");
-            }
-            plus.AppendSpaceLine(2, "}");
 
-
-            plus.AppendSpaceLine(2, "/// <summary>");
-            plus.AppendSpaceLine(2, "/// 给当前实体赋值");
-            plus.AppendSpaceLine(2, "/// </summary>");
-            plus.AppendSpaceLine(2, "public override void SetPropertyValues(DataRow row)");
-            plus.AppendSpaceLine(2, "{");
-            foreach (ColumnInfo col in Columns)
-            {
-                plus.AppendSpaceLine(3, "this._" + col.ColumnName + " = DataUtils.ConvertValue<" + col.TypeName + ">(row[\"" + col.ColumnNameRealName + "\"]);");
-            }
-            plus.AppendSpaceLine(2, "}");
+            //2015-08-10注释
+            //plus.AppendSpaceLine(2, "/// <summary>");
+            //plus.AppendSpaceLine(2, "/// 给当前实体赋值");
+            //plus.AppendSpaceLine(2, "/// </summary>");
+            //plus.AppendSpaceLine(2, "public override void SetPropertyValues(DataRow row)");
+            //plus.AppendSpaceLine(2, "{");
+            //foreach (ColumnInfo col in Columns)
+            //{
+            //    plus.AppendSpaceLine(3, "this._" + col.ColumnName + " = DataUtils.ConvertValue<" + col.TypeName + ">(row[\"" + col.ColumnNameRealName + "\"]);");
+            //}
+            //plus.AppendSpaceLine(2, "}");
 
 
             plus.AppendSpaceLine(2, "#endregion");
