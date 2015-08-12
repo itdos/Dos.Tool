@@ -306,6 +306,12 @@
             <param name="dt"></param>
             <returns></returns>
         </member>
+        <member name="M:Dos.ORM.DataUtils.GetNewParamCount">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Dos.ORM.DataUtils.MakeUniqueKey(Dos.ORM.Field)">
             <summary>
             生成唯一字符串
@@ -4560,6 +4566,16 @@
             <param name="fromSection"></param>
             <returns></returns>
         </member>
+        <member name="P:Dos.ORM.FromSection.DbProvider">
+            <summary>
+            DbProvider。
+            </summary>
+        </member>
+        <member name="P:Dos.ORM.FromSection.Database">
+            <summary>
+            DbProvider。
+            </summary>
+        </member>
         <member name="P:Dos.ORM.FromSection.DistinctString">
             <summary>
             设置 distinct
@@ -5033,6 +5049,11 @@
             <param name="paramPrefixToken">paramPrefixToken</param>
             <param name="rightToken">rightToken</param>
         </member>
+        <member name="F:Dos.ORM.DbProvider.databaseType">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="F:Dos.ORM.DbProvider.cacheConfig">
             <summary>
             缓存
@@ -5072,6 +5093,11 @@
             </summary>
             <param name="cmd"></param>
             <returns></returns>
+        </member>
+        <member name="P:Dos.ORM.DbProvider.DatabaseType">
+            <summary>
+            ConnectionStrings 节点名称
+            </summary>
         </member>
         <member name="P:Dos.ORM.DbProvider.ConnectionStringsName">
             <summary>
@@ -5195,9 +5221,9 @@
             The db provider factory.
             </summary>
         </member>
-        <member name="M:Dos.ORM.ProviderFactory.CreateDbProvider(System.String,System.String,System.String)">
+        <member name="M:Dos.ORM.ProviderFactory.CreateDbProvider(System.String,System.String,System.String,System.Nullable{Dos.ORM.DatabaseType})">
             <summary>
-            Creates the db provider.
+            创建数据库事件提供程序
             </summary>
             <param name="assemblyName">Name of the assembly.</param>
             <param name="className">Name of the class.</param>
