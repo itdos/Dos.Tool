@@ -161,12 +161,17 @@
             <param name="entity"></param>
             <returns></returns>
         </member>
-        <member name="T:Dos.ORM.Common.DataUtils">
+        <member name="T:Dos.ORM.Common.DosORMCommon">
+            <summary>
+            此类占位用，以兼容以前代码不会报错。
+            </summary>
+        </member>
+        <member name="T:Dos.ORM.DataUtils">
             <summary>
             帮助类
             </summary>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.FormatSQL(System.String,System.Char,System.Char)">
+        <member name="M:Dos.ORM.DataUtils.FormatSQL(System.String,System.Char,System.Char)">
             <summary>
             格式化sql
             </summary>
@@ -175,28 +180,28 @@
             <param name="rightToken"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.FormatValue(System.Object)">
+        <member name="M:Dos.ORM.DataUtils.FormatValue(System.Object)">
             <summary>
             格式化数据为数据库通用格式
             </summary>
             <param name="val"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.CheckStruct(System.Type)">
+        <member name="M:Dos.ORM.DataUtils.CheckStruct(System.Type)">
             <summary>
             CheckStuct
             </summary>
             <param name="type"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.Clone(System.Object)">
+        <member name="M:Dos.ORM.DataUtils.Clone(System.Object)">
             <summary>
             DeepClone
             </summary>
             <param name="obj"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.ConvertValue(System.Type,System.Object)">
+        <member name="M:Dos.ORM.DataUtils.ConvertValue(System.Type,System.Object)">
             <summary>
             转换
             </summary>
@@ -204,7 +209,7 @@
             <param name="value"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.ConvertValue``1(System.Object)">
+        <member name="M:Dos.ORM.DataUtils.ConvertValue``1(System.Object)">
             <summary>
             转换数据类型
             </summary>
@@ -212,7 +217,7 @@
             <param name="value"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.FastMethodInvoke(System.Object,System.Reflection.MethodInfo,System.Object[])">
+        <member name="M:Dos.ORM.DataUtils.FastMethodInvoke(System.Object,System.Reflection.MethodInfo,System.Object[])">
             <summary>
             快速执行Method
             </summary>
@@ -221,21 +226,21 @@
             <param name="parameters"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.Create``1">
+        <member name="M:Dos.ORM.DataUtils.Create``1">
             <summary>
             快速实例化一个T
             </summary>
             <typeparam name="T"></typeparam>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.Create(System.Type)">
+        <member name="M:Dos.ORM.DataUtils.Create(System.Type)">
             <summary>
             快速实例化一个FastCreateInstanceHandler
             </summary>
             <param name="type"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.SetPropertyValue(System.Object,System.Reflection.PropertyInfo,System.Object)">
+        <member name="M:Dos.ORM.DataUtils.SetPropertyValue(System.Object,System.Reflection.PropertyInfo,System.Object)">
             <summary>
             设置属性值
             </summary>
@@ -243,7 +248,7 @@
             <param name="property"></param>
             <param name="value"></param>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.SetPropertyValue(System.Object,System.String,System.Object)">
+        <member name="M:Dos.ORM.DataUtils.SetPropertyValue(System.Object,System.String,System.Object)">
             <summary>
             设置属性值
             </summary>
@@ -251,7 +256,7 @@
             <param name="propertyName"></param>
             <param name="value"></param>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.SetPropertyValue(System.Type,System.Object,System.String,System.Object)">
+        <member name="M:Dos.ORM.DataUtils.SetPropertyValue(System.Type,System.Object,System.String,System.Object)">
             <summary>
             设置属性值
             </summary>
@@ -260,7 +265,7 @@
             <param name="propertyName"></param>
             <param name="value"></param>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.GetPropertyValue``1(``0,System.String)">
+        <member name="M:Dos.ORM.DataUtils.GetPropertyValue``1(``0,System.String)">
             <summary>
             获取属性值
             </summary>
@@ -269,7 +274,7 @@
             <param name="propertyName"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.EntityArrayToDataTable``1(``0[])">
+        <member name="M:Dos.ORM.DataUtils.EntityArrayToDataTable``1(``0[])">
             <summary>
             从Entity数组转换成DataTable
             </summary>
@@ -277,7 +282,7 @@
             <param name="entities"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.DataRowToEntity``1(System.Data.DataRow)">
+        <member name="M:Dos.ORM.DataUtils.DataRowToEntity``1(System.Data.DataRow)">
             <summary>
             DataRow转化为T
             </summary>
@@ -285,7 +290,7 @@
             <param name="row"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.DataTableToEntityArray``1(System.Data.DataTable)">
+        <member name="M:Dos.ORM.DataUtils.DataTableToEntityArray``1(System.Data.DataTable)">
             <summary>
             DataTable转化为TEntity[]
             </summary>
@@ -293,7 +298,7 @@
             <param name="dt"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.DataTableToEntityList``1(System.Data.DataTable)">
+        <member name="M:Dos.ORM.DataUtils.DataTableToEntityList``1(System.Data.DataTable)">
             <summary>
             DataTable转化为 List
             </summary>
@@ -301,20 +306,20 @@
             <param name="dt"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.MakeUniqueKey(Dos.ORM.Field)">
+        <member name="M:Dos.ORM.DataUtils.MakeUniqueKey(Dos.ORM.Field)">
             <summary>
             生成唯一字符串
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.GetPrimaryKeyWhere(Dos.ORM.Entity)">
+        <member name="M:Dos.ORM.DataUtils.GetPrimaryKeyWhere(Dos.ORM.Entity)">
             <summary>
             生成主键条件
             </summary>
             <param name="entity"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.GetPrimaryKeyWhere``1(System.Object[])">
+        <member name="M:Dos.ORM.DataUtils.GetPrimaryKeyWhere``1(System.Object[])">
             <summary>
             生成主键条件
             </summary>
@@ -322,7 +327,7 @@
             <param name="pkValues"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.FieldValueToDictionary(Dos.ORM.Field[],System.Object[])">
+        <member name="M:Dos.ORM.DataUtils.FieldValueToDictionary(Dos.ORM.Field[],System.Object[])">
             <summary>
             数组转成字典
             </summary>
@@ -330,7 +335,7 @@
             <param name="values"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.DataUtils.ToString(Dos.ORM.QueryOperator)">
+        <member name="M:Dos.ORM.DataUtils.ToString(Dos.ORM.QueryOperator)">
             <summary>
             
             </summary>
@@ -469,7 +474,7 @@
             
             </summary>
         </member>
-        <member name="T:Dos.Check">
+        <member name="T:Dos.ORM.Check">
             <summary>
             Design By Contract Checks.
             
@@ -495,92 +500,92 @@
             </remarks>
             
         </member>
-        <member name="M:Dos.Check.Require(System.Boolean,System.String)">
+        <member name="M:Dos.ORM.Check.Require(System.Boolean,System.String)">
             <summary>
             Precondition check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Require(System.Boolean,System.String,System.Exception)">
+        <member name="M:Dos.ORM.Check.Require(System.Boolean,System.String,System.Exception)">
             <summary>
             Precondition check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Require(System.Boolean)">
+        <member name="M:Dos.ORM.Check.Require(System.Boolean)">
             <summary>
             Precondition check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Require(System.Object,System.String,Dos.Check.ICheckStrategy[])">
+        <member name="M:Dos.ORM.Check.Require(System.Object,System.String,Dos.ORM.Check.ICheckStrategy[])">
             <summary>
             Precondition check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Ensure(System.Boolean,System.String)">
+        <member name="M:Dos.ORM.Check.Ensure(System.Boolean,System.String)">
             <summary>
             Postcondition check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Ensure(System.Boolean,System.String,System.Exception)">
+        <member name="M:Dos.ORM.Check.Ensure(System.Boolean,System.String,System.Exception)">
             <summary>
             Postcondition check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Ensure(System.Boolean)">
+        <member name="M:Dos.ORM.Check.Ensure(System.Boolean)">
             <summary>
             Postcondition check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Ensure(System.Object,System.String,Dos.Check.ICheckStrategy[])">
+        <member name="M:Dos.ORM.Check.Ensure(System.Object,System.String,Dos.ORM.Check.ICheckStrategy[])">
             <summary>
             Postcondition check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Invariant(System.Boolean,System.String)">
+        <member name="M:Dos.ORM.Check.Invariant(System.Boolean,System.String)">
             <summary>
             Invariant check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Invariant(System.Boolean,System.String,System.Exception)">
+        <member name="M:Dos.ORM.Check.Invariant(System.Boolean,System.String,System.Exception)">
             <summary>
             Invariant check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Invariant(System.Boolean)">
+        <member name="M:Dos.ORM.Check.Invariant(System.Boolean)">
             <summary>
             Invariant check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Invariant(System.Object,System.String,Dos.Check.ICheckStrategy[])">
+        <member name="M:Dos.ORM.Check.Invariant(System.Object,System.String,Dos.ORM.Check.ICheckStrategy[])">
             <summary>
             Invariant check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Assert(System.Boolean,System.String)">
+        <member name="M:Dos.ORM.Check.Assert(System.Boolean,System.String)">
             <summary>
             Assertion check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Assert(System.Boolean,System.String,System.Exception)">
+        <member name="M:Dos.ORM.Check.Assert(System.Boolean,System.String,System.Exception)">
             <summary>
             Assertion check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Assert(System.Boolean)">
+        <member name="M:Dos.ORM.Check.Assert(System.Boolean)">
             <summary>
             Assertion check.
             </summary>
         </member>
-        <member name="M:Dos.Check.Assert(System.Object,System.String,Dos.Check.ICheckStrategy[])">
+        <member name="M:Dos.ORM.Check.Assert(System.Object,System.String,Dos.ORM.Check.ICheckStrategy[])">
             <summary>
             Assertion check.
             </summary>
         </member>
-        <member name="P:Dos.Check.UseExceptions">
+        <member name="P:Dos.ORM.Check.UseExceptions">
             <summary>
             Is exception handling being used?
             </summary>
         </member>
-        <member name="T:Dos.DesignByContractException">
+        <member name="T:Dos.ORM.DesignByContractException">
             <summary>
             Exception raised when a contract is broken.
             Catch this exception type if you wish to differentiate between 
@@ -588,100 +593,100 @@
              
             </summary>
         </member>
-        <member name="M:Dos.DesignByContractException.#ctor">
+        <member name="M:Dos.ORM.DesignByContractException.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Dos.DesignByContractException"/> class.
+            Initializes a new instance of the <see cref="T:Dos.ORM.DesignByContractException"/> class.
             </summary>
         </member>
-        <member name="M:Dos.DesignByContractException.#ctor(System.String)">
+        <member name="M:Dos.ORM.DesignByContractException.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:Dos.DesignByContractException"/> class.
+            Initializes a new instance of the <see cref="T:Dos.ORM.DesignByContractException"/> class.
             </summary>
             <param name="message">The message.</param>
         </member>
-        <member name="M:Dos.DesignByContractException.#ctor(System.String,System.Exception)">
+        <member name="M:Dos.ORM.DesignByContractException.#ctor(System.String,System.Exception)">
             <summary>
-            Initializes a new instance of the <see cref="T:Dos.DesignByContractException"/> class.
+            Initializes a new instance of the <see cref="T:Dos.ORM.DesignByContractException"/> class.
             </summary>
             <param name="message">The message.</param>
             <param name="inner">The inner.</param>
         </member>
-        <member name="T:Dos.PreconditionException">
+        <member name="T:Dos.ORM.PreconditionException">
             <summary>
             Exception raised when a precondition fails.
             </summary>
         </member>
-        <member name="M:Dos.PreconditionException.#ctor">
+        <member name="M:Dos.ORM.PreconditionException.#ctor">
             <summary>
             Precondition Exception.
             </summary>
         </member>
-        <member name="M:Dos.PreconditionException.#ctor(System.String)">
+        <member name="M:Dos.ORM.PreconditionException.#ctor(System.String)">
             <summary>
             Precondition Exception.
             </summary>
         </member>
-        <member name="M:Dos.PreconditionException.#ctor(System.String,System.Exception)">
+        <member name="M:Dos.ORM.PreconditionException.#ctor(System.String,System.Exception)">
             <summary>
             Precondition Exception.
             </summary>
         </member>
-        <member name="T:Dos.PostconditionException">
+        <member name="T:Dos.ORM.PostconditionException">
             <summary>
             Exception raised when a postcondition fails.
             </summary>
         </member>
-        <member name="M:Dos.PostconditionException.#ctor">
+        <member name="M:Dos.ORM.PostconditionException.#ctor">
             <summary>
             Postcondition Exception.
             </summary>
         </member>
-        <member name="M:Dos.PostconditionException.#ctor(System.String)">
+        <member name="M:Dos.ORM.PostconditionException.#ctor(System.String)">
             <summary>
             Postcondition Exception.
             </summary>
         </member>
-        <member name="M:Dos.PostconditionException.#ctor(System.String,System.Exception)">
+        <member name="M:Dos.ORM.PostconditionException.#ctor(System.String,System.Exception)">
             <summary>
             Postcondition Exception.
             </summary>
         </member>
-        <member name="T:Dos.InvariantException">
+        <member name="T:Dos.ORM.InvariantException">
             <summary>
             Exception raised when an invariant fails.
             </summary>
         </member>
-        <member name="M:Dos.InvariantException.#ctor">
+        <member name="M:Dos.ORM.InvariantException.#ctor">
             <summary>
             Invariant Exception.
             </summary>
         </member>
-        <member name="M:Dos.InvariantException.#ctor(System.String)">
+        <member name="M:Dos.ORM.InvariantException.#ctor(System.String)">
             <summary>
             Invariant Exception.
             </summary>
         </member>
-        <member name="M:Dos.InvariantException.#ctor(System.String,System.Exception)">
+        <member name="M:Dos.ORM.InvariantException.#ctor(System.String,System.Exception)">
             <summary>
             Invariant Exception.
             </summary>
         </member>
-        <member name="T:Dos.AssertionException">
+        <member name="T:Dos.ORM.AssertionException">
             <summary>
             Exception raised when an assertion fails.
             </summary>
         </member>
-        <member name="M:Dos.AssertionException.#ctor">
+        <member name="M:Dos.ORM.AssertionException.#ctor">
             <summary>
             Assertion Exception.
             </summary>
         </member>
-        <member name="M:Dos.AssertionException.#ctor(System.String)">
+        <member name="M:Dos.ORM.AssertionException.#ctor(System.String)">
             <summary>
             Assertion Exception.
             </summary>
         </member>
-        <member name="M:Dos.AssertionException.#ctor(System.String,System.Exception)">
+        <member name="M:Dos.ORM.AssertionException.#ctor(System.String,System.Exception)">
             <summary>
             Assertion Exception.
             </summary>
@@ -749,92 +754,92 @@
             <param name="ilGeneartor">The MSIL generator.</param>
             <param name="value">The value to push.</param>
         </member>
-        <member name="T:Dos.ORM.Common.EntityCache">
+        <member name="T:Dos.ORM.EntityCache">
             <summary>
             实体信息缓存
             </summary>
         </member>
-        <member name="F:Dos.ORM.Common.EntityCache.entityList">
+        <member name="F:Dos.ORM.EntityCache.entityList">
             <summary>
             保存实体列表
             </summary>
         </member>
-        <member name="F:Dos.ORM.Common.EntityCache.lockObj">
+        <member name="F:Dos.ORM.EntityCache.lockObj">
             <summary>
             lock object
             </summary>
         </member>
-        <member name="M:Dos.ORM.Common.EntityCache.Reset">
+        <member name="M:Dos.ORM.EntityCache.Reset">
             <summary>
             清空所有缓存
             </summary>
         </member>
-        <member name="M:Dos.ORM.Common.EntityCache.Reset``1">
+        <member name="M:Dos.ORM.EntityCache.Reset``1">
             <summary>
             清理具体实体的缓存
             </summary>
         </member>
-        <member name="M:Dos.ORM.Common.EntityCache.GetTableName``1">
+        <member name="M:Dos.ORM.EntityCache.GetTableName``1">
             <summary>
             返回表名
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.EntityCache.getTEntity``1">
+        <member name="M:Dos.ORM.EntityCache.getTEntity``1">
             <summary>
             返回T
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.EntityCache.GetPrimaryKeyFields``1">
+        <member name="M:Dos.ORM.EntityCache.GetPrimaryKeyFields``1">
             <summary>
             获取主键字段
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.EntityCache.GetFields``1">
+        <member name="M:Dos.ORM.EntityCache.GetFields``1">
             <summary>
             返回所有字段
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.EntityCache.GetFirstField``1">
+        <member name="M:Dos.ORM.EntityCache.GetFirstField``1">
             <summary>
             返回第一个字段
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.EntityCache.GetIdentityField``1">
+        <member name="M:Dos.ORM.EntityCache.GetIdentityField``1">
             <summary>
             返回标识字段
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.EntityCache.IsReadOnly``1">
+        <member name="M:Dos.ORM.EntityCache.IsReadOnly``1">
             <summary>
             是否只读
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.EntityCache.GetSequence``1">
+        <member name="M:Dos.ORM.EntityCache.GetSequence``1">
             <summary>
             标识列的名称（Oracle）
             </summary>
             <returns></returns>
         </member>
-        <member name="T:Dos.ORM.Common.EntityUtils">
+        <member name="T:Dos.ORM.EntityUtils">
             <summary>
             实体帮助类
             </summary>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.UpdateModel``1(``0)">
+        <member name="M:Dos.ORM.EntityUtils.UpdateModel``1(``0)">
             <summary>
             为Entity赋值
             </summary>
             <typeparam name="T">Model</typeparam>
             <param name="t">model</param>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.UpdateModel``1(``0,System.String)">
+        <member name="M:Dos.ORM.EntityUtils.UpdateModel``1(``0,System.String)">
             <summary>
             为Entity赋值
             </summary>
@@ -842,7 +847,7 @@
             <param name="t">model</param>
             <param name="prefix">前缀</param>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.UpdateModel``1(``0,System.Collections.Specialized.NameValueCollection)">
+        <member name="M:Dos.ORM.EntityUtils.UpdateModel``1(``0,System.Collections.Specialized.NameValueCollection)">
             <summary>
             为Entity赋值
             </summary>
@@ -850,7 +855,7 @@
             <param name="t">model</param>
             <param name="form">Request</param>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.UpdateModel``1(``0,System.Collections.Specialized.NameValueCollection,System.String)">
+        <member name="M:Dos.ORM.EntityUtils.UpdateModel``1(``0,System.Collections.Specialized.NameValueCollection,System.String)">
             <summary>
             为Entity赋值
             </summary>
@@ -859,7 +864,7 @@
             <param name="form">Request</param>
             <param name="prefix">前缀</param>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.TryUpdateModel``1(``0)">
+        <member name="M:Dos.ORM.EntityUtils.TryUpdateModel``1(``0)">
             <summary>
             为Entity赋值
             </summary>
@@ -867,7 +872,7 @@
             <param name="t">Entity</param>      
             <returns>转换是否成功</returns>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.TryUpdateModel``1(``0,System.String)">
+        <member name="M:Dos.ORM.EntityUtils.TryUpdateModel``1(``0,System.String)">
             <summary>
             为Entity赋值
             </summary>
@@ -876,7 +881,7 @@
             <param name="prefix">前缀</param>
             <returns>转换是否成功</returns>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.TryUpdateModel``1(``0,System.Collections.Specialized.NameValueCollection)">
+        <member name="M:Dos.ORM.EntityUtils.TryUpdateModel``1(``0,System.Collections.Specialized.NameValueCollection)">
             <summary>
             为Entity赋值
             </summary>
@@ -885,7 +890,7 @@
             <param name="form">Request</param>
             <returns>转换是否成功</returns>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.TryUpdateModel``1(``0,System.Collections.Specialized.NameValueCollection,System.String)">
+        <member name="M:Dos.ORM.EntityUtils.TryUpdateModel``1(``0,System.Collections.Specialized.NameValueCollection,System.String)">
             <summary>
             为Entity赋值
             </summary>
@@ -895,27 +900,27 @@
             <param name="prefix">前缀</param>
             <returns>转换是否成功</returns>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.SetDocumentValue``1(``0)">
+        <member name="M:Dos.ORM.EntityUtils.SetDocumentValue``1(``0)">
             <summary>
             设置Web页面的值
             </summary>
             <typeparam name="TEntity"></typeparam>
             <param name="entity"></param>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.SetDocumentValue(System.Collections.Generic.Dictionary{Dos.ORM.Field,System.Object})">
+        <member name="M:Dos.ORM.EntityUtils.SetDocumentValue(System.Collections.Generic.Dictionary{Dos.ORM.Field,System.Object})">
             <summary>
             设置Web页面的值
             </summary>
             <param name="fieldvalues"></param>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.SetDocumentValue(System.Collections.Generic.Dictionary{Dos.ORM.Field,System.Object},System.String)">
+        <member name="M:Dos.ORM.EntityUtils.SetDocumentValue(System.Collections.Generic.Dictionary{Dos.ORM.Field,System.Object},System.String)">
             <summary>
             设置Web页面的值
             </summary>
             <param name="fieldvalues"></param>
             <param name="prefix"></param>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.SetDocumentValueString(System.Collections.Generic.Dictionary{Dos.ORM.Field,System.Object},System.String)">
+        <member name="M:Dos.ORM.EntityUtils.SetDocumentValueString(System.Collections.Generic.Dictionary{Dos.ORM.Field,System.Object},System.String)">
             <summary>
             返回赋值的脚本
             </summary>
@@ -923,7 +928,7 @@
             <param name="prefix"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.SetDocumentValueString``1(``0,System.String)">
+        <member name="M:Dos.ORM.EntityUtils.SetDocumentValueString``1(``0,System.String)">
             <summary>
             返回赋值的脚本
             </summary>
@@ -931,7 +936,7 @@
             <param name="prefix"></param>
             <param name="entity"></param>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.SetDocumentValueString(Dos.ORM.Field[],System.Object[],System.String)">
+        <member name="M:Dos.ORM.EntityUtils.SetDocumentValueString(Dos.ORM.Field[],System.Object[],System.String)">
             <summary>
             返回赋值的脚本
             </summary>
@@ -940,7 +945,7 @@
             <param name="prefix"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.SetDocumentValue``1(``0,System.String)">
+        <member name="M:Dos.ORM.EntityUtils.SetDocumentValue``1(``0,System.String)">
             <summary>
             设置Web页面的值
             </summary>
@@ -948,14 +953,14 @@
             <param name="prefix"></param>
             <param name="entity"></param>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.SetDocumentValue(Dos.ORM.Field[],System.Object[])">
+        <member name="M:Dos.ORM.EntityUtils.SetDocumentValue(Dos.ORM.Field[],System.Object[])">
             <summary>
             设置Web页面值
             </summary>
             <param name="fields"></param>
             <param name="values"></param>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.SetDocumentValue(Dos.ORM.Field[],System.Object[],System.String)">
+        <member name="M:Dos.ORM.EntityUtils.SetDocumentValue(Dos.ORM.Field[],System.Object[],System.String)">
             <summary>
             设置Web页面值
             </summary>
@@ -963,21 +968,21 @@
             <param name="values"></param>
             <param name="prefix"></param>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.SetDocumentValueClear``1(System.String)">
+        <member name="M:Dos.ORM.EntityUtils.SetDocumentValueClear``1(System.String)">
             <summary>
             清空Web页面的值
             </summary>
             <typeparam name="TEntity"></typeparam>
             <param name="prefix"></param>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.SetDocumentValueClearString``1(System.String)">
+        <member name="M:Dos.ORM.EntityUtils.SetDocumentValueClearString``1(System.String)">
             <summary>
             返回清空Web页面的值的脚本
             </summary>
             <typeparam name="TEntity"></typeparam>
             <param name="prefix"></param>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.GetField``1(System.String)">
+        <member name="M:Dos.ORM.EntityUtils.GetField``1(System.String)">
             <summary>
             根据字段名返回实体字段
             </summary>
@@ -985,7 +990,7 @@
             <param name="fieldName"></param>
             <returns>返回null 就表示字段不存在</returns>
         </member>
-        <member name="M:Dos.ORM.Common.EntityUtils.SetValue``1(``0,``0)">
+        <member name="M:Dos.ORM.EntityUtils.SetValue``1(``0,``0)">
             <summary>
             实体赋值
             </summary>
@@ -994,57 +999,57 @@
             <param name="fromEntity">来源实体</param>
             <returns>返回null 就表示fromEntity==null</returns>
         </member>
-        <member name="T:Dos.ORM.Common.JoinType">
+        <member name="T:Dos.ORM.JoinType">
             <summary>
             连接类型
             </summary>
         </member>
-        <member name="F:Dos.ORM.Common.JoinType.InnerJoin">
+        <member name="F:Dos.ORM.JoinType.InnerJoin">
             <summary>
             InnerJoin
             </summary>
         </member>
-        <member name="F:Dos.ORM.Common.JoinType.LeftJoin">
+        <member name="F:Dos.ORM.JoinType.LeftJoin">
             <summary>
             LeftJoin
             </summary>
         </member>
-        <member name="F:Dos.ORM.Common.JoinType.RightJoin">
+        <member name="F:Dos.ORM.JoinType.RightJoin">
             <summary>
             RightJoin
             </summary>
         </member>
-        <member name="F:Dos.ORM.Common.JoinType.CrossJoin">
+        <member name="F:Dos.ORM.JoinType.CrossJoin">
             <summary>
             CrossJoin
             </summary>
         </member>
-        <member name="F:Dos.ORM.Common.JoinType.FullJoin">
+        <member name="F:Dos.ORM.JoinType.FullJoin">
             <summary>
             FullJoin
             </summary>
         </member>
-        <member name="T:Dos.ORM.Common.EntityState">
+        <member name="T:Dos.ORM.EntityState">
             <summary>
             标记实体状态
             </summary>
         </member>
-        <member name="F:Dos.ORM.Common.EntityState.Unchanged">
+        <member name="F:Dos.ORM.EntityState.Unchanged">
             <summary>
             标记为不做任何数据库操作。
             </summary>
         </member>
-        <member name="F:Dos.ORM.Common.EntityState.Added">
+        <member name="F:Dos.ORM.EntityState.Added">
             <summary>
             标记为插入状态。.Save()触发。
             </summary>
         </member>
-        <member name="F:Dos.ORM.Common.EntityState.Deleted">
+        <member name="F:Dos.ORM.EntityState.Deleted">
             <summary>
             标记为删除状态。.Save()触发。
             </summary>
         </member>
-        <member name="F:Dos.ORM.Common.EntityState.Modified">
+        <member name="F:Dos.ORM.EntityState.Modified">
             <summary>
             标记为修改状态。.Save()触发。
             </summary>
@@ -2465,12 +2470,13 @@
             <summary>
              删除
             </summary>
-            <typeparam name="TEntity"></typeparam>
-            <param name="where"></param>
-            <param name="tran"></param>
-            <returns></returns>
         </member>
         <member name="M:Dos.ORM.DbSession.Delete``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+             删除
+            </summary>
+        </member>
+        <member name="M:Dos.ORM.DbSession.Delete``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Data.Common.DbTransaction)">
             <summary>
              删除
             </summary>
@@ -2570,10 +2576,20 @@
         </member>
         <member name="M:Dos.ORM.DbSession.Save``1(System.Collections.Generic.IEnumerable{``0})">
             <summary>
-            Save。将实体批量提交至数据库，每个实体需要手动标记EntityState状态。
+            将实体批量提交至数据库，内置事务。每个实体需要手动标记EntityState状态。
             </summary>
         </member>
         <member name="M:Dos.ORM.DbSession.Save``1(``0)">
+             <summary>
+            保存实体。需要手动标记EntityState状态。
+             </summary>
+        </member>
+        <member name="M:Dos.ORM.DbSession.Save``1(System.Collections.Generic.IEnumerable{``0},System.Data.Common.DbTransaction)">
+            <summary>
+            将实体批量提交至数据库。每个实体需要手动标记EntityState状态。
+            </summary>
+        </member>
+        <member name="M:Dos.ORM.DbSession.Save``1(``0,System.Data.Common.DbTransaction)">
              <summary>
             保存实体。需要手动标记EntityState状态。
              </summary>
@@ -2979,7 +2995,7 @@
             将实体置为修改状态
             </summary>
         </member>
-        <member name="M:Dos.ORM.Entity.Attach(Dos.ORM.Common.EntityState)">
+        <member name="M:Dos.ORM.Entity.Attach(Dos.ORM.EntityState)">
             <summary>
             将实体置为指定状态
             </summary>
@@ -2991,7 +3007,7 @@
         </member>
         <member name="M:Dos.ORM.Entity.DeAttach">
             <summary>
-            将实体置为插入状态
+            恢复实体为默认状态，且标记实体为不做任何数据库操作（仅对.Save()有效果）！
             </summary>
         </member>
         <member name="M:Dos.ORM.Entity.OnPropertyValueChange(Dos.ORM.Field,System.Object,System.Object)">
@@ -4115,57 +4131,57 @@
             </summary>
             <param name="fileName">字段名</param>
         </member>
-        <member name="T:Dos.ORM.FieldExtend">
+        <member name="T:FieldExtend">
             <summary>
             
             </summary>
         </member>
-        <member name="F:Dos.ORM.FieldExtend.Tips">
+        <member name="F:FieldExtend.Tips">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Dos.ORM.FieldExtend.Like(System.Object,System.Object)">
+        <member name="M:FieldExtend.Like(System.Object,System.Object)">
             <summary>
             like '%value%' 模糊查询，同Contains。
             </summary>
         </member>
-        <member name="M:Dos.ORM.FieldExtend.In``1(System.Object,``0[])">
+        <member name="M:FieldExtend.In``1(System.Object,``0[])">
             <summary>
             where field in (value,value,value)。传入Array或List&lt;T>。
             </summary>
         </member>
-        <member name="M:Dos.ORM.FieldExtend.In``1(System.Object,System.Collections.Generic.List{``0})">
+        <member name="M:FieldExtend.In``1(System.Object,System.Collections.Generic.List{``0})">
             <summary>
             where field in (value,value,value)。传入Array或List&lt;T>。
             </summary>
         </member>
-        <member name="M:Dos.ORM.FieldExtend.NotIn``1(System.Object,``0[])">
+        <member name="M:FieldExtend.NotIn``1(System.Object,``0[])">
             <summary>
             where field not in (value,value,value)。传入Array或List&lt;T>。
             </summary>
         </member>
-        <member name="M:Dos.ORM.FieldExtend.NotIn``1(System.Object,System.Collections.Generic.List{``0})">
+        <member name="M:FieldExtend.NotIn``1(System.Object,System.Collections.Generic.List{``0})">
             <summary>
             where field not in (value,value,value)。传入Array或List&lt;T>。
             </summary>
         </member>
-        <member name="M:Dos.ORM.FieldExtend.IsNull(System.Object)">
+        <member name="M:FieldExtend.IsNull(System.Object)">
             <summary>
             IS NULL
             </summary>
         </member>
-        <member name="M:Dos.ORM.FieldExtend.IsNotNull(System.Object)">
+        <member name="M:FieldExtend.IsNotNull(System.Object)">
             <summary>
             IS NOT NULL
             </summary>
         </member>
-        <member name="M:Dos.ORM.FieldExtend.As(System.Object,System.String)">
+        <member name="M:FieldExtend.As(System.Object,System.String)">
             <summary>
             As
             </summary>
         </member>
-        <member name="M:Dos.ORM.FieldExtend.Sum(System.Object)">
+        <member name="M:FieldExtend.Sum(System.Object)">
             <summary>
             Sum
             </summary>
@@ -4453,7 +4469,7 @@
             <typeparam name="TResult"></typeparam>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.FromSection.join(System.String,Dos.ORM.WhereClip,Dos.ORM.Common.JoinType)">
+        <member name="M:Dos.ORM.FromSection.join(System.String,Dos.ORM.WhereClip,Dos.ORM.JoinType)">
             <summary>
             连接
             </summary>
@@ -4664,7 +4680,7 @@
             <param name="where"></param>
             <returns></returns>
         </member>
-        <member name="M:Dos.ORM.FromSection`1.join(System.String,Dos.ORM.WhereClip,Dos.ORM.Common.JoinType)">
+        <member name="M:Dos.ORM.FromSection`1.join(System.String,Dos.ORM.WhereClip,Dos.ORM.JoinType)">
             <summary>
             连接
             </summary>

@@ -43,6 +43,8 @@ D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\WeifenLuo.WinFormsUI.Docking.d
 D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Dos.Common.xml
 D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Dos.ORM.xml
 D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Dos.ORM.MySql.xml
+D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Dos.ORM.Sqlite.xml
+D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.csprojResolveAssemblyReference.cache
 D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Hxj.Tools.EntityDesign.About.resources
 D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Hxj.Tools.EntityDesign.BatchForm.resources
 D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Hxj.Tools.EntityDesign.ContentForm.resources
@@ -59,4 +61,3 @@ D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.Propert
 D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.csproj.GenerateResource.Cache
 D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.exe
 D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.pdb
-D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Dos.ORM.Sqlite.xml

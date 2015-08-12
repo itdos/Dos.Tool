@@ -6,6 +6,7 @@ using System.Data.Common;
 using Hxj.Tools.EntityDesign.Model;
 using System.Xml;
 using System.Windows.Forms;
+using Dos.ORM;
 using Dos.ORM.Common;
 
 namespace Hxj.Tools.EntityDesign
