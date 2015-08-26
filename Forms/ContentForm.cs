@@ -194,7 +194,7 @@ namespace Hxj.Tools.EntityDesign
                 }
             }
 
-            EntityBuilder builder = new EntityBuilder(TableName, txtnamespace.Text, txtClassName.Text, columns, IsView, cbToupperFrstword.Checked);
+            EntityBuilder builder = new EntityBuilder(TableName, txtnamespace.Text, txtClassName.Text, columns, IsView, cbToupperFrstword.Checked, ConnectionModel.DbType);
 
             txtContent.Text = builder.Builder();
 

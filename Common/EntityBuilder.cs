@@ -16,6 +16,7 @@ namespace Hxj.Tools.EntityDesign
         private List<Model.ColumnInfo> _columns = new List<Hxj.Tools.EntityDesign.Model.ColumnInfo>();
 
         private string _tableName;
+        private string _dbType;
 
         private string _nameSpace = "Dos.Model";
 
@@ -31,12 +32,13 @@ namespace Hxj.Tools.EntityDesign
 
         }
 
-        public EntityBuilder(string tableName, string nameSpace, string className, List<Model.ColumnInfo> columns, bool isView, bool isSZMDX)
+        public EntityBuilder(string tableName, string nameSpace, string className, List<Model.ColumnInfo> columns, bool isView, bool isSZMDX,string dbType = null)
         {
             _isSZMDX = isSZMDX;
             _className = Utils.ReplaceSpace(className);
             _nameSpace = Utils.ReplaceSpace(nameSpace);
             _tableName = tableName;
+            _dbType = dbType;
             if (_isSZMDX)
             {
                 _className = Utils.ToUpperFirstword(_className);
@@ -79,7 +81,11 @@ namespace Hxj.Tools.EntityDesign
             get { return _className; }
             set { _className = value; }
         }
-
+        public string DbType
+        {
+            get { return _dbType; }
+            set { _dbType = value; }
+        }
         public bool IsView
         {
             get { return _isView; }
@@ -88,7 +94,7 @@ namespace Hxj.Tools.EntityDesign
 
         public string Builder()
         {
-            Columns = DbToCS.DbtoCSColumns(Columns);
+            Columns = DbToCS.DbtoCSColumns(Columns,DbType);
 
             StringPlus plus = new StringPlus();
             plus.AppendLine("//------------------------------------------------------------------------------");
@@ -424,8 +430,9 @@ namespace Hxj.Tools.EntityDesign
         /// 修改TypeName
         /// </summary>
         /// <param name="columns"></param>
+        /// <param name="dbType"></param>
         /// <returns></returns>
-        public static List<Model.ColumnInfo> DbtoCSColumns(List<Model.ColumnInfo> columns)
+        public static List<Model.ColumnInfo> DbtoCSColumns(List<Model.ColumnInfo> columns, string dbType)
         {
             Dictionary<string, string> types = loadType();
 
@@ -433,7 +440,7 @@ namespace Hxj.Tools.EntityDesign
             {
                 try
                 {
-                    if (column.TypeName.Trim().ToLower() == "char" && column.Length == "36")
+                    if (column.TypeName.Trim().ToLower() == "char" && column.Length == "36" && dbType == "MySql")
                     {
                         column.TypeName = types["uniqueidentifier"];
                     }
