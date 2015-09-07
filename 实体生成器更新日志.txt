@@ -2,8 +2,9 @@
 	*）右键刷新单个数据库异常，需要整个连接刷新。
 	*）增加自动更新实体生成器功能
 	
-2015-08-26 Dos.Tools.EntityDesign(v1.8.7.3)
-	*）char36仅在MySql下才生成Guid类型。（感谢群友【更新中】发现此Bug）
+2015-09-07 Dos.Tools.EntityDesign(v1.8.7.4)
+	*）tinyint(1)修改为仅在MySql下才生成Bool类型。（感谢群友【更新中】发现此Bug）
+	*）char(36)修改为仅在MySql下才生成Guid类型。（感谢群友【更新中】发现此Bug）
 	*）解决x64不能连接SQlite数据库的bug
 	*）取消实体类的SetPropertyValues映射，考虑到单表查询也会用到别名然后扩展类属性，此时SetPropertyValues无法映射别名数据，因此取消，ORM底层映射全部采用Emit。同时实体生成器v1.8.7.0生成的实体类将不再生成SetPropertyValues方法，此实体类仅适用于Dos.ORM v1.9.9.2 以及上版本。
 	*）生成的实体现在会加上数据库默认值。如：private bool IsCan = true;
