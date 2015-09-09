@@ -176,15 +176,15 @@ namespace Hxj.Tools.EntityDesign
                     }
                     else if (column.TypeName.ToLower().Contains("int"))
                     {
-                        val = column.DefaultVal;
+                        val = column.DefaultVal.Replace("\"","").Replace("'", "").Replace("(", "").Replace(")", "").Replace(" ", "");
                     }
                     else if (column.TypeName.ToLower().Contains("decimal"))
                     {
-                        val = column.DefaultVal + "M";
+                        val = column.DefaultVal.Replace("\"", "").Replace("'", "").Replace("(", "").Replace(")", "").Replace(" ", "") + "M";
                     }
                     else if (column.TypeName.ToLower().Contains("float"))
                     {
-                        val = column.DefaultVal + "F";
+                        val = column.DefaultVal.Replace("\"", "").Replace("'", "").Replace("(", "").Replace(")", "").Replace(" ", "") + "F";
                     }
                     if (string.IsNullOrWhiteSpace(val))
                     {

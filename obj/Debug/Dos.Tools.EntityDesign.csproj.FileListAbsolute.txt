@@ -61,3 +61,4 @@ D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.csproj.
 D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.exe
 D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.pdb
 D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\System.Data.SQLite.xml
+D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.csprojResolveAssemblyReference.cache
