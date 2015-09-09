@@ -142,8 +142,15 @@ namespace Hxj.Tools.EntityDesign
             plus.AppendSpaceLine(2, "#region Model");
             foreach (ColumnInfo column in Columns)
             {
-                if (!string.IsNullOrWhiteSpace(column.DefaultVal))
+                //2015-09-09去除生成默认值功能
+                if (false)//!string.IsNullOrWhiteSpace(column.DefaultVal.Replace("\"", "").Replace("'", "").Replace("(", "").Replace(")", "").Replace(" ", ""))
                 {
+                    var defaultVal =
+                        column.DefaultVal.Replace("\"", "")
+                            .Replace("'", "")
+                            .Replace("(", "")
+                            .Replace(")", "")
+                            .Replace(" ", "");
                     var val = "";
                     if (column.TypeName.ToLower().Contains("bool"))
                     {
