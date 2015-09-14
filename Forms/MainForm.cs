@@ -4,7 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
+using Dos.Common;
+using Dos.Tools.EntityDesign.Forms;
 
 namespace Hxj.Tools.EntityDesign
 {
@@ -13,7 +16,6 @@ namespace Hxj.Tools.EntityDesign
         public MainForm()
         {
             InitializeComponent();
-
         }
 
         #region 打开数据库视图

@@ -1,0 +1,48 @@
+DateTime:2015/9/14 15:39:54
+Message:Connection must be valid and open.
+Source:MySql.Data
+StackTrace:   在 MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   在 MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   在 MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   在 MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Hxj.DbObjects.MySQL.DbObject.ExecuteReader(String DbName, String strSQL) 位置 d:\工作\GitHub\Dos.Tools.EntityDesign\DbDAL\MySql\DbObject.cs:行号 182
+   在 Hxj.DbObjects.MySQL.DbObject.GetDBList() 位置 d:\工作\GitHub\Dos.Tools.EntityDesign\DbDAL\MySql\DbObject.cs:行号 323
+   在 Hxj.Tools.EntityDesign.LeftPanel.getDatabaseinfo() 位置 d:\工作\GitHub\Dos.Tools.EntityDesign\Forms\LeftPanel.cs:行号 303
+   在 Hxj.Tools.EntityDesign.LeftPanel.连接ToolStripMenuItem_Click(Object sender, EventArgs e) 位置 d:\工作\GitHub\Dos.Tools.EntityDesign\Forms\LeftPanel.cs:行号 202
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+--------------------------------------------------------------
+DateTime:2015/9/14 15:40:00
+Message:Connection must be valid and open.
+Source:MySql.Data
+StackTrace:   在 MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   在 MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   在 MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   在 MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 Hxj.DbObjects.MySQL.DbObject.ExecuteReader(String DbName, String strSQL) 位置 d:\工作\GitHub\Dos.Tools.EntityDesign\DbDAL\MySql\DbObject.cs:行号 182
+   在 Hxj.DbObjects.MySQL.DbObject.GetDBList() 位置 d:\工作\GitHub\Dos.Tools.EntityDesign\DbDAL\MySql\DbObject.cs:行号 323
+   在 Hxj.Tools.EntityDesign.LeftPanel.getDatabaseinfo() 位置 d:\工作\GitHub\Dos.Tools.EntityDesign\Forms\LeftPanel.cs:行号 303
+   在 Hxj.Tools.EntityDesign.LeftPanel.连接ToolStripMenuItem_Click(Object sender, EventArgs e) 位置 d:\工作\GitHub\Dos.Tools.EntityDesign\Forms\LeftPanel.cs:行号 202
+   在 System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   在 System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   在 System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   在 System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
+   在 System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   在 System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+--------------------------------------------------------------

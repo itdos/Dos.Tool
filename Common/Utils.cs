@@ -350,7 +350,8 @@ namespace Hxj.Tools.EntityDesign
             char firstChar = value[0];
             if (firstChar >= 48 && firstChar <= 57)
             {
-                value = "F" + value;
+                //value = "F" + value;
+                value = "_" + value;
             }
             return regSpace.Replace(value.Trim(), " ");
         }

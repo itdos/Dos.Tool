@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.IO;
 using System.Text;
+using System.Threading;
+using Dos.Common;
+using Dos.Tools.EntityDesign.Forms;
 
 namespace Hxj.Tools.EntityDesign
 {
@@ -14,9 +17,25 @@ namespace Hxj.Tools.EntityDesign
         [STAThread]
         static void Main()
         {
+            
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            #region 检查最新版
+            try
+            {
+                var serverVersion = HttpHelper.Get("http://123.57.75.168:8001/DosToolsEntityDesign.txt", "", 2);
+                string thisVersion = Application.ProductVersion;
+                if (Convert.ToInt32(serverVersion.Replace("v", "").Replace(".", "")) > Convert.ToInt32(thisVersion.Replace(".", "")))
+                {
+                    var cv = new CheckVersion();
+                    cv.ShowDialog();
+                }
+            }
+            catch (Exception)
+            {
+            }
+            #endregion
             Application.Run(new MainForm());
         }
 
