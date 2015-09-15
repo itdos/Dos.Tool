@@ -9,12 +9,13 @@
   <type dbtype="text" cstype="string" />
   <type dbtype="ntext" cstype="string" />
   <type dbtype="longtext" cstype="string" />
+  <type dbtype="mediumtext" cstype="string" />
   <type dbtype="string" cstype="string" />
   <type dbtype="clob" cstype="string" />
   <type dbtype="nclob" cstype="string" />
   <type dbtype="date" cstype="DateTime" />
   <type dbtype="datetime" cstype="DateTime" />
-<type dbtype="datetime2" cstype="DateTime" />
+  <type dbtype="datetime2" cstype="DateTime" />
   <type dbtype="smalldatetime" cstype="DateTime" />
   <type dbtype="timestamp" cstype="DateTime" />
   <type dbtype="int" cstype="int" />

@@ -14,7 +14,7 @@ namespace Hxj.Tools.EntityDesign
         /// <summary>
         /// 数据库连接配置文件
         /// </summary>
-        public static readonly string DatabaseconfigPath = Application.StartupPath + "/databaseconfig.xml";
+        public static readonly string DatabaseconfigPath = Application.StartupPath + "/Config/databaseconfig.xml";
 
 
         /// <summary>
@@ -155,7 +155,7 @@ namespace Hxj.Tools.EntityDesign
         /// <summary>
         /// 系统配置路径
         /// </summary>
-        public static string SysconfigPath = Application.StartupPath + "/sysconfig.xml";
+        public static string SysconfigPath = Application.StartupPath + "/Config/sysconfig.xml";
 
 
         /// <summary>

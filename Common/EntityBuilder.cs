@@ -382,7 +382,7 @@ namespace Hxj.Tools.EntityDesign
         /// <summary>
         /// 类型配置文件
         /// </summary>
-        public static readonly string DbTypePath = Application.StartupPath + "/dbtype.xml";
+        public static readonly string DbTypePath = Application.StartupPath + "/Config/dbtype.xml";
 
 
         private const string cachekeystring = "_dbtype_cache_";

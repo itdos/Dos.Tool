@@ -240,13 +240,13 @@
             this.contextMenuStripSave.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.保存ToolStripMenuItem});
             this.contextMenuStripSave.Name = "contextMenuStripSave";
-            this.contextMenuStripSave.Size = new System.Drawing.Size(142, 26);
+            this.contextMenuStripSave.Size = new System.Drawing.Size(145, 26);
             // 
             // 保存ToolStripMenuItem
             // 
             this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
             this.保存ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.保存ToolStripMenuItem.Text = "保存";
             this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
             // 

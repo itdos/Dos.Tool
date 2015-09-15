@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogShow));
             this.txtLog = new System.Windows.Forms.RichTextBox();
             this.cbmerrorlist = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -60,6 +61,7 @@
             this.ClientSize = new System.Drawing.Size(646, 446);
             this.Controls.Add(this.cbmerrorlist);
             this.Controls.Add(this.txtLog);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LogShow";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
