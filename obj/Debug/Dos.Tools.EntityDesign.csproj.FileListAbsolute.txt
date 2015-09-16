@@ -62,3 +62,5 @@ D:\工作\GitHub\Dos.Tools.EntityDesign\obj\Debug\Dos.Tools.EntityDesign.Forms.C
 D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Config\databaseconfig.xml
 D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Config\dbtype.xml
 D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Config\sysconfig.xml
+D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Dos.ORM.exe.config
+D:\工作\GitHub\Dos.Tools.EntityDesign\bin\Debug\Dos.ORM.Tool.exe.config

@@ -2,14 +2,16 @@
 	*）右键刷新单个数据库异常，需要整个连接刷新。
 	*）增加自动更新实体生成器功能
 	
-2015-09-15 Dos.Tools.EntityDesign(v1.8.8.1)
+2015-09-16 Dos.Tools.EntityDesign(v1.8.8.2)
+	*）增加MariaDB数据库选项。同时准备加入PostgreSQL选项。
+	*）程序名称由【Dos.Tools.EntityDesign】修改为【Dos.Tools】。
 	*）配置文件结构优化，统一放到Config文件夹下。
 	*）程序生气改为默认X86架构。
 	*）配置增加mediumtext类型映射为string。
 	*）增加启动实体生成器时判断程序是否为最新版。
 	*）数字字段名现在是生成以“_”开头，不再是以“F”开头。如以前数字段名：55，生成的属性名为F55，现在则为_55。
 
-2015-09-07 Dos.Tools.EntityDesign(v1.8.7.0)
+2015-09-07 Dos.Tools.EntityDesign(v1.8.7.5)
 	*）暂时去除生成默认值功能（有bug，后面再重新开放）
 	*）tinyint(1)修改为仅在MySql下才生成Bool类型。（感谢群友【更新中】发现此Bug）
 	*）char(36)修改为仅在MySql下才生成Guid类型。（感谢群友【更新中】发现此Bug）

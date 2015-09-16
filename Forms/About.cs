@@ -55,5 +55,10 @@ namespace Hxj.Tools.EntityDesign
         {
             System.Diagnostics.Process.Start("http://www.cnblogs.com/jgl5981/");
         }
+
+        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://my.oschina.net/janl/blog");
+        }
     }
 }

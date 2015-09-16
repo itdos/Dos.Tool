@@ -47,15 +47,16 @@ namespace Hxj.Tools.EntityDesign
             {
                 DatabaseType = Dos.ORM.DatabaseType.MySql;
             }
+            else if (rbMariaDB.Checked)
+            {
+                DatabaseType = Dos.ORM.DatabaseType.MySql;
+            }
             this.Close();
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-
     }
 }

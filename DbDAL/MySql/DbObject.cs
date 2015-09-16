@@ -74,11 +74,11 @@ namespace Hxj.DbObjects.MySQL
             if (SSPI)
             {
                 //_dbconnectStr="Integrated Security=SSPI;Data Source="+Ip+";Initial Catalog=mysql";
-                _dbconnectStr = String.Format("server={0};user id={1}; password={2}; Port={3};database=mysql; pooling=false", Ip, User, Pass, port);
+                _dbconnectStr = String.Format("server={0};user id={1}; password={2}; Port={3};database=; pooling=false", Ip, User, Pass, port);//database=mysql
             }
             else
             {
-                _dbconnectStr = String.Format("server={0};user id={1}; password={2}; Port={3};database=mysql; pooling=false", Ip, User, Pass, port);
+                _dbconnectStr = String.Format("server={0};user id={1}; password={2}; Port={3};database=; pooling=false", Ip, User, Pass, port);//database=mysql
 
             }
             connect.ConnectionString = _dbconnectStr;

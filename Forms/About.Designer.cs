@@ -1,4 +1,6 @@
-﻿namespace Hxj.Tools.EntityDesign
+﻿using System.Windows.Forms;
+
+namespace Hxj.Tools.EntityDesign
 {
     partial class About 
     {
@@ -43,6 +45,7 @@
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label3
@@ -51,9 +54,9 @@
             this.label3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(212, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(233, 16);
+            this.label3.Size = new System.Drawing.Size(278, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "实体代码生成器（V1.8.8.0）";
+            this.label3.Text = "实体代码生成器（V11.0.61030.0）";
             // 
             // button1
             // 
@@ -110,9 +113,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(21, 161);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 12);
+            this.label2.Size = new System.Drawing.Size(341, 12);
             this.label2.TabIndex = 9;
-            this.label2.Text = "特别感谢以下群友为Dos.系列组件做出贡献：";
+            this.label2.Text = "特别感谢以下群友为Dos.系列组件做出贡献（排名不分先后）：";
             // 
             // linkLabel3
             // 
@@ -187,11 +190,23 @@
             this.linkLabel7.Text = "jgl5981";
             this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
             // 
+            // linkLabel8
+            // 
+            this.linkLabel8.AutoSize = true;
+            this.linkLabel8.Location = new System.Drawing.Point(303, 193);
+            this.linkLabel8.Name = "linkLabel8";
+            this.linkLabel8.Size = new System.Drawing.Size(29, 12);
+            this.linkLabel8.TabIndex = 17;
+            this.linkLabel8.TabStop = true;
+            this.linkLabel8.Text = "janl";
+            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel8_LinkClicked);
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 394);
+            this.Controls.Add(this.linkLabel8);
             this.Controls.Add(this.linkLabel7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.linkLabel6);
@@ -236,5 +251,6 @@
         private System.Windows.Forms.LinkLabel linkLabel6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linkLabel7;
+        private LinkLabel linkLabel8;
     }
 }
