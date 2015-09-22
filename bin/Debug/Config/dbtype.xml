@@ -25,8 +25,8 @@
   <type dbtype="integer" cstype="int" />
   <type dbtype="smallint" cstype="short" />
   <type dbtype="single" cstype="Single" />
-  <type dbtype="float" cstype="double" />
-  <type dbtype="double" cstype="decimal" />
+  <type dbtype="float" cstype="float" />
+  <type dbtype="double" cstype="double" />
   <type dbtype="numeric" cstype="decimal" />
   <type dbtype="decimal" cstype="decimal" />
   <type dbtype="money" cstype="decimal" />

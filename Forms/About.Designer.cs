@@ -56,7 +56,7 @@ namespace Hxj.Tools.EntityDesign
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(278, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "实体代码生成器（V11.0.61030.0）";
+            this.label3.Text = "实体代码生成器（v" + Application.ProductVersion + "）";
             // 
             // button1
             // 

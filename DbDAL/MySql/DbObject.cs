@@ -818,6 +818,11 @@ namespace Hxj.DbObjects.MySQL
 
             col = new DataColumn();
             col.DataType = Type.GetType("System.String");
+            col.ColumnName = "deText";
+            table.Columns.Add(col);
+
+            col = new DataColumn();
+            col.DataType = Type.GetType("System.String");
             col.ColumnName = "TypeName";
             table.Columns.Add(col);
 
@@ -856,10 +861,7 @@ namespace Hxj.DbObjects.MySQL
             col.ColumnName = "defaultVal";
             table.Columns.Add(col);
 
-            col = new DataColumn();
-            col.DataType = Type.GetType("System.String");
-            col.ColumnName = "deText";
-            table.Columns.Add(col);
+            
 
             return table;
         }

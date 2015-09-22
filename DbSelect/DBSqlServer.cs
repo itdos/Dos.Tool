@@ -172,11 +172,15 @@ namespace Hxj.Tools.EntityDesign.DbSelect
             connectionModel.Database = cbbDatabase.SelectedIndex == 0 ? "all" : cbbDatabase.Text;
             connectionModel.ID = Guid.NewGuid();
             connectionModel.Name = cbbServer.Text + "(" + cbbServerType.Text + ")[" + connectionModel.Database + "]";
-            connectionModel.ConnectionString = tempconnectionstring;
-            connectionModel.DbType = Dos.ORM.DatabaseType.SqlServer.ToString();
-            if (cbbServerType.SelectedIndex == 1)
+            if (cbbServerType.SelectedIndex == 0)
+            {
+                connectionModel.DbType = Dos.ORM.DatabaseType.SqlServer.ToString();
+            }
+            else
+            {
                 connectionModel.DbType = Dos.ORM.DatabaseType.SqlServer9.ToString();
-
+            }
+            connectionModel.ConnectionString = tempconnectionstring;
 
             Utils.AddConnection(connectionModel);
 

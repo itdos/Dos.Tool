@@ -32,6 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContentForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tp1 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbToupperFrstword = new System.Windows.Forms.CheckBox();
             this.btnRemovePrimarykey = new System.Windows.Forms.Button();
@@ -69,11 +74,16 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(646, 546);
+            this.tabControl1.Size = new System.Drawing.Size(730, 555);
             this.tabControl1.TabIndex = 0;
             // 
             // tp1
             // 
+            this.tp1.Controls.Add(this.button6);
+            this.tp1.Controls.Add(this.button5);
+            this.tp1.Controls.Add(this.button4);
+            this.tp1.Controls.Add(this.button3);
+            this.tp1.Controls.Add(this.button2);
             this.tp1.Controls.Add(this.groupBox1);
             this.tp1.Controls.Add(this.button1);
             this.tp1.Controls.Add(this.gridColumns);
@@ -81,10 +91,70 @@
             this.tp1.Location = new System.Drawing.Point(4, 4);
             this.tp1.Name = "tp1";
             this.tp1.Padding = new System.Windows.Forms.Padding(3);
-            this.tp1.Size = new System.Drawing.Size(638, 519);
+            this.tp1.Size = new System.Drawing.Size(722, 528);
             this.tp1.TabIndex = 0;
             this.tp1.Text = "生成设置";
             this.tp1.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button6.Enabled = false;
+            this.button6.Location = new System.Drawing.Point(120, 452);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(107, 23);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "生成 Repository";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button5.Enabled = false;
+            this.button5.Location = new System.Drawing.Point(606, 452);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(107, 23);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "生成 JavaScript";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button4.Enabled = false;
+            this.button4.Location = new System.Drawing.Point(476, 452);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(111, 23);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "生成 ParamExpand";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button3.Enabled = false;
+            this.button3.Location = new System.Drawing.Point(350, 452);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(107, 23);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "生成 Controller";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(246, 452);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(85, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "生成 Logic";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -100,7 +170,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(3, 293);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(632, 139);
+            this.groupBox1.Size = new System.Drawing.Size(716, 139);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "生成配置";
@@ -189,11 +259,11 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.Location = new System.Drawing.Point(535, 461);
+            this.button1.Location = new System.Drawing.Point(22, 452);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(79, 23);
             this.button1.TabIndex = 6;
-            this.button1.Text = "生成";
+            this.button1.Text = "生成 Model";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -206,9 +276,8 @@
             this.gridColumns.Dock = System.Windows.Forms.DockStyle.Top;
             this.gridColumns.Location = new System.Drawing.Point(3, 3);
             this.gridColumns.Name = "gridColumns";
-            this.gridColumns.ReadOnly = true;
             this.gridColumns.RowTemplate.Height = 23;
-            this.gridColumns.Size = new System.Drawing.Size(632, 290);
+            this.gridColumns.Size = new System.Drawing.Size(716, 290);
             this.gridColumns.TabIndex = 0;
             // 
             // tp2
@@ -218,7 +287,7 @@
             this.tp2.Location = new System.Drawing.Point(4, 4);
             this.tp2.Name = "tp2";
             this.tp2.Padding = new System.Windows.Forms.Padding(3);
-            this.tp2.Size = new System.Drawing.Size(638, 519);
+            this.tp2.Size = new System.Drawing.Size(722, 528);
             this.tp2.TabIndex = 1;
             this.tp2.Text = "代码查看";
             this.tp2.UseVisualStyleBackColor = true;
@@ -231,7 +300,7 @@
             this.txtContent.Margin = new System.Windows.Forms.Padding(0);
             this.txtContent.Name = "txtContent";
             this.txtContent.ReadOnly = true;
-            this.txtContent.Size = new System.Drawing.Size(632, 513);
+            this.txtContent.Size = new System.Drawing.Size(716, 522);
             this.txtContent.TabIndex = 0;
             this.txtContent.Text = "";
             // 
@@ -261,7 +330,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 546);
+            this.ClientSize = new System.Drawing.Size(730, 555);
             this.Controls.Add(this.tabControl1);
             this.DockAreas = WeifenLuo.WinFormsUI.Docking.DockAreas.Document;
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -303,5 +372,10 @@
         private System.Windows.Forms.SaveFileDialog saveEntity;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.CheckBox cbToupperFrstword;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
     }
 }

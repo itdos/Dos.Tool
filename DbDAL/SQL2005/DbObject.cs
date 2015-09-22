@@ -145,6 +145,8 @@
             builder.Append("SELECT distinct * from (select ");
             builder.Append("colorder=C.column_id,");
             builder.Append("ColumnName=C.name,");
+
+            builder.Append("deText=ISNULL(PFD.[value],N''),");
             builder.Append("TypeName=T.name, ");
             builder.Append("Length=C.max_length, ");
             builder.Append("Preci=C.precision, ");
@@ -157,8 +159,8 @@
             builder.Append("Create_Date=O.Create_Date, ");
             builder.Append("Modify_Date=O.Modify_date, ");
             builder.Append("cisNull=CASE WHEN C.is_nullable=1 THEN N'√'ELSE N'' END, ");
-            builder.Append("defaultVal=ISNULL(D.definition,N''), ");
-            builder.Append("deText=ISNULL(PFD.[value],N'') ");
+            builder.Append("defaultVal=ISNULL(D.definition,N'') ");
+            
             builder.Append("FROM sys.columns C ");
             builder.Append("INNER JOIN sys.objects O ");
             builder.Append("ON C.[object_id]=O.[object_id] ");

@@ -44,7 +44,6 @@
             this.cbbDatabase = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -99,7 +98,9 @@
             this.cbbServerType.FormattingEnabled = true;
             this.cbbServerType.Items.AddRange(new object[] {
             "SQL Server2000",
-            "SQL Server2005"});
+            "SQL Server2005",
+            "SQL Server2008",
+            "SQL Server2012及以上版本"});
             this.cbbServerType.Location = new System.Drawing.Point(129, 82);
             this.cbbServerType.Name = "cbbServerType";
             this.cbbServerType.Size = new System.Drawing.Size(214, 20);
@@ -194,22 +195,11 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(212, 67);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 12);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "2008/2008r2请选择2005";
-            // 
             // DBSqlServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 383);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cbbDatabase);

@@ -9,4 +9,7 @@
   <server id="79165f81-3225-4576-ad58-1ac31e2d56ed" name="192.168.2.150(MySql)[all]" database="all" dbtype="MySql">
     <connectionstring><![CDATA[server=192.168.2.150;user id=root; password=root; Port=3306;database=; pooling=false]]></connectionstring>
   </server>
+  <server id="14300805-2941-4221-a1dc-c579033e778e" name=".\sql2008r2(SQL Server2008)[all]" database="all" dbtype="SqlServer9">
+    <connectionstring><![CDATA[Data Source=.\sql2008r2;Initial Catalog=master;User Id=sa;Password=sa]]></connectionstring>
+  </server>
 </servers>
