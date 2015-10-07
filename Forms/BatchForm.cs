@@ -254,7 +254,7 @@ namespace Hxj.Tools.EntityDesign
 
             foreach (object o in lbright.Items)
             {
-                builder = new EntityBuilder(o.ToString(), txtNamaspace.Text, o.ToString().Trim().Replace(' ', '_'), Utils.GetColumnInfos(dbObject.GetColumnInfoList(DatabaseName, o.ToString())), tableview[o.ToString()], cbToupperFrstword.Checked);
+                builder = new EntityBuilder(o.ToString(), txtNamaspace.Text, o.ToString().Trim().Replace(' ', '_'), Utils.GetColumnInfos(dbObject.GetColumnInfoList(DatabaseName, o.ToString())), tableview[o.ToString()], cbToupperFrstword.Checked,ConnectionModel.DbType);
 
                 using (StreamWriter sw = new StreamWriter(Path.Combine(txtPath.Text, o.ToString().Trim().Replace(' ', '_') + ".cs"), false, Encoding.UTF8))
                 {
