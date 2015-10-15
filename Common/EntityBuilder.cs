@@ -35,7 +35,13 @@ namespace Hxj.Tools.EntityDesign
         public EntityBuilder(string tableName, string nameSpace, string className, List<Model.ColumnInfo> columns, bool isView, bool isSZMDX,string dbType = null)
         {
             _isSZMDX = isSZMDX;
-            _className = Utils.ReplaceSpace(className);
+            // 类名首字母大写， snake_style 自动去下划线
+            if (_isSZMDX) {
+                var classname_parts = Utils.ReplaceSpace(className).Split('_');
+                foreach (var part in classname_parts) {
+                    _className += Utils.ToUpperFirstword(part);
+                }
+            }
             _nameSpace = Utils.ReplaceSpace(nameSpace);
             _tableName = tableName;
             _dbType = dbType;
@@ -473,10 +479,5 @@ namespace Hxj.Tools.EntityDesign
 
             return columns;
         }
-
-
-
-
-
     }
 }
