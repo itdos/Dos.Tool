@@ -9,7 +9,7 @@ using Hxj.IDBO;
 namespace Hxj.DbObjects.MySQL
 {
     /// <summary>
-    /// Êı¾İ¿âĞÅÏ¢Àà¡£
+    /// æ•°æ®åº“ä¿¡æ¯ç±»ã€‚
     /// </summary>
     public class DbObject : IDbObject
     {
@@ -17,7 +17,7 @@ namespace Hxj.DbObjects.MySQL
         //LTP.Utility.INIFile cfgfile;
         bool isdbosp = false;
 
-        #region  ÊôĞÔ
+        #region  å±æ€§
         public string DbType
         {
             get { return "MySQL"; }
@@ -32,14 +32,14 @@ namespace Hxj.DbObjects.MySQL
 
         #endregion
 
-        #region ¹¹Ôìº¯Êı£¬¹¹Ôì»ù±¾ĞÅÏ¢
+        #region æ„é€ å‡½æ•°ï¼Œæ„é€ åŸºæœ¬ä¿¡æ¯
         public DbObject()
         {
             IsDboSp();
         }
 
         /// <summary>
-        /// ¹¹ÔìÒ»¸öÊı¾İ¿âÁ¬½Ó
+        /// æ„é€ ä¸€ä¸ªæ•°æ®åº“è¿æ¥
         /// </summary>
         /// <param name="connect"></param>
         public DbObject(string DbConnectStr)
@@ -48,12 +48,12 @@ namespace Hxj.DbObjects.MySQL
             connect.ConnectionString = DbConnectStr;
         }
         /// <summary>
-        /// ¹¹ÔìÒ»¸öÁ¬½Ó×Ö·û´®
+        /// æ„é€ ä¸€ä¸ªè¿æ¥å­—ç¬¦ä¸²
         /// </summary>
-        /// <param name="SSPI">ÊÇ·ñwindows¼¯³ÉÈÏÖ¤</param>
-        /// <param name="Ip">·şÎñÆ÷IP</param>
-        /// <param name="User">ÓÃ»§Ãû</param>
-        /// <param name="Pass">ÃÜÂë</param>
+        /// <param name="SSPI">æ˜¯å¦windowsé›†æˆè®¤è¯</param>
+        /// <param name="Ip">æœåŠ¡å™¨IP</param>
+        /// <param name="User">ç”¨æˆ·å</param>
+        /// <param name="Pass">å¯†ç </param>
         public DbObject(bool SSPI, string Ip, string User, string Pass)
             : this(SSPI, Ip, User, Pass, "3306")
         {
@@ -61,13 +61,13 @@ namespace Hxj.DbObjects.MySQL
         }
 
         /// <summary>
-        /// ¹¹ÔìÒ»¸öÁ¬½Ó×Ö·û´®
+        /// æ„é€ ä¸€ä¸ªè¿æ¥å­—ç¬¦ä¸²
         /// </summary>
-        /// <param name="SSPI">ÊÇ·ñwindows¼¯³ÉÈÏÖ¤</param>
-        /// <param name="Ip">·şÎñÆ÷IP</param>
-        /// <param name="User">ÓÃ»§Ãû</param>
-        /// <param name="Pass">ÃÜÂë</param>
-        /// <param name="port">¶Ë¿Ú</param>
+        /// <param name="SSPI">æ˜¯å¦windowsé›†æˆè®¤è¯</param>
+        /// <param name="Ip">æœåŠ¡å™¨IP</param>
+        /// <param name="User">ç”¨æˆ·å</param>
+        /// <param name="Pass">å¯†ç </param>
+        /// <param name="port">ç«¯å£</param>
         public DbObject(bool SSPI, string Ip, string User, string Pass, string port)
         {
             connect = new MySqlConnection();
@@ -88,9 +88,9 @@ namespace Hxj.DbObjects.MySQL
 
         #endregion
 
-        #region  ÊÇ·ñ²ÉÓÃsp(´æ´¢¹ı³Ì)µÄ·½Ê½»ñÈ¡Êı¾İ½á¹¹ĞÅÏ¢
+        #region  æ˜¯å¦é‡‡ç”¨sp(å­˜å‚¨è¿‡ç¨‹)çš„æ–¹å¼è·å–æ•°æ®ç»“æ„ä¿¡æ¯
         /// <summary>
-        /// ÊÇ·ñ²ÉÓÃspµÄ·½Ê½»ñÈ¡Êı¾İ½á¹¹ĞÅÏ¢
+        /// æ˜¯å¦é‡‡ç”¨spçš„æ–¹å¼è·å–æ•°æ®ç»“æ„ä¿¡æ¯
         /// </summary>
         /// <returns></returns>
         private bool IsDboSp()
@@ -109,12 +109,12 @@ namespace Hxj.DbObjects.MySQL
 
         #endregion
 
-        #region ´ò¿ªÊı¾İ¿â OpenDB(string DbName)
+        #region æ‰“å¼€æ•°æ®åº“ OpenDB(string DbName)
 
         /// <summary>
-        /// ´ò¿ªÊı¾İ¿â
+        /// æ‰“å¼€æ•°æ®åº“
         /// </summary>
-        /// <param name="DbName">Òª´ò¿ªµÄÊı¾İ¿â</param>
+        /// <param name="DbName">è¦æ‰“å¼€çš„æ•°æ®åº“</param>
         /// <returns></returns>
         private MySqlCommand OpenDB(string DbName)
         {
@@ -149,7 +149,7 @@ namespace Hxj.DbObjects.MySQL
         }
         #endregion
 
-        #region ADO.NET ²Ù×÷
+        #region ADO.NET æ“ä½œ
 
         public int ExecuteSql(string DbName, string SQLString)
         {
@@ -209,11 +209,11 @@ namespace Hxj.DbObjects.MySQL
             }
         }
         /// <summary>
-        /// Ö´ĞĞ´æ´¢¹ı³Ì
+        /// æ‰§è¡Œå­˜å‚¨è¿‡ç¨‹
         /// </summary>
-        /// <param name="storedProcName">´æ´¢¹ı³ÌÃû</param>
-        /// <param name="parameters">´æ´¢¹ı³Ì²ÎÊı</param>
-        /// <param name="tableName">DataSet½á¹ûÖĞµÄ±íÃû</param>
+        /// <param name="storedProcName">å­˜å‚¨è¿‡ç¨‹å</param>
+        /// <param name="parameters">å­˜å‚¨è¿‡ç¨‹å‚æ•°</param>
+        /// <param name="tableName">DataSetç»“æœä¸­çš„è¡¨å</param>
         /// <returns>DataSet</returns>
         public DataSet RunProcedure(string DbName, string storedProcName, IDataParameter[] parameters, string tableName)
         {
@@ -235,7 +235,7 @@ namespace Hxj.DbObjects.MySQL
             {
                 if (parameter != null)
                 {
-                    // ¼ì²éÎ´·ÖÅäÖµµÄÊä³ö²ÎÊı,½«Æä·ÖÅäÒÔDBNull.Value.
+                    // æ£€æŸ¥æœªåˆ†é…å€¼çš„è¾“å‡ºå‚æ•°,å°†å…¶åˆ†é…ä»¥DBNull.Value.
                     if ((parameter.Direction == ParameterDirection.InputOutput || parameter.Direction == ParameterDirection.Input) &&
                         (parameter.Value == null))
                     {
@@ -249,14 +249,14 @@ namespace Hxj.DbObjects.MySQL
         }
         #endregion
 
-        #region ¹«¹²·½·¨
+        #region å…¬å…±æ–¹æ³•
 
         /// <summary>
-        /// List¸ù¾İ×Ö·û´®ÅÅĞò
+        /// Listæ ¹æ®å­—ç¬¦ä¸²æ’åº
         /// </summary>
         /// <param name="x"></param>
         /// <param name="y"></param>
-        /// <returns>0´ú±íÏàµÈ£¬-1´ú±íy´óÓÚx£¬1´ú±íx´óÓÚy</returns>
+        /// <returns>0ä»£è¡¨ç›¸ç­‰ï¼Œ-1ä»£è¡¨yå¤§äºxï¼Œ1ä»£è¡¨xå¤§äºy</returns>
         private int CompareStrByOrder(string x, string y)
         {
             if (x == "")
@@ -287,10 +287,10 @@ namespace Hxj.DbObjects.MySQL
         #endregion
 
 
-        #region µÃµ½Êı¾İ¿âµÄÃû×ÖÁĞ±í GetDBList()
+        #region å¾—åˆ°æ•°æ®åº“çš„åå­—åˆ—è¡¨ GetDBList()
 
         ///// <summary>
-        ///// µÃµ½Êı¾İ¿âµÄÃû×ÖÁĞ±í
+        ///// å¾—åˆ°æ•°æ®åº“çš„åå­—åˆ—è¡¨
         ///// </summary>
         ///// <returns></returns>
         //public List<string> GetDBList()
@@ -311,7 +311,7 @@ namespace Hxj.DbObjects.MySQL
         //}
 
         /// <summary>
-        /// µÃµ½Êı¾İ¿âµÄÃû×ÖÁĞ±í
+        /// å¾—åˆ°æ•°æ®åº“çš„åå­—åˆ—è¡¨
         /// </summary>
         /// <returns></returns>
         public DataTable GetDBList()
@@ -339,14 +339,14 @@ namespace Hxj.DbObjects.MySQL
         }
         #endregion
 
-        #region  µÃµ½Êı¾İ¿âµÄËùÓĞ±íºÍÊÓÍ¼ µÄÃû×Ö
+        #region  å¾—åˆ°æ•°æ®åº“çš„æ‰€æœ‰è¡¨å’Œè§†å›¾ çš„åå­—
 
 
 
         /// <summary>
-        /// µÃµ½Êı¾İ¿âµÄËùÓĞ±íÃû
+        /// å¾—åˆ°æ•°æ®åº“çš„æ‰€æœ‰è¡¨å
         /// </summary>
-        /// <param name="DbName">Êı¾İ¿â</param>
+        /// <param name="DbName">æ•°æ®åº“</param>
         /// <returns></returns>
         public DataTable GetTables(string DbName)
         {
@@ -395,9 +395,9 @@ namespace Hxj.DbObjects.MySQL
         }
 
         /// <summary>
-        /// µÃµ½Êı¾İ¿âµÄËùÓĞÊÓÍ¼Ãû
+        /// å¾—åˆ°æ•°æ®åº“çš„æ‰€æœ‰è§†å›¾å
         /// </summary>
-        /// <param name="DbName">Êı¾İ¿â</param>
+        /// <param name="DbName">æ•°æ®åº“</param>
         /// <returns></returns>
         public DataTable GetVIEWs(string DbName)
         {
@@ -416,9 +416,9 @@ namespace Hxj.DbObjects.MySQL
             return newdt;
         }
         /// <summary>
-        /// µÃµ½Êı¾İ¿âµÄËùÓĞÊÓÍ¼Ãû
+        /// å¾—åˆ°æ•°æ®åº“çš„æ‰€æœ‰è§†å›¾å
         /// </summary>
-        /// <param name="DbName">Êı¾İ¿â</param>
+        /// <param name="DbName">æ•°æ®åº“</param>
         /// <returns></returns>
         public DataTable GetVIEWsSP(string DbName)
         {
@@ -451,9 +451,9 @@ namespace Hxj.DbObjects.MySQL
         }
 
         /// <summary>
-        /// µÃµ½Êı¾İ¿âµÄËùÓĞ±íºÍÊÓÍ¼Ãû
+        /// å¾—åˆ°æ•°æ®åº“çš„æ‰€æœ‰è¡¨å’Œè§†å›¾å
         /// </summary>
-        /// <param name="DbName">Êı¾İ¿â</param>
+        /// <param name="DbName">æ•°æ®åº“</param>
         /// <returns></returns>
         public DataTable GetTabViews(string DbName)
         {
@@ -463,9 +463,9 @@ namespace Hxj.DbObjects.MySQL
             return dt;
         }
         /// <summary>
-        /// µÃµ½Êı¾İ¿âµÄËùÓĞ±íºÍÊÓÍ¼Ãû
+        /// å¾—åˆ°æ•°æ®åº“çš„æ‰€æœ‰è¡¨å’Œè§†å›¾å
         /// </summary>
-        /// <param name="DbName">Êı¾İ¿â</param>
+        /// <param name="DbName">æ•°æ®åº“</param>
         /// <returns></returns>
         public DataTable GetTabViewsSP(string DbName)
         {
@@ -473,9 +473,9 @@ namespace Hxj.DbObjects.MySQL
         }
 
         /// <summary>
-        /// µÃµ½Êı¾İ¿âµÄËùÓĞ´æ´¢¹ı³ÌÃû
+        /// å¾—åˆ°æ•°æ®åº“çš„æ‰€æœ‰å­˜å‚¨è¿‡ç¨‹å
         /// </summary>
-        /// <param name="DbName">Êı¾İ¿â</param>
+        /// <param name="DbName">æ•°æ®åº“</param>
         /// <returns></returns>
         public DataTable GetProcs(string DbName)
         {
@@ -483,11 +483,11 @@ namespace Hxj.DbObjects.MySQL
         }
         #endregion
 
-        #region  µÃµ½Êı¾İ¿âµÄËùÓĞ±íºÍÊÓÍ¼ µÄÁĞ±íĞÅÏ¢
+        #region  å¾—åˆ°æ•°æ®åº“çš„æ‰€æœ‰è¡¨å’Œè§†å›¾ çš„åˆ—è¡¨ä¿¡æ¯
         /// <summary>
-        /// µÃµ½Êı¾İ¿âµÄËùÓĞ±íµÄÏêÏ¸ĞÅÏ¢
+        /// å¾—åˆ°æ•°æ®åº“çš„æ‰€æœ‰è¡¨çš„è¯¦ç»†ä¿¡æ¯
         /// </summary>
-        /// <param name="DbName">Êı¾İ¿â</param>
+        /// <param name="DbName">æ•°æ®åº“</param>
         /// <returns></returns>
         public DataTable GetTablesInfo(string DbName)
         {
@@ -506,9 +506,9 @@ namespace Hxj.DbObjects.MySQL
             return newdt;
         }
         /// <summary>
-        /// µÃµ½Êı¾İ¿âµÄËùÓĞÊÓÍ¼µÄÏêÏ¸ĞÅÏ¢
+        /// å¾—åˆ°æ•°æ®åº“çš„æ‰€æœ‰è§†å›¾çš„è¯¦ç»†ä¿¡æ¯
         /// </summary>
-        /// <param name="DbName">Êı¾İ¿â</param>
+        /// <param name="DbName">æ•°æ®åº“</param>
         /// <returns></returns>
         public DataTable GetVIEWsInfo(string DbName)
         {
@@ -527,9 +527,9 @@ namespace Hxj.DbObjects.MySQL
             return newdt;
         }
         /// <summary>
-        /// µÃµ½Êı¾İ¿âµÄËùÓĞ±íºÍÊÓÍ¼µÄÏêÏ¸ĞÅÏ¢
+        /// å¾—åˆ°æ•°æ®åº“çš„æ‰€æœ‰è¡¨å’Œè§†å›¾çš„è¯¦ç»†ä¿¡æ¯
         /// </summary>
-        /// <param name="DbName">Êı¾İ¿â</param>
+        /// <param name="DbName">æ•°æ®åº“</param>
         /// <returns></returns>
         public DataTable GetTabViewsInfo(string DbName)
         {
@@ -539,9 +539,9 @@ namespace Hxj.DbObjects.MySQL
             return dt;
         }
         /// <summary>
-        /// µÃµ½Êı¾İ¿âµÄËùÓĞ´æ´¢¹ı³ÌµÄÏêÏ¸ĞÅÏ¢
+        /// å¾—åˆ°æ•°æ®åº“çš„æ‰€æœ‰å­˜å‚¨è¿‡ç¨‹çš„è¯¦ç»†ä¿¡æ¯
         /// </summary>
-        /// <param name="DbName">Êı¾İ¿â</param>
+        /// <param name="DbName">æ•°æ®åº“</param>
         /// <returns></returns>
         public DataTable GetProcInfo(string DbName)
         {
@@ -549,11 +549,11 @@ namespace Hxj.DbObjects.MySQL
         }
         #endregion
 
-        #region µÃµ½¶ÔÏó¶¨ÒåÓï¾ä
+        #region å¾—åˆ°å¯¹è±¡å®šä¹‰è¯­å¥
         /// <summary>
-        /// µÃµ½ÊÓÍ¼»ò´æ´¢¹ı³ÌµÄ¶¨ÒåÓï¾ä
+        /// å¾—åˆ°è§†å›¾æˆ–å­˜å‚¨è¿‡ç¨‹çš„å®šä¹‰è¯­å¥
         /// </summary>
-        /// <param name="DbName">Êı¾İ¿â</param>
+        /// <param name="DbName">æ•°æ®åº“</param>
         /// <returns></returns>
         public string GetObjectInfo(string DbName, string objName)
         {
@@ -567,13 +567,13 @@ namespace Hxj.DbObjects.MySQL
         }
         #endregion
 
-        #region µÃµ½(¿ìËÙ)Êı¾İ¿âÀï±íµÄÁĞÃûºÍÀàĞÍ GetColumnList(string DbName,string TableName)
+        #region å¾—åˆ°(å¿«é€Ÿ)æ•°æ®åº“é‡Œè¡¨çš„åˆ—åå’Œç±»å‹ GetColumnList(string DbName,string TableName)
 
         /// <summary>
-        /// µÃµ½Êı¾İ¿âÀï±í»òÊÓÍ¼µÄÁĞÃûºÍÀàĞÍ
+        /// å¾—åˆ°æ•°æ®åº“é‡Œè¡¨æˆ–è§†å›¾çš„åˆ—åå’Œç±»å‹
         /// </summary>
-        /// <param name="DbName">¿â</param>
-        /// <param name="TableName">±í</param>
+        /// <param name="DbName">åº“</param>
+        /// <param name="TableName">è¡¨</param>
         /// <returns></returns>
         public DataTable GetColumnList(string DbName, string TableName)
         {
@@ -587,12 +587,12 @@ namespace Hxj.DbObjects.MySQL
         #endregion
 
 
-        #region µÃµ½±íµÄÁĞµÄÏêÏ¸ĞÅÏ¢ GetColumnInfoList(string DbName,string TableName)
+        #region å¾—åˆ°è¡¨çš„åˆ—çš„è¯¦ç»†ä¿¡æ¯ GetColumnInfoList(string DbName,string TableName)
         /// <summary>
-        /// µÃµ½Êı¾İ¿âÀï±í»òÊÓÍ¼µÄÁĞµÄÏêÏ¸ĞÅÏ¢
+        /// å¾—åˆ°æ•°æ®åº“é‡Œè¡¨æˆ–è§†å›¾çš„åˆ—çš„è¯¦ç»†ä¿¡æ¯
         /// </summary>
-        /// <param name="DbName">¿â</param>
-        /// <param name="TableName">±í</param>
+        /// <param name="DbName">åº“</param>
+        /// <param name="TableName">è¡¨</param>
         /// <returns></returns>
         public DataTable GetColumnInfoList(string DbName, string TableName)
         {
@@ -664,7 +664,7 @@ namespace Hxj.DbObjects.MySQL
                                 skey = reader["Key"].ToString();
                                 break;
                         }
-                        dr["isPK"] = (skey.Trim() == "PRI") ? "¡Ì" : "";
+                        dr["isPK"] = (skey.Trim() == "PRI") ? "âˆš" : "";
                     }
                     if ((!Object.Equals(reader["Null"], null)) && (!Object.Equals(reader["Null"], System.DBNull.Value)))
                     {
@@ -681,7 +681,7 @@ namespace Hxj.DbObjects.MySQL
                                 snull = reader["Null"].ToString();
                                 break;
                         }
-                        dr["cisNull"] = (snull.Trim() == "YES") ? "¡Ì" : "";
+                        dr["cisNull"] = (snull.Trim() == "YES") ? "âˆš" : "";
                     }
                     if ((!Object.Equals(reader["Default"], null)) && (!Object.Equals(reader["Default"], System.DBNull.Value)))
                     {
@@ -699,25 +699,25 @@ namespace Hxj.DbObjects.MySQL
                         }
                     }
                     dr["IsIdentity"] = "";
-                    if ((!Object.Equals(reader["Extra"], null)) && (!Object.Equals(reader["Extra"], System.DBNull.Value)))
+                    if ((!Object.Equals(reader["Comment"], null)) && (!Object.Equals(reader["Comment"], System.DBNull.Value)))
                     {
 
-                        string tname = reader["Extra"].GetType().Name;
+                        string tname = reader["Comment"].GetType().Name;
                         switch (tname)
                         {
                             case "Byte[]":
-                                dr["DeText"] = Encoding.Default.GetString((Byte[])reader["Extra"]);
+                                dr["DeText"] = Encoding.Default.GetString((Byte[])reader["Comment"]);
                                 break;
                             case "":
                                 dr["DeText"] = "";
                                 break;
                             default:
-                                dr["DeText"] = reader["Extra"].ToString();
+                                dr["DeText"] = reader["Comment"].ToString();
                                 break;
                         }
                         if (dr["DeText"].ToString().Trim() == "auto_increment")
                         {
-                            dr["IsIdentity"] = "¡Ì";
+                            dr["IsIdentity"] = "âˆš";
                         }
                     }
 
@@ -729,14 +729,14 @@ namespace Hxj.DbObjects.MySQL
             }
             catch (System.Exception ex)
             {
-                throw new Exception("»ñÈ¡ÁĞÊı¾İÊ§°Ü" + ex.Message);
+                throw new Exception("è·å–åˆ—æ•°æ®å¤±è´¥" + ex.Message);
             }
 
         }
 
 
 
-        //¶ÔÀàĞÍÃû³Æ ½âÎö
+        //å¯¹ç±»å‹åç§° è§£æ
         private void TypeNameProcess(string strName, out string TypeName, out string Length, out string Preci, out string Scale)
         {
             TypeName = strName;
@@ -749,7 +749,7 @@ namespace Hxj.DbObjects.MySQL
                 TypeName = strName.Substring(0, n);
                 switch (TypeName.Trim().ToUpper())
                 {
-                    //Ö»ÓĞ´óĞ¡(M)
+                    //åªæœ‰å¤§å°(M)
                     case "TINYINT":
                     case "SMALLINT":
                     case "MEDIUMINT":
@@ -798,9 +798,9 @@ namespace Hxj.DbObjects.MySQL
         #endregion
 
 
-        #region µÃµ½Êı¾İ¿âÀï±íµÄÖ÷¼ü GetKeyName(string DbName,string TableName)
+        #region å¾—åˆ°æ•°æ®åº“é‡Œè¡¨çš„ä¸»é”® GetKeyName(string DbName,string TableName)
 
-        //´´½¨ÁĞĞÅÏ¢±í
+        //åˆ›å»ºåˆ—ä¿¡æ¯è¡¨
         public DataTable CreateColumnTable()
         {
             DataTable table = new DataTable();
@@ -867,16 +867,16 @@ namespace Hxj.DbObjects.MySQL
         }
 
         /// <summary>
-        /// µÃµ½Êı¾İ¿âÀï±íµÄÖ÷¼ü
+        /// å¾—åˆ°æ•°æ®åº“é‡Œè¡¨çš„ä¸»é”®
         /// </summary>
-        /// <param name="DbName">¿â</param>
-        /// <param name="TableName">±í</param>
+        /// <param name="DbName">åº“</param>
+        /// <param name="TableName">è¡¨</param>
         /// <returns></returns>
         public DataTable GetKeyName(string DbName, string TableName)
         {
             DataTable dtkey = CreateColumnTable();
             DataTable dt = GetColumnInfoList(DbName, TableName);
-            DataRow[] rows = dt.Select(" isPK='¡Ì' ");
+            DataRow[] rows = dt.Select(" isPK='âˆš' ");
             foreach (DataRow row in rows)
             {
                 DataRow nrow = dtkey.NewRow();
@@ -899,10 +899,10 @@ namespace Hxj.DbObjects.MySQL
         }
         #endregion
 
-        #region µÃµ½Êı¾İ±íÀïµÄÊı¾İ GetTabData(string DbName,string TableName)
+        #region å¾—åˆ°æ•°æ®è¡¨é‡Œçš„æ•°æ® GetTabData(string DbName,string TableName)
 
         /// <summary>
-        /// µÃµ½Êı¾İ±íÀïµÄÊı¾İ
+        /// å¾—åˆ°æ•°æ®è¡¨é‡Œçš„æ•°æ®
         /// </summary>
         /// <param name="DbName"></param>
         /// <param name="TableName"></param>
@@ -914,7 +914,7 @@ namespace Hxj.DbObjects.MySQL
             return Query(DbName, strSql.ToString()).Tables[0];
         }
         /// <summary>
-        /// ¸ù¾İSQL²éÑ¯µÃµ½Êı¾İ±íÀïµÄÊı¾İ
+        /// æ ¹æ®SQLæŸ¥è¯¢å¾—åˆ°æ•°æ®è¡¨é‡Œçš„æ•°æ®
         /// </summary>
         /// <param name="DbName"></param>
         /// <param name="TableName"></param>
@@ -940,10 +940,10 @@ namespace Hxj.DbObjects.MySQL
         #endregion
 
 
-        #region Êı¾İ¿âÊôĞÔ²Ù×÷
+        #region æ•°æ®åº“å±æ€§æ“ä½œ
 
         /// <summary>
-        /// ĞŞ¸Ä±íÃû³Æ
+        /// ä¿®æ”¹è¡¨åç§°
         /// </summary>
         /// <param name="OldName"></param>
         /// <param name="NewName"></param>
@@ -965,7 +965,7 @@ namespace Hxj.DbObjects.MySQL
         }
 
         /// <summary>
-        /// É¾³ı±í
+        /// åˆ é™¤è¡¨
         /// </summary>	
         public bool DeleteTable(string DbName, string TableName)
         {
@@ -984,7 +984,7 @@ namespace Hxj.DbObjects.MySQL
         }
 
         /// <summary>
-        /// µÃµ½°æ±¾ºÅ
+        /// å¾—åˆ°ç‰ˆæœ¬å·
         /// </summary>
         /// <returns></returns>
         public string GetVersion()
@@ -1003,7 +1003,7 @@ namespace Hxj.DbObjects.MySQL
 
 
         /// <summary>
-        /// µÃµ½´´½¨±í µÄ½Å±¾
+        /// å¾—åˆ°åˆ›å»ºè¡¨ çš„è„šæœ¬
         /// </summary>
         /// <returns></returns>
         public string GetTableScript(string DbName, string TableName)
