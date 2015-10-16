@@ -256,8 +256,17 @@ namespace Hxj.Tools.EntityDesign
             {
                 builder = new EntityBuilder(o.ToString(), txtNamaspace.Text, o.ToString().Trim().Replace(' ', '_'), Utils.GetColumnInfos(dbObject.GetColumnInfoList(DatabaseName, o.ToString())), tableview[o.ToString()], cbToupperFrstword.Checked,ConnectionModel.DbType);
 
-                using (StreamWriter sw = new StreamWriter(Path.Combine(txtPath.Text, o.ToString().Trim().Replace(' ', '_') + ".cs"), false, Encoding.UTF8))
-                {
+                string file_name = o.ToString().Trim().Replace(' ', '_') + ".cs";
+                // 文件名首字母大写， snake_style 自动去下划线
+                if (this.cbToupperFrstword.Checked) {
+                    string file_name_tmp = String.Empty;
+                    var filename_parts = file_name.Split('_');
+                    foreach (var filename_part in filename_parts) {
+                        file_name_tmp += Utils.ToUpperFirstword(filename_part);
+                    }
+                    file_name = file_name_tmp;
+                }
+                using (StreamWriter sw = new StreamWriter(Path.Combine(txtPath.Text, file_name), false, Encoding.UTF8)) {
                     sw.Write(builder.Builder());
                     sw.Close();
                 }

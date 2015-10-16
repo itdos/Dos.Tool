@@ -209,7 +209,17 @@ namespace Hxj.Tools.EntityDesign
         /// <param name="e"></param>
         private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveEntity.FileName = txtClassName.Text;
+            string file_name = txtClassName.Text;
+            // 文件名首字母大写， snake_style 自动去下划线。
+            if (this.cbToupperFrstword.Checked) {
+                string file_name_tmp = String.Empty;
+                var filename_parts = file_name.Split('_');
+                foreach (var filename_part in filename_parts) {
+                    file_name_tmp += Utils.ToUpperFirstword(filename_part);
+                }
+                file_name = file_name_tmp;
+            }
+            saveEntity.FileName = file_name;
             saveEntity.Filter = "CS 文件|*.cs";
 
             if (saveEntity.ShowDialog() == DialogResult.OK)
