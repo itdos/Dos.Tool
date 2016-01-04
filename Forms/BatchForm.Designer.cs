@@ -57,6 +57,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.pbar = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.cbEntityTableName = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panelbtns.SuspendLayout();
@@ -226,6 +227,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.cbEntityTableName);
             this.groupBox3.Controls.Add(this.cbToupperFrstword);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.txtNamaspace);
@@ -245,7 +247,7 @@
             // cbToupperFrstword
             // 
             this.cbToupperFrstword.AutoSize = true;
-            this.cbToupperFrstword.Location = new System.Drawing.Point(364, 34);
+            this.cbToupperFrstword.Location = new System.Drawing.Point(280, 37);
             this.cbToupperFrstword.Name = "cbToupperFrstword";
             this.cbToupperFrstword.Size = new System.Drawing.Size(84, 16);
             this.cbToupperFrstword.TabIndex = 10;
@@ -329,6 +331,16 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
+            // cbEntityTableName
+            // 
+            this.cbEntityTableName.AutoSize = true;
+            this.cbEntityTableName.Location = new System.Drawing.Point(389, 37);
+            this.cbEntityTableName.Name = "cbEntityTableName";
+            this.cbEntityTableName.Size = new System.Drawing.Size(174, 16);
+            this.cbEntityTableName.TabIndex = 11;
+            this.cbEntityTableName.Text = "生成v1.10.3及以上版本实体";
+            this.cbEntityTableName.UseVisualStyleBackColor = true;
+            // 
             // BatchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -390,5 +402,6 @@
         private System.Windows.Forms.Panel panelbtns;
         private System.Windows.Forms.CheckBox chbView;
         private System.Windows.Forms.CheckBox cbToupperFrstword;
+        private System.Windows.Forms.CheckBox cbEntityTableName;
     }
 }

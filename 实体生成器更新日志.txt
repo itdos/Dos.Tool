@@ -2,6 +2,9 @@
 	*）右键刷新单个数据库异常，需要整个连接刷新。
 	*）增加自动更新实体生成器功能
 	
+2016-01-04 Dos.Tools.EntityDesign(v1.8.8.5)
+	*）实体类生成方式与Dos.ORM v1.10.3.0配合，解决lambda写法是取的实体类名不是实际表名的Bug。
+
 2015-09-22 Dos.Tools.EntityDesign(v1.8.8.3)
 	*）修改部分类型映射关系。
 	*）增加MariaDB数据库选项。同时准备加入PostgreSQL选项。

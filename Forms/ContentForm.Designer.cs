@@ -55,6 +55,7 @@
             this.保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.saveEntity = new System.Windows.Forms.SaveFileDialog();
+            this.cbEntityTableName = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tp1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -74,7 +75,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(730, 555);
+            this.tabControl1.Size = new System.Drawing.Size(875, 665);
             this.tabControl1.TabIndex = 0;
             // 
             // tp1
@@ -91,7 +92,7 @@
             this.tp1.Location = new System.Drawing.Point(4, 4);
             this.tp1.Name = "tp1";
             this.tp1.Padding = new System.Windows.Forms.Padding(3);
-            this.tp1.Size = new System.Drawing.Size(722, 528);
+            this.tp1.Size = new System.Drawing.Size(867, 638);
             this.tp1.TabIndex = 0;
             this.tp1.Text = "生成设置";
             this.tp1.UseVisualStyleBackColor = true;
@@ -101,7 +102,7 @@
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button6.Enabled = false;
-            this.button6.Location = new System.Drawing.Point(120, 452);
+            this.button6.Location = new System.Drawing.Point(263, 486);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(107, 23);
             this.button6.TabIndex = 11;
@@ -113,7 +114,7 @@
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button5.Enabled = false;
-            this.button5.Location = new System.Drawing.Point(606, 452);
+            this.button5.Location = new System.Drawing.Point(749, 486);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(107, 23);
             this.button5.TabIndex = 10;
@@ -125,7 +126,7 @@
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(476, 452);
+            this.button4.Location = new System.Drawing.Point(619, 486);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(111, 23);
             this.button4.TabIndex = 9;
@@ -137,7 +138,7 @@
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(350, 452);
+            this.button3.Location = new System.Drawing.Point(493, 486);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(107, 23);
             this.button3.TabIndex = 8;
@@ -149,7 +150,7 @@
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(246, 452);
+            this.button2.Location = new System.Drawing.Point(389, 486);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(85, 23);
             this.button2.TabIndex = 7;
@@ -158,6 +159,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbEntityTableName);
             this.groupBox1.Controls.Add(this.cbToupperFrstword);
             this.groupBox1.Controls.Add(this.btnRemovePrimarykey);
             this.groupBox1.Controls.Add(this.btnAddPrimarykey);
@@ -170,7 +172,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(3, 293);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(716, 139);
+            this.groupBox1.Size = new System.Drawing.Size(861, 151);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "生成配置";
@@ -178,7 +180,7 @@
             // cbToupperFrstword
             // 
             this.cbToupperFrstword.AutoSize = true;
-            this.cbToupperFrstword.Location = new System.Drawing.Point(509, 91);
+            this.cbToupperFrstword.Location = new System.Drawing.Point(274, 117);
             this.cbToupperFrstword.Name = "cbToupperFrstword";
             this.cbToupperFrstword.Size = new System.Drawing.Size(84, 16);
             this.cbToupperFrstword.TabIndex = 6;
@@ -207,7 +209,7 @@
             // 
             // txtClassName
             // 
-            this.txtClassName.Location = new System.Drawing.Point(322, 89);
+            this.txtClassName.Location = new System.Drawing.Point(322, 74);
             this.txtClassName.Name = "txtClassName";
             this.txtClassName.Size = new System.Drawing.Size(140, 21);
             this.txtClassName.TabIndex = 5;
@@ -215,7 +217,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(272, 92);
+            this.label3.Location = new System.Drawing.Point(272, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 12);
             this.label3.TabIndex = 5;
@@ -224,7 +226,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 92);
+            this.label2.Location = new System.Drawing.Point(16, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 12);
             this.label2.TabIndex = 4;
@@ -232,7 +234,7 @@
             // 
             // txtnamespace
             // 
-            this.txtnamespace.Location = new System.Drawing.Point(91, 89);
+            this.txtnamespace.Location = new System.Drawing.Point(91, 74);
             this.txtnamespace.Name = "txtnamespace";
             this.txtnamespace.Size = new System.Drawing.Size(144, 21);
             this.txtnamespace.TabIndex = 4;
@@ -259,9 +261,9 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.Location = new System.Drawing.Point(22, 452);
+            this.button1.Location = new System.Drawing.Point(157, 486);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 23);
+            this.button1.Size = new System.Drawing.Size(89, 23);
             this.button1.TabIndex = 6;
             this.button1.Text = "生成 Model";
             this.button1.UseVisualStyleBackColor = true;
@@ -277,7 +279,7 @@
             this.gridColumns.Location = new System.Drawing.Point(3, 3);
             this.gridColumns.Name = "gridColumns";
             this.gridColumns.RowTemplate.Height = 23;
-            this.gridColumns.Size = new System.Drawing.Size(716, 290);
+            this.gridColumns.Size = new System.Drawing.Size(861, 290);
             this.gridColumns.TabIndex = 0;
             // 
             // tp2
@@ -287,7 +289,7 @@
             this.tp2.Location = new System.Drawing.Point(4, 4);
             this.tp2.Name = "tp2";
             this.tp2.Padding = new System.Windows.Forms.Padding(3);
-            this.tp2.Size = new System.Drawing.Size(722, 528);
+            this.tp2.Size = new System.Drawing.Size(722, 638);
             this.tp2.TabIndex = 1;
             this.tp2.Text = "代码查看";
             this.tp2.UseVisualStyleBackColor = true;
@@ -300,7 +302,7 @@
             this.txtContent.Margin = new System.Windows.Forms.Padding(0);
             this.txtContent.Name = "txtContent";
             this.txtContent.ReadOnly = true;
-            this.txtContent.Size = new System.Drawing.Size(716, 522);
+            this.txtContent.Size = new System.Drawing.Size(716, 632);
             this.txtContent.TabIndex = 0;
             this.txtContent.Text = "";
             // 
@@ -326,11 +328,21 @@
             this.imageList1.Images.SetKeyName(0, "pz.ICO");
             this.imageList1.Images.SetKeyName(1, "cs.ICO");
             // 
+            // cbEntityTableName
+            // 
+            this.cbEntityTableName.AutoSize = true;
+            this.cbEntityTableName.Location = new System.Drawing.Point(19, 117);
+            this.cbEntityTableName.Name = "cbEntityTableName";
+            this.cbEntityTableName.Size = new System.Drawing.Size(174, 16);
+            this.cbEntityTableName.TabIndex = 7;
+            this.cbEntityTableName.Text = "生成v1.10.3及以上版本实体";
+            this.cbEntityTableName.UseVisualStyleBackColor = true;
+            // 
             // ContentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 555);
+            this.ClientSize = new System.Drawing.Size(875, 665);
             this.Controls.Add(this.tabControl1);
             this.DockAreas = WeifenLuo.WinFormsUI.Docking.DockAreas.Document;
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -377,5 +389,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.CheckBox cbEntityTableName;
     }
 }

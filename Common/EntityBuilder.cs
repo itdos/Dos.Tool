@@ -25,6 +25,7 @@ namespace Hxj.Tools.EntityDesign
         private bool _isView = false;
 
         private bool _isSZMDX = false;
+        private bool _isNewModel = false;
 
         public EntityBuilder(string tableName, string nameSpace, string className, List<Model.ColumnInfo> columns, bool isView)
             : this(tableName, nameSpace, className, columns, isView, false)
@@ -32,13 +33,14 @@ namespace Hxj.Tools.EntityDesign
 
         }
 
-        public EntityBuilder(string tableName, string nameSpace, string className, List<Model.ColumnInfo> columns, bool isView, bool isSZMDX,string dbType = null)
+        public EntityBuilder(string tableName, string nameSpace, string className, List<Model.ColumnInfo> columns, bool isView, bool isSZMDX,string dbType = null,bool isNewModel = false)
         {
             _isSZMDX = isSZMDX;
             _className = Utils.ReplaceSpace(className);
             _nameSpace = Utils.ReplaceSpace(nameSpace);
             _tableName = tableName;
             _dbType = dbType;
+            _isNewModel = isNewModel;
             if (_isSZMDX)
             {
                 _className = Utils.ToUpperFirstword(_className);
@@ -121,10 +123,24 @@ namespace Hxj.Tools.EntityDesign
             plus.AppendSpaceLine(1, "/// <summary>");
             plus.AppendSpaceLine(1, "/// 实体类" + ClassName + " 。(属性说明自动提取数据库字段的描述信息)");
             plus.AppendSpaceLine(1, "/// </summary>");
-            plus.AppendSpaceLine(1, "[Serializable]");
+            if (!_isNewModel)
+            {
+                plus.AppendSpaceLine(1, "[Serializable]");
+            }
+            else
+            {
+                plus.AppendSpaceLine(1, "[Entity(\"" + TableName + "\")]");
+            }
             plus.AppendSpaceLine(1, "public partial class " + ClassName + " : Entity ");
             plus.AppendSpaceLine(1, "{");
-            plus.AppendSpaceLine(2, "public " + ClassName + "():base(\"" + TableName + "\") {}");
+            if (!_isNewModel)
+            {
+                plus.AppendSpaceLine(2, "public " + ClassName + "():base(\"" + TableName + "\") {}");
+            }
+            else
+            {
+                plus.AppendSpaceLine(2, "public " + ClassName + "() { }");
+            }
             plus.AppendLine();
             plus.AppendLine(BuilderModel());
             plus.AppendLine(BuilderMethod());

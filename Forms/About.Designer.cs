@@ -46,6 +46,7 @@ namespace Hxj.Tools.EntityDesign
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel7 = new System.Windows.Forms.LinkLabel();
             this.linkLabel8 = new System.Windows.Forms.LinkLabel();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -56,7 +57,7 @@ namespace Hxj.Tools.EntityDesign
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(278, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "实体代码生成器（v" + Application.ProductVersion + "）";
+            this.label3.Text = "实体代码生成器（v11.0.61030.0）";
             // 
             // button1
             // 
@@ -201,11 +202,21 @@ namespace Hxj.Tools.EntityDesign
             this.linkLabel8.Text = "janl";
             this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel8_LinkClicked);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(347, 193);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(29, 12);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "随风";
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 394);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.linkLabel8);
             this.Controls.Add(this.linkLabel7);
             this.Controls.Add(this.label6);
@@ -252,5 +263,6 @@ namespace Hxj.Tools.EntityDesign
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linkLabel7;
         private LinkLabel linkLabel8;
+        private Label label7;
     }
 }
