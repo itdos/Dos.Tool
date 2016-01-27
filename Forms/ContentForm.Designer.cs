@@ -38,6 +38,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbEntityTableName = new System.Windows.Forms.CheckBox();
             this.cbToupperFrstword = new System.Windows.Forms.CheckBox();
             this.btnRemovePrimarykey = new System.Windows.Forms.Button();
             this.btnAddPrimarykey = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@
             this.保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.saveEntity = new System.Windows.Forms.SaveFileDialog();
-            this.cbEntityTableName = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tp1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -177,6 +177,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "生成配置";
             // 
+            // cbEntityTableName
+            // 
+            this.cbEntityTableName.AutoSize = true;
+            this.cbEntityTableName.Checked = true;
+            this.cbEntityTableName.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbEntityTableName.Location = new System.Drawing.Point(19, 117);
+            this.cbEntityTableName.Name = "cbEntityTableName";
+            this.cbEntityTableName.Size = new System.Drawing.Size(174, 16);
+            this.cbEntityTableName.TabIndex = 7;
+            this.cbEntityTableName.Text = "生成v1.10.3及以上版本实体";
+            this.cbEntityTableName.UseVisualStyleBackColor = true;
+            // 
             // cbToupperFrstword
             // 
             this.cbToupperFrstword.AutoSize = true;
@@ -289,7 +301,7 @@
             this.tp2.Location = new System.Drawing.Point(4, 4);
             this.tp2.Name = "tp2";
             this.tp2.Padding = new System.Windows.Forms.Padding(3);
-            this.tp2.Size = new System.Drawing.Size(722, 638);
+            this.tp2.Size = new System.Drawing.Size(867, 638);
             this.tp2.TabIndex = 1;
             this.tp2.Text = "代码查看";
             this.tp2.UseVisualStyleBackColor = true;
@@ -302,7 +314,7 @@
             this.txtContent.Margin = new System.Windows.Forms.Padding(0);
             this.txtContent.Name = "txtContent";
             this.txtContent.ReadOnly = true;
-            this.txtContent.Size = new System.Drawing.Size(716, 632);
+            this.txtContent.Size = new System.Drawing.Size(861, 632);
             this.txtContent.TabIndex = 0;
             this.txtContent.Text = "";
             // 
@@ -327,16 +339,6 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "pz.ICO");
             this.imageList1.Images.SetKeyName(1, "cs.ICO");
-            // 
-            // cbEntityTableName
-            // 
-            this.cbEntityTableName.AutoSize = true;
-            this.cbEntityTableName.Location = new System.Drawing.Point(19, 117);
-            this.cbEntityTableName.Name = "cbEntityTableName";
-            this.cbEntityTableName.Size = new System.Drawing.Size(174, 16);
-            this.cbEntityTableName.TabIndex = 7;
-            this.cbEntityTableName.Text = "生成v1.10.3及以上版本实体";
-            this.cbEntityTableName.UseVisualStyleBackColor = true;
             // 
             // ContentForm
             // 

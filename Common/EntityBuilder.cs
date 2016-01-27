@@ -129,19 +129,19 @@ namespace Hxj.Tools.EntityDesign
             }
             else
             {
-                plus.AppendSpaceLine(1, "[Entity(\"" + TableName + "\")]");
+                plus.AppendSpaceLine(1, "[Table(\"" + TableName + "\")]");
             }
             plus.AppendSpaceLine(1, "public partial class " + ClassName + " : Entity ");
             plus.AppendSpaceLine(1, "{");
             if (!_isNewModel)
             {
                 plus.AppendSpaceLine(2, "public " + ClassName + "():base(\"" + TableName + "\") {}");
+                plus.AppendLine();
             }
             else
             {
-                plus.AppendSpaceLine(2, "public " + ClassName + "() { }");
+                //plus.AppendSpaceLine(2, "public " + ClassName + "() { }");
             }
-            plus.AppendLine();
             plus.AppendLine(BuilderModel());
             plus.AppendLine(BuilderMethod());
             plus.AppendSpaceLine(1, "}");
@@ -463,7 +463,8 @@ namespace Hxj.Tools.EntityDesign
             {
                 try
                 {
-                    if (column.TypeName.Trim().ToLower() == "char" && column.Length == "36" && dbType == "MySql")
+                    if (column.TypeName.Trim().ToLower() == "char" && column.Length == "36"
+                        && (dbType == "MySql" || dbType == "Oracle"))
                     {
                         column.TypeName = types["uniqueidentifier"];
                     }

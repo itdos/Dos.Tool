@@ -2,6 +2,9 @@
 	*）右键刷新单个数据库异常，需要整个连接刷新。
 	*）增加自动更新实体生成器功能
 	
+2016-01-27 Dos.Tools.EntityDesign(v1.8.8.6)
+	*）实体类[Entity("TableName")]标记修改为[Table("TableName")]，以解决序列化时多了一个TypeId字段的Bug。
+
 2016-01-04 Dos.Tools.EntityDesign(v1.8.8.5)
 	*）实体类生成方式与Dos.ORM v1.10.3.0配合，解决lambda写法是取的实体类名不是实际表名的Bug。
 
