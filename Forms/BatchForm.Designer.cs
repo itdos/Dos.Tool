@@ -61,7 +61,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.pbar = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.txt_wjj = new System.Windows.Forms.TextBox();
+            this.txt_wjj = new System.Windows.Forms.TextBox(); //创建类子文件夹  例com_aa  这里填写com  生成com文件夹
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -260,7 +260,7 @@
             // 
             // txtTableStar
             // 
-            this.txtTableStar.Location = new System.Drawing.Point(111, 64);
+            this.txtTableStar.Location = new System.Drawing.Point(111, 64);    //去除表头 列数据库表Com_aa 填写Com_  生成的文件将是aa 
             this.txtTableStar.Name = "txtTableStar";
             this.txtTableStar.Size = new System.Drawing.Size(170, 21);
             this.txtTableStar.TabIndex = 12;
