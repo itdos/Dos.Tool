@@ -254,9 +254,11 @@ namespace Hxj.Tools.EntityDesign
 
             foreach (object o in lbright.Items)
             {
-                builder = new EntityBuilder(o.ToString(), txtNamaspace.Text, o.ToString().Trim().Replace(' ', '_'), Utils.GetColumnInfos(dbObject.GetColumnInfoList(DatabaseName, o.ToString())), tableview[o.ToString()], cbToupperFrstword.Checked, ConnectionModel.DbType, cbEntityTableName.Checked);
-
-                using (StreamWriter sw = new StreamWriter(Path.Combine(txtPath.Text, o.ToString().Trim().Replace(' ', '_') + ".cs"), false, Encoding.UTF8))
+                builder = new EntityBuilder(o.ToString(), txtNamaspace.Text+"."+txt_wjj.Text.Trim(), o.ToString().Trim().Replace(' ', '_').Replace(txtTableStar.Text.Trim(),""), Utils.GetColumnInfos(dbObject.GetColumnInfoList(DatabaseName, o.ToString())), tableview[o.ToString()], cbToupperFrstword.Checked, ConnectionModel.DbType, cbEntityTableName.Checked);
+                var path = txtPath.Text + "\\" + txt_wjj.Text.Trim();
+                if (!Directory.Exists(path))
+                    Directory.CreateDirectory(path);
+                using (StreamWriter sw = new StreamWriter(Path.Combine(path, o.ToString().Trim().Replace(' ', '_').Replace(txtTableStar.Text.Trim(), "") + ".cs"), false, Encoding.UTF8))
                 {
                     sw.Write(builder.Builder());
                     sw.Close();
@@ -320,7 +322,58 @@ namespace Hxj.Tools.EntityDesign
                 }
             }
         }
+           /// <summary>
+           /// 左边双击
+           /// </summary>
+           /// <param name="sender"></param>
+           /// <param name="e"></param>
+        private void lbleft_DoubleClick(object sender, EventArgs e)
+        {
+            if (lbleft.SelectedIndex != -1)
+            {
+                List<object> list = new List<object>();
+
+                foreach (object o in lbleft.SelectedItems)
+                {
+                    lbright.Items.Add(o);
+
+                    list.Add(o);
+                }
+
+                foreach (object o in list)
+                {
+                    lbleft.Items.Remove(o);
+                }
 
 
+            }
+        }
+
+       /// <summary>
+       /// 右边双击
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
+        private void lbright_DoubleClick(object sender, EventArgs e)
+        {
+            if (lbright.SelectedIndex != -1)
+            {
+                List<object> list = new List<object>();
+
+                foreach (object o in lbright.SelectedItems)
+                {
+                    lbleft.Items.Add(o);
+
+                    list.Add(o);
+                }
+
+                foreach (object o in list)
+                {
+                    lbright.Items.Remove(o);
+                }
+
+
+            }
+        }
     }
 }

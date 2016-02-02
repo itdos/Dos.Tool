@@ -46,6 +46,10 @@
             this.btnback = new System.Windows.Forms.Button();
             this.lbright = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtTableStar = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbEntityTableName = new System.Windows.Forms.CheckBox();
             this.cbToupperFrstword = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.txtNamaspace = new System.Windows.Forms.TextBox();
@@ -57,7 +61,9 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.pbar = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.cbEntityTableName = new System.Windows.Forms.CheckBox();
+            this.txt_wjj = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panelbtns.SuspendLayout();
@@ -82,10 +88,11 @@
             this.lbleft.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lbleft.Size = new System.Drawing.Size(201, 208);
             this.lbleft.TabIndex = 1;
+            this.lbleft.DoubleClick += new System.EventHandler(this.lbleft_DoubleClick);
             // 
             // txtPath
             // 
-            this.txtPath.Location = new System.Drawing.Point(111, 76);
+            this.txtPath.Location = new System.Drawing.Point(111, 103);
             this.txtPath.Name = "txtPath";
             this.txtPath.Size = new System.Drawing.Size(328, 21);
             this.txtPath.TabIndex = 2;
@@ -224,9 +231,16 @@
             this.lbright.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lbright.Size = new System.Drawing.Size(201, 208);
             this.lbright.TabIndex = 2;
+            this.lbright.DoubleClick += new System.EventHandler(this.lbright_DoubleClick);
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txt_wjj);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.txtTableStar);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.cbEntityTableName);
             this.groupBox3.Controls.Add(this.cbToupperFrstword);
             this.groupBox3.Controls.Add(this.button2);
@@ -239,15 +253,51 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Location = new System.Drawing.Point(0, 306);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(596, 118);
+            this.groupBox3.Size = new System.Drawing.Size(596, 145);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "参数设置";
             // 
+            // txtTableStar
+            // 
+            this.txtTableStar.Location = new System.Drawing.Point(111, 64);
+            this.txtTableStar.Name = "txtTableStar";
+            this.txtTableStar.Size = new System.Drawing.Size(170, 21);
+            this.txtTableStar.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(63, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 12);
+            this.label2.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 67);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 12);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "去掉表名前缀:";
+            // 
+            // cbEntityTableName
+            // 
+            this.cbEntityTableName.AutoSize = true;
+            this.cbEntityTableName.Checked = true;
+            this.cbEntityTableName.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbEntityTableName.Location = new System.Drawing.Point(389, 67);
+            this.cbEntityTableName.Name = "cbEntityTableName";
+            this.cbEntityTableName.Size = new System.Drawing.Size(174, 16);
+            this.cbEntityTableName.TabIndex = 11;
+            this.cbEntityTableName.Text = "生成v1.10.3及以上版本实体";
+            this.cbEntityTableName.UseVisualStyleBackColor = true;
+            // 
             // cbToupperFrstword
             // 
             this.cbToupperFrstword.AutoSize = true;
-            this.cbToupperFrstword.Location = new System.Drawing.Point(280, 37);
+            this.cbToupperFrstword.Location = new System.Drawing.Point(479, 37);
             this.cbToupperFrstword.Name = "cbToupperFrstword";
             this.cbToupperFrstword.Size = new System.Drawing.Size(84, 16);
             this.cbToupperFrstword.TabIndex = 10;
@@ -256,7 +306,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(445, 74);
+            this.button2.Location = new System.Drawing.Point(445, 101);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -268,7 +318,7 @@
             // 
             this.txtNamaspace.Location = new System.Drawing.Point(111, 32);
             this.txtNamaspace.Name = "txtNamaspace";
-            this.txtNamaspace.Size = new System.Drawing.Size(154, 21);
+            this.txtNamaspace.Size = new System.Drawing.Size(77, 21);
             this.txtNamaspace.TabIndex = 1;
             // 
             // label3
@@ -299,7 +349,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 79);
+            this.label7.Location = new System.Drawing.Point(18, 106);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 12);
             this.label7.TabIndex = 0;
@@ -331,15 +381,29 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // cbEntityTableName
+            // txt_wjj
             // 
-            this.cbEntityTableName.AutoSize = true;
-            this.cbEntityTableName.Location = new System.Drawing.Point(389, 37);
-            this.cbEntityTableName.Name = "cbEntityTableName";
-            this.cbEntityTableName.Size = new System.Drawing.Size(174, 16);
-            this.cbEntityTableName.TabIndex = 11;
-            this.cbEntityTableName.Text = "生成v1.10.3及以上版本实体";
-            this.cbEntityTableName.UseVisualStyleBackColor = true;
+            this.txt_wjj.Location = new System.Drawing.Point(285, 32);
+            this.txt_wjj.Name = "txt_wjj";
+            this.txt_wjj.Size = new System.Drawing.Size(120, 21);
+            this.txt_wjj.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(338, 29);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 12);
+            this.label9.TabIndex = 17;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(210, 35);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 12);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "子文件夹名:";
             // 
             // BatchForm
             // 
@@ -403,5 +467,11 @@
         private System.Windows.Forms.CheckBox chbView;
         private System.Windows.Forms.CheckBox cbToupperFrstword;
         private System.Windows.Forms.CheckBox cbEntityTableName;
+        private System.Windows.Forms.TextBox txtTableStar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txt_wjj;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
