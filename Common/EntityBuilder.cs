@@ -125,12 +125,13 @@ namespace Hxj.Tools.EntityDesign
             plus.AppendSpaceLine(1, "/// </summary>");
             if (!_isNewModel)
             {
-                plus.AppendSpaceLine(1, "[Serializable]");
+                //plus.AppendSpaceLine(1, "[Serializable]");
             }
             else
             {
                 plus.AppendSpaceLine(1, "[Table(\"" + TableName + "\")]");
             }
+            plus.AppendSpaceLine(1, "[Serializable]");
             plus.AppendSpaceLine(1, "public partial class " + ClassName + " : Entity ");
             plus.AppendSpaceLine(1, "{");
             if (!_isNewModel)
