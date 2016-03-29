@@ -252,18 +252,30 @@ namespace Hxj.Tools.EntityDesign
 
             EntityBuilder builder;
 
-            foreach (object o in lbright.Items)
+            foreach (string o in lbright.Items)
             {
+                var ro = !string.IsNullOrWhiteSpace(txtTableStar.Text.Trim()) 
+                    ? o.Trim().Replace(' ', '_').Replace(txtTableStar.Text.Trim(), "") 
+                    : o.Trim().Replace(' ', '_');
                 //修改原因：需要生成简写表名,同时类名也需要改 例 Com_aa 需要Com文件夹 aa类  命名空间Com.aa
                 //修改后效果：根据txtTableStar文本框所填内容来识别去除内容  by kelyljk 2016-2-2
-                builder = new EntityBuilder(o.ToString(), txtNamaspace.Text+"."+txt_wjj.Text.Trim(), o.ToString().Trim().Replace(' ', '_').Replace(txtTableStar.Text.Trim(),""), Utils.GetColumnInfos(dbObject.GetColumnInfoList(DatabaseName, o.ToString())), tableview[o.ToString()], cbToupperFrstword.Checked, ConnectionModel.DbType, cbEntityTableName.Checked);
+                builder = new EntityBuilder(o, txtNamaspace.Text + "." + txt_wjj.Text.Trim(),
+                    ro,
+                    Utils.GetColumnInfos(dbObject.GetColumnInfoList(DatabaseName, o)),
+                    tableview[o],
+                    cbToupperFrstword.Checked,
+                    ConnectionModel.DbType,
+                    cbEntityTableName.Checked);
                 var path = txtPath.Text + "\\" + txt_wjj.Text.Trim();
                 //修改后效果：自动生成路劲文件夹 by kelyljk 2016-2-2
                 if (!Directory.Exists(path))
                     Directory.CreateDirectory(path);
                 //修改原因：需要生成简写表名 例 Com_aa 需要Com文件夹 aa类
                 //修改后效果：根据txtTableStar文本框所填内容来识别去除内容  by kelyljk 2016-2-2
-                using (StreamWriter sw = new StreamWriter(Path.Combine(path, o.ToString().Trim().Replace(' ', '_').Replace(txtTableStar.Text.Trim(), "") + ".cs"), false, Encoding.UTF8))
+                using (StreamWriter sw = new StreamWriter(Path.Combine(path,
+                    ro + ".cs"),
+                    false,
+                    Encoding.UTF8))
                 {
                     sw.Write(builder.Builder());
                     sw.Close();
@@ -338,7 +350,7 @@ namespace Hxj.Tools.EntityDesign
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void lbleft_DoubleClick(object sender, EventArgs e)   
+        private void lbleft_DoubleClick(object sender, EventArgs e)
         {
             if (lbleft.SelectedIndex != -1)
             {

@@ -280,7 +280,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 12);
             this.label8.TabIndex = 13;
-            this.label8.Text = "去掉表名前缀:";
+            this.label8.Text = "去掉表名中字符:";
             // 
             // cbEntityTableName
             // 

@@ -2,7 +2,8 @@
 	*）右键刷新单个数据库异常，需要整个连接刷新。
 	*）增加自动更新实体生成器功能
 	
-2016-03-02 Dos.Tools.EntityDesign(v1.8.8.8)
+2016-03-29 Dos.Tools.EntityDesign(v1.8.8.9)
+	*）解决批量生成中的一个Bug。
 	*）恢复实体类[Serializable]标记
 	*）实体类[Entity("TableName")]标记修改为[Table("TableName")]，以解决序列化时多了一个TypeId字段的Bug。
 
