@@ -254,12 +254,13 @@ namespace Hxj.Tools.EntityDesign
 
             foreach (string o in lbright.Items)
             {
-                var ro = !string.IsNullOrWhiteSpace(txtTableStar.Text.Trim()) 
-                    ? o.Trim().Replace(' ', '_').Replace(txtTableStar.Text.Trim(), "") 
+                var ro = !string.IsNullOrWhiteSpace(txtTableStar.Text.Trim())
+                    ? o.Trim().Replace(' ', '_').Replace(txtTableStar.Text.Trim(), "")
                     : o.Trim().Replace(' ', '_');
+                //var wjj = string.IsNullOrWhiteSpace(txt_wjj.Text.Trim()) ? "" : "." + txt_wjj.Text.Trim();
                 //修改原因：需要生成简写表名,同时类名也需要改 例 Com_aa 需要Com文件夹 aa类  命名空间Com.aa
                 //修改后效果：根据txtTableStar文本框所填内容来识别去除内容  by kelyljk 2016-2-2
-                builder = new EntityBuilder(o, txtNamaspace.Text + "." + txt_wjj.Text.Trim(),
+                builder = new EntityBuilder(o, txtNamaspace.Text, //+ wjj
                     ro,
                     Utils.GetColumnInfos(dbObject.GetColumnInfoList(DatabaseName, o)),
                     tableview[o],
