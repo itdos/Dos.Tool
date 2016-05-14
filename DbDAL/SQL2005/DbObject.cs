@@ -1,6 +1,6 @@
-﻿namespace Hxj.DbObjects.SQL2005
+﻿namespace Dos.DbObjects.SQL2005
 {
-    using Hxj.IDBO;
+    
     using System;
     using System.Data;
     using System.Data.SqlClient;

@@ -5,8 +5,8 @@ using System.IO;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using Hxj.IDBO;
-namespace Hxj.DbObjects.MySQL
+
+namespace Dos.DbObjects.MySQL
 {
     /// <summary>
     /// 数据库信息类。

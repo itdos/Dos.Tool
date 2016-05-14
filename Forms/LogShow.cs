@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 
-namespace Hxj.Tools.EntityDesign
+namespace Dos.Tools
 {
     public partial class LogShow : Form
     {

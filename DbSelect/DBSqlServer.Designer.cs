@@ -1,4 +1,4 @@
-﻿namespace Hxj.Tools.EntityDesign.DbSelect
+﻿namespace Dos.Tools.DbSelect
 {
     partial class DBSqlServer
     {

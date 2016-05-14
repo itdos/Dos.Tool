@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
-namespace Hxj.Tools.EntityDesign.DbSelect
+namespace Dos.Tools.DbSelect
 {
     public partial class DbSqlite : Form
     {
@@ -89,7 +89,7 @@ namespace Hxj.Tools.EntityDesign.DbSelect
 
             }
 
-            Model.Connection connModel = new Hxj.Tools.EntityDesign.Model.Connection();
+            Model.Connection connModel = new Dos.Tools.Model.Connection();
 
             if (rbdatabaseselect.Checked)
             {

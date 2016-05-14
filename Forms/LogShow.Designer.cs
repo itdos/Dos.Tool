@@ -1,4 +1,4 @@
-﻿namespace Hxj.Tools.EntityDesign
+﻿namespace Dos.Tools
 {
     partial class LogShow
     {

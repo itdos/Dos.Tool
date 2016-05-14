@@ -1,4 +1,4 @@
-﻿namespace Hxj.Tools.EntityDesign.DbSelect
+﻿namespace Dos.Tools.DbSelect
 {
     partial class DBMySql
     {
@@ -65,6 +65,9 @@
             // 
             this.cbbDatabase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbDatabase.Enabled = false;
+            this.cbbDatabase.FormattingEnabled = true;
+            this.cbbDatabase.Items.AddRange(new object[] {
+            "全部库"});
             this.cbbDatabase.Location = new System.Drawing.Point(129, 137);
             this.cbbDatabase.Name = "cbbDatabase";
             this.cbbDatabase.Size = new System.Drawing.Size(246, 20);
@@ -188,6 +191,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "连接MySql服务器";
+            this.Load += new System.EventHandler(this.DBMySql_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

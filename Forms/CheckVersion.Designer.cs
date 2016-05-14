@@ -1,4 +1,4 @@
-﻿namespace Dos.Tools.EntityDesign.Forms
+﻿namespace Dos.Tools.Forms
 {
     partial class CheckVersion
     {

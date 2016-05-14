@@ -5,9 +5,9 @@ using System.IO;
 using System.Text;
 using System.Threading;
 using Dos.Common;
-using Dos.Tools.EntityDesign.Forms;
+using Dos.Tools.Forms;
 
-namespace Hxj.Tools.EntityDesign
+namespace Dos.Tools
 {
     static class Program
     {
@@ -17,7 +17,6 @@ namespace Hxj.Tools.EntityDesign
         [STAThread]
         static void Main()
         {
-            
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

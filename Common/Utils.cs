@@ -4,10 +4,10 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 using System.IO;
-using Hxj.Tools.EntityDesign.Model;
+using Dos.Tools.Model;
 using System.Data;
 
-namespace Hxj.Tools.EntityDesign
+namespace Dos.Tools
 {
     public class Utils
     {
@@ -23,7 +23,7 @@ namespace Hxj.Tools.EntityDesign
         /// <returns></returns>
         public static List<Model.Connection> GetConnectionList()
         {
-            List<Model.Connection> list = new List<Hxj.Tools.EntityDesign.Model.Connection>();
+            List<Model.Connection> list = new List<Dos.Tools.Model.Connection>();
             XmlDocument doc = getXmlDocument();
 
             XmlNodeList xmlNodeList = doc.SelectNodes("servers/server");
@@ -34,7 +34,7 @@ namespace Hxj.Tools.EntityDesign
                     if (!node.HasChildNodes)
                         continue;
 
-                    Model.Connection connection = new Hxj.Tools.EntityDesign.Model.Connection();
+                    Model.Connection connection = new Dos.Tools.Model.Connection();
 
                     connection.ID = new Guid(node.Attributes["id"].Value);
                     connection.Name = node.Attributes["name"].Value;
@@ -141,7 +141,7 @@ namespace Hxj.Tools.EntityDesign
             XmlNode xmlNode = doc.SelectSingleNode("servers/server[@id='" + id.ToString() + "']");
             if (null != xmlNode)
             {
-                connModel = new Hxj.Tools.EntityDesign.Model.Connection();
+                connModel = new Dos.Tools.Model.Connection();
                 connModel.ID = new Guid(xmlNode.Attributes["id"].Value);
                 connModel.Name = xmlNode.Attributes["name"].Value;
                 connModel.Database = xmlNode.Attributes["database"].Value;

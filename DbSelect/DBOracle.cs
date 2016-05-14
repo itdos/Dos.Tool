@@ -6,8 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.OracleClient;
+using Dos.DbObjects;
 
-namespace Hxj.Tools.EntityDesign.DbSelect
+namespace Dos.Tools.DbSelect
 {
     public partial class DBOracle : Form
     {
@@ -16,7 +17,7 @@ namespace Hxj.Tools.EntityDesign.DbSelect
             InitializeComponent();
         }
 
-        Hxj.IDBO.IDbObject dbObject;
+        IDbObject dbObject;
 
         /// <summary>
         /// 测试连接
@@ -33,7 +34,7 @@ namespace Hxj.Tools.EntityDesign.DbSelect
                     return;
                 }
 
-                dbObject = new Hxj.DbObjects.Oracle.DbObject(txtConnectString.Text);
+                dbObject = new Dos.DbObjects.Oracle.DbObject(txtConnectString.Text);
             }
             else
             {
@@ -49,7 +50,7 @@ namespace Hxj.Tools.EntityDesign.DbSelect
                     return;
                 }
 
-                dbObject = new Hxj.DbObjects.Oracle.DbObject(false, cbbServer.Text, txtUserName.Text, txtPassword.Text);
+                dbObject = new Dos.DbObjects.Oracle.DbObject(false, cbbServer.Text, txtUserName.Text, txtPassword.Text);
             }
 
             try
@@ -93,7 +94,7 @@ namespace Hxj.Tools.EntityDesign.DbSelect
             }
 
 
-            Model.Connection connectionModel = new Hxj.Tools.EntityDesign.Model.Connection();
+            Model.Connection connectionModel = new Dos.Tools.Model.Connection();
             connectionModel.Database = cbbServer.Text;
             connectionModel.ID = Guid.NewGuid();
             connectionModel.Name = cbbServer.Text+"(Oracle)";

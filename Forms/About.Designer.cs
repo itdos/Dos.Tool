@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Hxj.Tools.EntityDesign
+namespace Dos.Tools
 {
     partial class About 
     {

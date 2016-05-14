@@ -1,6 +1,6 @@
-﻿namespace Hxj.DbObjects.Oracle
+﻿namespace Dos.DbObjects.Oracle
 {
-    using Hxj.IDBO;
+    
     using System;
     using System.Data;
     using System.Data.OracleClient;

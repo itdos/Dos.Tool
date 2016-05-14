@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Dos.Tools.EntityDesign.Forms
+namespace Dos.Tools.Forms
 {
     public partial class CheckVersion : Form
     {

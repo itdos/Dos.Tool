@@ -1,4 +1,4 @@
-﻿namespace Hxj.Tools.EntityDesign
+﻿namespace Dos.Tools
 {
     partial class MainForm
     {
@@ -50,6 +50,16 @@
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.视图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.数据库视图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.换肤ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calmnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deepCyanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.diamondOliveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.glassGreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.macOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.office2007ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xPBlueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,6 +72,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.文件ToolStripMenuItem,
             this.视图ToolStripMenuItem,
+            this.换肤ToolStripMenuItem,
             this.帮助ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -102,9 +113,88 @@
             // 数据库视图ToolStripMenuItem
             // 
             this.数据库视图ToolStripMenuItem.Name = "数据库视图ToolStripMenuItem";
-            this.数据库视图ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.数据库视图ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.数据库视图ToolStripMenuItem.Text = "数据库视图";
             this.数据库视图ToolStripMenuItem.Click += new System.EventHandler(this.数据库视图ToolStripMenuItem_Click);
+            // 
+            // 换肤ToolStripMenuItem
+            // 
+            this.换肤ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calmnessToolStripMenuItem,
+            this.deepCyanToolStripMenuItem,
+            this.diamondOliveToolStripMenuItem,
+            this.glassGreenToolStripMenuItem,
+            this.macOSToolStripMenuItem,
+            this.office2007ToolStripMenuItem,
+            this.pageToolStripMenuItem,
+            this.vistaToolStripMenuItem,
+            this.xPBlueToolStripMenuItem});
+            this.换肤ToolStripMenuItem.Name = "换肤ToolStripMenuItem";
+            this.换肤ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.换肤ToolStripMenuItem.Text = "换肤";
+            // 
+            // calmnessToolStripMenuItem
+            // 
+            this.calmnessToolStripMenuItem.Name = "calmnessToolStripMenuItem";
+            this.calmnessToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.calmnessToolStripMenuItem.Text = "Calmness";
+            this.calmnessToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            // 
+            // deepCyanToolStripMenuItem
+            // 
+            this.deepCyanToolStripMenuItem.Name = "deepCyanToolStripMenuItem";
+            this.deepCyanToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.deepCyanToolStripMenuItem.Text = "DeepCyan";
+            this.deepCyanToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            // 
+            // diamondOliveToolStripMenuItem
+            // 
+            this.diamondOliveToolStripMenuItem.Name = "diamondOliveToolStripMenuItem";
+            this.diamondOliveToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.diamondOliveToolStripMenuItem.Text = "DiamondOlive";
+            this.diamondOliveToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            // 
+            // glassGreenToolStripMenuItem
+            // 
+            this.glassGreenToolStripMenuItem.Name = "glassGreenToolStripMenuItem";
+            this.glassGreenToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.glassGreenToolStripMenuItem.Text = "GlassGreen";
+            this.glassGreenToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            // 
+            // macOSToolStripMenuItem
+            // 
+            this.macOSToolStripMenuItem.Name = "macOSToolStripMenuItem";
+            this.macOSToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.macOSToolStripMenuItem.Text = "MacOS";
+            this.macOSToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            // 
+            // office2007ToolStripMenuItem
+            // 
+            this.office2007ToolStripMenuItem.Name = "office2007ToolStripMenuItem";
+            this.office2007ToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.office2007ToolStripMenuItem.Text = "office2007";
+            this.office2007ToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            // 
+            // pageToolStripMenuItem
+            // 
+            this.pageToolStripMenuItem.Name = "pageToolStripMenuItem";
+            this.pageToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.pageToolStripMenuItem.Text = "Page";
+            this.pageToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            // 
+            // vistaToolStripMenuItem
+            // 
+            this.vistaToolStripMenuItem.Name = "vistaToolStripMenuItem";
+            this.vistaToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.vistaToolStripMenuItem.Text = "vista";
+            this.vistaToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            // 
+            // xPBlueToolStripMenuItem
+            // 
+            this.xPBlueToolStripMenuItem.Name = "xPBlueToolStripMenuItem";
+            this.xPBlueToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.xPBlueToolStripMenuItem.Text = "XPBlue";
+            this.xPBlueToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
             // 
             // 帮助ToolStripMenuItem
             // 
@@ -216,6 +306,16 @@
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 日志ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 换肤ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calmnessToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deepCyanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem diamondOliveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem glassGreenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem macOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem office2007ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vistaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xPBlueToolStripMenuItem;
     }
 }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Hxj.Tools.EntityDesign.Model
+namespace Dos.Tools.Model
 {
     public class Connection
     {

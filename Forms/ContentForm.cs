@@ -6,8 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using Dos.DbObjects;
 
-namespace Hxj.Tools.EntityDesign
+namespace Dos.Tools
 {
     public partial class ContentForm : WeifenLuo.WinFormsUI.Docking.DockContent
     {
@@ -61,30 +62,30 @@ namespace Hxj.Tools.EntityDesign
         /// <param name="e"></param>
         private void ContentForm_Load(object sender, EventArgs e)
         {
-            Hxj.IDBO.IDbObject dbObject = null;
+           IDbObject dbObject = null;
             if (ConnectionModel.DbType.Equals(Dos.ORM.DatabaseType.SqlServer.ToString()))
             {
-                dbObject = new Hxj.DbObjects.SQL2000.DbObject(ConnectionModel.ConnectionString);
+                dbObject = new Dos.DbObjects.SQL2000.DbObject(ConnectionModel.ConnectionString);
             }
             else if (ConnectionModel.DbType.Equals(Dos.ORM.DatabaseType.SqlServer9.ToString()))
             {
-                dbObject = new Hxj.DbObjects.SQL2005.DbObject(ConnectionModel.ConnectionString);
+                dbObject = new Dos.DbObjects.SQL2005.DbObject(ConnectionModel.ConnectionString);
             }
             else if (ConnectionModel.DbType.Equals(Dos.ORM.DatabaseType.MsAccess.ToString()))
             {
-                dbObject = new Hxj.DbObjects.OleDb.DbObject(ConnectionModel.ConnectionString);
+                dbObject = new Dos.DbObjects.OleDb.DbObject(ConnectionModel.ConnectionString);
             }
             else if (ConnectionModel.DbType.Equals(Dos.ORM.DatabaseType.Oracle.ToString()))
             {
-                dbObject = new Hxj.DbObjects.Oracle.DbObject(ConnectionModel.ConnectionString);
+                dbObject = new Dos.DbObjects.Oracle.DbObject(ConnectionModel.ConnectionString);
             }
             else if (ConnectionModel.DbType.Equals(Dos.ORM.DatabaseType.Sqlite3.ToString()))
             {
-                dbObject = new Hxj.DbObjects.SQLite.DbObject(ConnectionModel.ConnectionString);
+                dbObject = new Dos.DbObjects.SQLite.DbObject(ConnectionModel.ConnectionString);
             }
             else if (ConnectionModel.DbType.Equals(Dos.ORM.DatabaseType.MySql.ToString()))
             {
-                dbObject = new Hxj.DbObjects.MySQL.DbObject(ConnectionModel.ConnectionString);
+                dbObject = new Dos.DbObjects.MySQL.DbObject(ConnectionModel.ConnectionString);
             }
             else
             {

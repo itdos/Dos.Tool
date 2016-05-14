@@ -6,8 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using Dos.DbObjects;
 
-namespace Hxj.Tools.EntityDesign
+namespace Dos.Tools
 {
     public partial class LeftPanel : WeifenLuo.WinFormsUI.Docking.DockContent
     {
@@ -45,23 +46,23 @@ namespace Hxj.Tools.EntityDesign
                 switch (DatabaseSelect.DatabaseType)
                 {
                     case Dos.ORM.DatabaseType.SqlServer:
-                        DbSelect.DBSqlServer dbsqlserver = new Hxj.Tools.EntityDesign.DbSelect.DBSqlServer();
+                        DbSelect.DBSqlServer dbsqlserver = new Dos.Tools.DbSelect.DBSqlServer();
                         dia = dbsqlserver.ShowDialog();
                         break;
                     case Dos.ORM.DatabaseType.MsAccess:
-                        DbSelect.DBMsAccess dbMsAccess = new Hxj.Tools.EntityDesign.DbSelect.DBMsAccess();
+                        DbSelect.DBMsAccess dbMsAccess = new Dos.Tools.DbSelect.DBMsAccess();
                         dia = dbMsAccess.ShowDialog();
                         break;
                     case Dos.ORM.DatabaseType.Oracle:
-                        DbSelect.DBOracle dbOracle = new Hxj.Tools.EntityDesign.DbSelect.DBOracle();
+                        DbSelect.DBOracle dbOracle = new Dos.Tools.DbSelect.DBOracle();
                         dia = dbOracle.ShowDialog();
                         break;
                     case Dos.ORM.DatabaseType.Sqlite3:
-                        DbSelect.DbSqlite dbSqlite = new Hxj.Tools.EntityDesign.DbSelect.DbSqlite();
+                        DbSelect.DbSqlite dbSqlite = new Dos.Tools.DbSelect.DbSqlite();
                         dia = dbSqlite.ShowDialog();
                         break;
                     case Dos.ORM.DatabaseType.MySql:
-                        DbSelect.DBMySql dbMySql = new Hxj.Tools.EntityDesign.DbSelect.DBMySql();
+                        DbSelect.DBMySql dbMySql = new Dos.Tools.DbSelect.DBMySql();
                         dia = dbMySql.ShowDialog();
                         break;
                     default:
@@ -222,11 +223,11 @@ namespace Hxj.Tools.EntityDesign
 
             Model.Connection conModel = list.Find(delegate(Model.Connection con) { return con.ID.ToString().Equals(node.Tag.ToString()); });
 
-            IDBO.IDbObject dbObject;
+            IDbObject dbObject;
 
             if (conModel.DbType.Equals(Dos.ORM.DatabaseType.MsAccess.ToString()))
             {
-                dbObject = new Hxj.DbObjects.OleDb.DbObject(conModel.ConnectionString);
+                dbObject = new Dos.DbObjects.OleDb.DbObject(conModel.ConnectionString);
 
                 TreeNode tnode = new TreeNode(conModel.Database, 1, 1);
                 tnode.Tag = conModel.ConnectionString;
@@ -241,7 +242,7 @@ namespace Hxj.Tools.EntityDesign
             }
             else if (conModel.DbType.Equals(Dos.ORM.DatabaseType.Sqlite3.ToString()))
             {
-                dbObject = new Hxj.DbObjects.SQLite.DbObject(conModel.ConnectionString);
+                dbObject = new Dos.DbObjects.SQLite.DbObject(conModel.ConnectionString);
 
                 TreeNode tnode = new TreeNode(conModel.Database, 1, 1);
                 tnode.Tag = conModel.ConnectionString;
@@ -254,9 +255,9 @@ namespace Hxj.Tools.EntityDesign
             else if (conModel.DbType.Equals(Dos.ORM.DatabaseType.SqlServer.ToString()) || conModel.DbType.Equals(Dos.ORM.DatabaseType.SqlServer9.ToString()))
             {
                 if (conModel.DbType.Equals(Dos.ORM.DatabaseType.SqlServer.ToString()))
-                    dbObject = new Hxj.DbObjects.SQL2000.DbObject(conModel.ConnectionString);
+                    dbObject = new Dos.DbObjects.SQL2000.DbObject(conModel.ConnectionString);
                 else
-                    dbObject = new Hxj.DbObjects.SQL2005.DbObject(conModel.ConnectionString);
+                    dbObject = new Dos.DbObjects.SQL2005.DbObject(conModel.ConnectionString);
 
                 if (conModel.Database.Equals("all"))
                 {
@@ -285,7 +286,7 @@ namespace Hxj.Tools.EntityDesign
             }
             else if (conModel.DbType.Equals(Dos.ORM.DatabaseType.Oracle.ToString()))
             {
-                dbObject = new Hxj.DbObjects.Oracle.DbObject(conModel.ConnectionString);
+                dbObject = new Dos.DbObjects.Oracle.DbObject(conModel.ConnectionString);
 
                 TreeNode tnode = new TreeNode(conModel.Database, 1, 1);
                 tnode.Tag = conModel.ConnectionString;
@@ -296,7 +297,7 @@ namespace Hxj.Tools.EntityDesign
             }
             else if (conModel.DbType.Equals(Dos.ORM.DatabaseType.MySql.ToString()))
             {
-                dbObject = new Hxj.DbObjects.MySQL.DbObject(conModel.ConnectionString);
+                dbObject = new Dos.DbObjects.MySQL.DbObject(conModel.ConnectionString);
 
                 if (conModel.Database.Equals("all"))
                 {
@@ -392,31 +393,31 @@ namespace Hxj.Tools.EntityDesign
 
             Model.Connection conModel = list.Find(delegate(Model.Connection con) { return con.ID.ToString().Equals(node.Parent.Tag.ToString()); });
 
-            IDBO.IDbObject dbObject;
+            IDbObject dbObject;
 
             if (conModel.DbType.Equals(Dos.ORM.DatabaseType.MsAccess.ToString()))
             {
-                dbObject = new Hxj.DbObjects.OleDb.DbObject(conModel.ConnectionString);
+                dbObject = new Dos.DbObjects.OleDb.DbObject(conModel.ConnectionString);
                 gettables(node, dbObject.GetTables(""), dbObject.GetVIEWs(""));
             }
             else if (conModel.DbType.Equals(Dos.ORM.DatabaseType.SqlServer.ToString()))
             {
-                dbObject = new Hxj.DbObjects.SQL2000.DbObject(conModel.ConnectionString);
+                dbObject = new Dos.DbObjects.SQL2000.DbObject(conModel.ConnectionString);
                 gettables(node, dbObject.GetTables(node.Text), dbObject.GetVIEWs(node.Text));
             }
             else if (conModel.DbType.Equals(Dos.ORM.DatabaseType.SqlServer9.ToString()))
             {
-                dbObject = new Hxj.DbObjects.SQL2005.DbObject(conModel.ConnectionString);
+                dbObject = new Dos.DbObjects.SQL2005.DbObject(conModel.ConnectionString);
                 gettables(node, dbObject.GetTables(node.Text), dbObject.GetVIEWs(node.Text));
             }
             else if (conModel.DbType.Equals(Dos.ORM.DatabaseType.Oracle.ToString()))
             {
-                dbObject = new Hxj.DbObjects.Oracle.DbObject(conModel.ConnectionString);
+                dbObject = new Dos.DbObjects.Oracle.DbObject(conModel.ConnectionString);
                 gettables(node, dbObject.GetTables(node.Text), dbObject.GetVIEWs(node.Text));
             }
             else if (conModel.DbType.Equals(Dos.ORM.DatabaseType.MySql.ToString()))
             {
-                dbObject = new Hxj.DbObjects.Oracle.DbObject(conModel.ConnectionString);
+                dbObject = new Dos.DbObjects.MySQL.DbObject(conModel.ConnectionString);
                 gettables(node, dbObject.GetTables(node.Text), dbObject.GetVIEWs(node.Text));
             }
         }

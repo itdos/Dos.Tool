@@ -1,4 +1,4 @@
-﻿namespace Hxj.Tools.EntityDesign.Model
+﻿namespace Dos.Tools.Model
 {
     using System;
 

@@ -2,7 +2,7 @@
 using System;
 using System.Text;
 
-namespace Hxj.Tools.EntityDesign
+namespace Dos.Tools
 {
     public class StringPlus
     {

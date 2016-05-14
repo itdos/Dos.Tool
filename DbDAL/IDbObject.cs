@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 
-namespace Hxj.IDBO
+namespace Dos.DbObjects
 {
     public interface IDbObject
     {

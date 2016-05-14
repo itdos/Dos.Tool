@@ -1,4 +1,4 @@
-﻿using Hxj.IDBO;
+﻿
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -6,7 +6,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Hxj.DbObjects.SQL2000
+namespace Dos.DbObjects.SQL2000
 {
     public class DbObject : IDbObject
     {

@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Hxj.Tools.EntityDesign
+namespace Dos.Tools
 {
     public partial class About : Form
     {

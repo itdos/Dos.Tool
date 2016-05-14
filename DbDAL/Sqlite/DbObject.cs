@@ -1,4 +1,4 @@
-﻿namespace Hxj.DbObjects.SQLite
+﻿namespace Dos.DbObjects.SQLite
 {
 
     using System;
@@ -9,8 +9,8 @@
     using System.Runtime.InteropServices;
     using System.Text;
     using System.Windows.Forms;
-    using Hxj.Tools.EntityDesign.Model;
-    using Hxj.IDBO;
+    using Dos.Tools.Model;
+    
 
     public class DbObject : IDbObject
     {

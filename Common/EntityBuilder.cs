@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using System.Data.Common;
-using Hxj.Tools.EntityDesign.Model;
+using Dos.Tools.Model;
 using System.Xml;
 using System.Windows.Forms;
 using Dos.ORM;
 using Dos.ORM.Common;
 
-namespace Hxj.Tools.EntityDesign
+namespace Dos.Tools
 {
     public class EntityBuilder
     {
-        private List<Model.ColumnInfo> _columns = new List<Hxj.Tools.EntityDesign.Model.ColumnInfo>();
+        private List<Model.ColumnInfo> _columns = new List<Dos.Tools.Model.ColumnInfo>();
 
         private string _tableName;
         private string _dbType;

@@ -7,12 +7,14 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using Dos.Common;
-using Dos.Tools.EntityDesign.Forms;
+using Dos.Tools.Forms;
+using Sunisoft.IrisSkin;
 
-namespace Hxj.Tools.EntityDesign
+namespace Dos.Tools
 {
     public partial class MainForm : Form
     {
+        SkinEngine skin = new SkinEngine();
         public MainForm()
         {
             InitializeComponent();
@@ -22,8 +24,10 @@ namespace Hxj.Tools.EntityDesign
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            var path = Environment.CurrentDirectory + "\\Skin\\";
+            skin.SkinFile = path + "Calmness.ssk";
+            skin.Active = true;
             showSJKST();
-
         }
 
         LeftPanel lp = new LeftPanel();
@@ -44,7 +48,7 @@ namespace Hxj.Tools.EntityDesign
         /// </summary>
         /// <param name="conModel"></param>
         /// <param name="tableName"></param>
-        void lp_newcontentForm(Hxj.Tools.EntityDesign.Model.Connection conModel, string tableName, string databaseName, bool isView)
+        void lp_newcontentForm(Dos.Tools.Model.Connection conModel, string tableName, string databaseName, bool isView)
         {
             ContentForm s = new ContentForm();
             s.Text = "(" + databaseName + ")" + tableName;
@@ -89,6 +93,11 @@ namespace Hxj.Tools.EntityDesign
             LogShow ls = new LogShow();
             ls.ShowDialog();
         }
-
+        private void ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var path = Environment.CurrentDirectory + "\\Skin\\";
+            skin.SkinFile = path + sender + ".ssk";
+            skin.Active = true;
+        }
     }
 }

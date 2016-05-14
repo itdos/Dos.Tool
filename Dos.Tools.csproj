@@ -73,6 +73,9 @@
       <HintPath>packages\Dos.ORM.Sqlite.1.0.7.0\lib\net40\Dos.ORM.Sqlite.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="IrisSkin4">
+      <HintPath>packages\DLL\IrisSkin4.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.6.9.7\lib\net40\MySql.Data.dll</HintPath>
       <Private>True</Private>
@@ -184,6 +187,12 @@
     <Compile Include="Model\Sysconfig.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Template\Business.tpl" />
+    <None Include="Template\Cache.tpl" />
+    <None Include="Template\js.tpl" />
+    <None Include="Template\Model.tpl" />
+    <None Include="Template\Param.tpl" />
+    <None Include="Template\Repository.tpl" />
     <EmbeddedResource Include="Forms\About.resx">
       <DependentUpon>About.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -259,6 +268,33 @@
     <Compile Include="Common\StringPlus.cs" />
     <Compile Include="Common\Utils.cs" />
     <None Include="README.md" />
+    <Content Include="Skin\MacOS.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\Calmness.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\DeepCyan.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\DiamondOlive.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\GlassGreen.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\office2007.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\Page.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\vista.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\XPBlue.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="其它方式生成实体\T4模板\T4 Msql 实体生成抛砖引玉版.zip" />
     <None Include="其它方式生成实体\动软-Dos.ORM实体生成模板.cmt" />
   </ItemGroup>
