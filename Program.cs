@@ -23,7 +23,7 @@ namespace Dos.Tools
             #region 检查最新版
             try
             {
-                var serverVersion = HttpHelper.Get("http://123.57.75.168:8001/DosToolsEntityDesign.txt", "", 2);
+                var serverVersion = HttpHelper.Get("http://123.57.75.168:8001/DosToolsEntityDesign.txt");
                 string thisVersion = Application.ProductVersion;
                 if (Convert.ToInt32(serverVersion.Replace("v", "").Replace(".", "")) > Convert.ToInt32(thisVersion.Replace(".", "")))
                 {

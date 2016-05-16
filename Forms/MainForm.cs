@@ -8,6 +8,7 @@ using System.Threading;
 using System.Windows.Forms;
 using Dos.Common;
 using Dos.Tools.Forms;
+using RazorEngine;
 using Sunisoft.IrisSkin;
 
 namespace Dos.Tools
@@ -24,9 +25,9 @@ namespace Dos.Tools
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            var path = Environment.CurrentDirectory + "\\Skin\\";
-            skin.SkinFile = path + "Calmness.ssk";
-            skin.Active = true;
+            //var path = Environment.CurrentDirectory + "\\Skin\\";
+            //skin.SkinFile = path + "Calmness.ssk";
+            //skin.Active = true;
             showSJKST();
         }
 
@@ -98,6 +99,11 @@ namespace Dos.Tools
             var path = Environment.CurrentDirectory + "\\Skin\\";
             skin.SkinFile = path + sender + ".ssk";
             skin.Active = true;
+        }
+
+        private void 默认ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            skin.Active = false;
         }
     }
 }

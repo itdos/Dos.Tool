@@ -51,6 +51,7 @@
             this.视图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.数据库视图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.换肤ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.默认ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calmnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deepCyanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diamondOliveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -113,13 +114,14 @@
             // 数据库视图ToolStripMenuItem
             // 
             this.数据库视图ToolStripMenuItem.Name = "数据库视图ToolStripMenuItem";
-            this.数据库视图ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.数据库视图ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.数据库视图ToolStripMenuItem.Text = "数据库视图";
             this.数据库视图ToolStripMenuItem.Click += new System.EventHandler(this.数据库视图ToolStripMenuItem_Click);
             // 
             // 换肤ToolStripMenuItem
             // 
             this.换肤ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.默认ToolStripMenuItem,
             this.calmnessToolStripMenuItem,
             this.deepCyanToolStripMenuItem,
             this.diamondOliveToolStripMenuItem,
@@ -132,6 +134,13 @@
             this.换肤ToolStripMenuItem.Name = "换肤ToolStripMenuItem";
             this.换肤ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.换肤ToolStripMenuItem.Text = "换肤";
+            // 
+            // 默认ToolStripMenuItem
+            // 
+            this.默认ToolStripMenuItem.Name = "默认ToolStripMenuItem";
+            this.默认ToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.默认ToolStripMenuItem.Text = "默认";
+            this.默认ToolStripMenuItem.Click += new System.EventHandler(this.默认ToolStripMenuItem_Click);
             // 
             // calmnessToolStripMenuItem
             // 
@@ -284,7 +293,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "Dos.Tools代码生成器";
+            this.Text = "Dos.Tool代码生成器";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -316,6 +325,7 @@
         private System.Windows.Forms.ToolStripMenuItem pageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vistaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xPBlueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 默认ToolStripMenuItem;
     }
 }
 

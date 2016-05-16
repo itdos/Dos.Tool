@@ -60,5 +60,10 @@ namespace Dos.Tools
         {
             System.Diagnostics.Process.Start("http://my.oschina.net/janl/blog");
         }
+
+        private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://jeeshu.cn/");
+        }
     }
 }

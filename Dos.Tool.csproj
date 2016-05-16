@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F073175B-8B7A-4EFB-AD8C-8F8CBB4133A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dos.Tool</RootNamespace>
+    <AssemblyName>Dos.Tool</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Ico\16.ico</ApplicationIcon>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dos.Common, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dos.Common.1.0.8.0\lib\net40\Dos.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dos.ORM, Version=1.10.5.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dos.ORM.1.10.5.7\lib\net40\Dos.ORM.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dos.ORM.MySql, Version=1.1.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dos.ORM.MySql.1.1.7.0\lib\net40\Dos.ORM.MySql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dos.ORM.Sqlite, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dos.ORM.Sqlite.1.0.7.0\lib\net40\Dos.ORM.Sqlite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IrisSkin4">
+      <HintPath>packages\DLL\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.6.9.8\lib\net40\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.8.2.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>packages\RazorEngine.3.8.2\lib\net40\RazorEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SQLite, Version=1.0.101.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Core.1.0.101.0\lib\net40\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>packages\DLL\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BatchForm.Designer.cs">
+      <DependentUpon>BatchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbDAL\MySql\DbObject.cs" />
+    <Compile Include="DbDAL\Sqlite\DbObject.cs" />
+    <Compile Include="DbSelect\DBMySql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbSelect\DBMySql.Designer.cs">
+      <DependentUpon>DBMySql.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbSelect\DBOracle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbSelect\DBOracle.Designer.cs">
+      <DependentUpon>DBOracle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbSelect\DbSqlite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbSelect\DbSqlite.Designer.cs">
+      <DependentUpon>DbSqlite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CheckVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CheckVersion.Designer.cs">
+      <DependentUpon>CheckVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LogShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LogShow.Designer.cs">
+      <DependentUpon>LogShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ColumnInfo.cs" />
+    <Compile Include="DbDAL\IDbObject.cs" />
+    <Compile Include="DbDAL\OleDb\DbObject.cs" />
+    <Compile Include="DbDAL\Oracle\DbObject.cs" />
+    <Compile Include="DbDAL\SQL2000\DbObject.cs" />
+    <Compile Include="DbDAL\SQL2005\DbObject.cs" />
+    <Compile Include="DbSelect\DBMsAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbSelect\DBMsAccess.Designer.cs">
+      <DependentUpon>DBMsAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\EntityBuilder.cs" />
+    <Compile Include="Model\Connection.cs" />
+    <Compile Include="Forms\ContentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ContentForm.Designer.cs">
+      <DependentUpon>ContentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DatabaseSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DatabaseSelect.Designer.cs">
+      <DependentUpon>DatabaseSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbSelect\DBSqlServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbSelect\DBSqlServer.Designer.cs">
+      <DependentUpon>DBSqlServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LeftPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LeftPanel.Designer.cs">
+      <DependentUpon>LeftPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Sysconfig.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Template\业务逻辑.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\实体类_最新.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\实体类_v1.10.2.7及以下.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\缓存处理.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\前端JavaScript.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\实体类_v1.10.5.5及以下.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\参数.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\仓库.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Forms\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BatchForm.resx">
+      <DependentUpon>BatchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CheckVersion.resx">
+      <DependentUpon>CheckVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ContentForm.resx">
+      <DependentUpon>ContentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DatabaseSelect.resx">
+      <DependentUpon>DatabaseSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbSelect\DBMsAccess.resx">
+      <DependentUpon>DBMsAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbSelect\DBMySql.resx">
+      <DependentUpon>DBMySql.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbSelect\DBOracle.resx">
+      <DependentUpon>DBOracle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbSelect\DbSqlite.resx">
+      <DependentUpon>DbSqlite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbSelect\DBSqlServer.resx">
+      <DependentUpon>DBSqlServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LeftPanel.resx">
+      <DependentUpon>LeftPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogShow.resx">
+      <DependentUpon>LogShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <Content Include="Ico\16.ico" />
+    <Content Include="Ico\48.ico" />
+    <Content Include="Ico\64.ico" />
+    <Content Include="LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Common\StringPlus.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <None Include="README.md" />
+    <Content Include="Skin\MacOS.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\Calmness.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\DeepCyan.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\DiamondOlive.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\GlassGreen.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\office2007.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\Page.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\vista.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Skin\XPBlue.ssk">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="其它方式生成实体\T4模板\T4 Msql 实体生成抛砖引玉版.zip" />
+    <None Include="其它方式生成实体\动软-Dos.ORM实体生成模板.cmt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\databaseconfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\dbtype.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Ico\batch.ICO" />
+    <Content Include="Ico\bdata.ICO" />
+    <Content Include="Ico\cs.ICO" />
+    <Content Include="Ico\database.ICO" />
+    <Content Include="Ico\file.ICO" />
+    <Content Include="Ico\fileopen.ICO" />
+    <Content Include="Ico\msaccess.ICO" />
+    <Content Include="Ico\png-1471.ico" />
+    <Content Include="Ico\pz.ICO" />
+    <Content Include="Ico\server.ICO" />
+    <Content Include="Ico\sqlserver.ICO" />
+    <Content Include="Ico\table.ICO" />
+    <Content Include="Config\namespace.txt" />
+    <Content Include="Config\sysconfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="实体生成器更新日志.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\System.Data.SQLite.Core.1.0.101.0\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('packages\System.Data.SQLite.Core.1.0.101.0\build\net40\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此项目引用这台计算机上缺少的 NuGet 程序包。使用 NuGet 程序包还原可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\System.Data.SQLite.Core.1.0.101.0\build\net40\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.Data.SQLite.Core.1.0.101.0\build\net40\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

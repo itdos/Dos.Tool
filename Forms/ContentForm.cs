@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Linq;
+using Dos.Common;
 using Dos.DbObjects;
 
 namespace Dos.Tools
@@ -15,6 +17,24 @@ namespace Dos.Tools
         public ContentForm()
         {
             InitializeComponent();
+            #region 加载模板
+            var tpls = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "Template")).GetFiles("*.tpl", SearchOption.AllDirectories);
+            tplComboBox.Items.Add("实体类_最新.tpl");
+            foreach (var fileInfo in tpls)
+            {
+                if (fileInfo.Name == "实体类_最新.tpl")
+                {
+                    continue;
+                }
+                tplComboBox.Items.Add(fileInfo.Name);
+            }
+            tplComboBox.SelectedIndex = 0;
+            var tpl = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "Template", "实体类_最新.tpl");
+            if (File.Exists(tpl))
+            {
+                tplContent.Text = FileHelper.Read(tpl);
+            }
+            #endregion
         }
 
         public string Content
@@ -62,7 +82,7 @@ namespace Dos.Tools
         /// <param name="e"></param>
         private void ContentForm_Load(object sender, EventArgs e)
         {
-           IDbObject dbObject = null;
+            IDbObject dbObject = null;
             if (ConnectionModel.DbType.Equals(Dos.ORM.DatabaseType.SqlServer.ToString()))
             {
                 dbObject = new Dos.DbObjects.SQL2000.DbObject(ConnectionModel.ConnectionString);
@@ -195,9 +215,9 @@ namespace Dos.Tools
                 }
             }
 
-            EntityBuilder builder = new EntityBuilder(TableName, txtnamespace.Text, txtClassName.Text, columns, IsView, cbToupperFrstword.Checked, ConnectionModel.DbType,cbEntityTableName.Checked);
+            EntityBuilder builder = new EntityBuilder(TableName, txtnamespace.Text, txtClassName.Text, columns, IsView, cbToupperFrstword.Checked, ConnectionModel.DbType, cbEntityTableName.Checked);
 
-            txtContent.Text = builder.Builder();
+            txtContent.Text = builder.Builder(tplContent.Text);
 
             tabControl1.SelectedIndex = 1;
         }
@@ -221,10 +241,20 @@ namespace Dos.Tools
                     sw.Close();
                 }
             }
-
         }
 
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if ((sender as TabControl).SelectedTab.Text == "生成代码")
+            {
+                button1_Click(null, null);
+            }
+        }
 
-
+        private void tplComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var tpl = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "Template", (sender as ComboBox).SelectedItem.ToString());
+            tplContent.Text = FileHelper.Read(tpl);
+        }
     }
 }

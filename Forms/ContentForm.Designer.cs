@@ -32,11 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContentForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tp1 = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbEntityTableName = new System.Windows.Forms.CheckBox();
             this.cbToupperFrstword = new System.Windows.Forms.CheckBox();
@@ -56,6 +51,9 @@
             this.保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.saveEntity = new System.Windows.Forms.SaveFileDialog();
+            this.tplContent = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tplComboBox = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tp1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -77,16 +75,12 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(875, 665);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tp1
             // 
-            this.tp1.Controls.Add(this.button6);
-            this.tp1.Controls.Add(this.button5);
-            this.tp1.Controls.Add(this.button4);
-            this.tp1.Controls.Add(this.button3);
-            this.tp1.Controls.Add(this.button2);
+            this.tp1.Controls.Add(this.tplContent);
             this.tp1.Controls.Add(this.groupBox1);
-            this.tp1.Controls.Add(this.button1);
             this.tp1.Controls.Add(this.gridColumns);
             this.tp1.ImageIndex = 0;
             this.tp1.Location = new System.Drawing.Point(4, 4);
@@ -97,69 +91,12 @@
             this.tp1.Text = "生成设置";
             this.tp1.UseVisualStyleBackColor = true;
             // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button6.Enabled = false;
-            this.button6.Location = new System.Drawing.Point(263, 486);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(107, 23);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "生成 Repository";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button5.Enabled = false;
-            this.button5.Location = new System.Drawing.Point(749, 486);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(107, 23);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "生成 JavaScript";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(619, 486);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(111, 23);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "生成 ParamExpand";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(493, 486);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "生成 Controller";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(389, 486);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "生成 Logic";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tplComboBox);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cbEntityTableName);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.cbToupperFrstword);
             this.groupBox1.Controls.Add(this.btnRemovePrimarykey);
             this.groupBox1.Controls.Add(this.btnAddPrimarykey);
@@ -170,9 +107,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbPrimarykey);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(3, 293);
+            this.groupBox1.Location = new System.Drawing.Point(3, 225);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(861, 151);
+            this.groupBox1.Size = new System.Drawing.Size(861, 100);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "生成配置";
@@ -182,17 +119,18 @@
             this.cbEntityTableName.AutoSize = true;
             this.cbEntityTableName.Checked = true;
             this.cbEntityTableName.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbEntityTableName.Location = new System.Drawing.Point(19, 117);
+            this.cbEntityTableName.Location = new System.Drawing.Point(684, 11);
             this.cbEntityTableName.Name = "cbEntityTableName";
             this.cbEntityTableName.Size = new System.Drawing.Size(174, 16);
             this.cbEntityTableName.TabIndex = 7;
             this.cbEntityTableName.Text = "生成v1.10.3及以上版本实体";
             this.cbEntityTableName.UseVisualStyleBackColor = true;
+            this.cbEntityTableName.Visible = false;
             // 
             // cbToupperFrstword
             // 
             this.cbToupperFrstword.AutoSize = true;
-            this.cbToupperFrstword.Location = new System.Drawing.Point(274, 117);
+            this.cbToupperFrstword.Location = new System.Drawing.Point(450, 65);
             this.cbToupperFrstword.Name = "cbToupperFrstword";
             this.cbToupperFrstword.Size = new System.Drawing.Size(84, 16);
             this.cbToupperFrstword.TabIndex = 6;
@@ -201,7 +139,7 @@
             // 
             // btnRemovePrimarykey
             // 
-            this.btnRemovePrimarykey.Location = new System.Drawing.Point(417, 27);
+            this.btnRemovePrimarykey.Location = new System.Drawing.Point(543, 25);
             this.btnRemovePrimarykey.Name = "btnRemovePrimarykey";
             this.btnRemovePrimarykey.Size = new System.Drawing.Size(75, 23);
             this.btnRemovePrimarykey.TabIndex = 3;
@@ -211,7 +149,7 @@
             // 
             // btnAddPrimarykey
             // 
-            this.btnAddPrimarykey.Location = new System.Drawing.Point(322, 28);
+            this.btnAddPrimarykey.Location = new System.Drawing.Point(450, 25);
             this.btnAddPrimarykey.Name = "btnAddPrimarykey";
             this.btnAddPrimarykey.Size = new System.Drawing.Size(75, 23);
             this.btnAddPrimarykey.TabIndex = 2;
@@ -221,7 +159,7 @@
             // 
             // txtClassName
             // 
-            this.txtClassName.Location = new System.Drawing.Point(322, 74);
+            this.txtClassName.Location = new System.Drawing.Point(285, 63);
             this.txtClassName.Name = "txtClassName";
             this.txtClassName.Size = new System.Drawing.Size(140, 21);
             this.txtClassName.TabIndex = 5;
@@ -229,55 +167,55 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(272, 77);
+            this.label3.Location = new System.Drawing.Point(242, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 12);
+            this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 5;
-            this.label3.Text = "类名:";
+            this.label3.Text = "类名：";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 77);
+            this.label2.Location = new System.Drawing.Point(13, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 12);
+            this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 4;
-            this.label2.Text = "命名空间:";
+            this.label2.Text = "命名空间：";
             // 
             // txtnamespace
             // 
-            this.txtnamespace.Location = new System.Drawing.Point(91, 74);
+            this.txtnamespace.Location = new System.Drawing.Point(78, 63);
             this.txtnamespace.Name = "txtnamespace";
-            this.txtnamespace.Size = new System.Drawing.Size(144, 21);
+            this.txtnamespace.Size = new System.Drawing.Size(137, 21);
             this.txtnamespace.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 33);
+            this.label1.Location = new System.Drawing.Point(242, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 12);
+            this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 2;
-            this.label1.Text = "主键:";
+            this.label1.Text = "主键：";
             // 
             // cbPrimarykey
             // 
             this.cbPrimarykey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPrimarykey.FormattingEnabled = true;
-            this.cbPrimarykey.Location = new System.Drawing.Point(91, 30);
+            this.cbPrimarykey.Location = new System.Drawing.Point(285, 26);
             this.cbPrimarykey.Name = "cbPrimarykey";
-            this.cbPrimarykey.Size = new System.Drawing.Size(144, 20);
+            this.cbPrimarykey.Size = new System.Drawing.Size(140, 20);
             this.cbPrimarykey.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.Location = new System.Drawing.Point(157, 486);
+            this.button1.Location = new System.Drawing.Point(543, 62);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 23);
             this.button1.TabIndex = 6;
-            this.button1.Text = "生成 Model";
+            this.button1.Text = "生成代码";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -291,7 +229,7 @@
             this.gridColumns.Location = new System.Drawing.Point(3, 3);
             this.gridColumns.Name = "gridColumns";
             this.gridColumns.RowTemplate.Height = 23;
-            this.gridColumns.Size = new System.Drawing.Size(861, 290);
+            this.gridColumns.Size = new System.Drawing.Size(861, 222);
             this.gridColumns.TabIndex = 0;
             // 
             // tp2
@@ -303,7 +241,7 @@
             this.tp2.Padding = new System.Windows.Forms.Padding(3);
             this.tp2.Size = new System.Drawing.Size(867, 638);
             this.tp2.TabIndex = 1;
-            this.tp2.Text = "代码查看";
+            this.tp2.Text = "生成代码";
             this.tp2.UseVisualStyleBackColor = true;
             // 
             // txtContent
@@ -313,7 +251,6 @@
             this.txtContent.Location = new System.Drawing.Point(3, 3);
             this.txtContent.Margin = new System.Windows.Forms.Padding(0);
             this.txtContent.Name = "txtContent";
-            this.txtContent.ReadOnly = true;
             this.txtContent.Size = new System.Drawing.Size(861, 632);
             this.txtContent.TabIndex = 0;
             this.txtContent.Text = "";
@@ -339,6 +276,36 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "pz.ICO");
             this.imageList1.Images.SetKeyName(1, "cs.ICO");
+            // 
+            // tplContent
+            // 
+            this.tplContent.ContextMenuStrip = this.contextMenuStripSave;
+            this.tplContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tplContent.Location = new System.Drawing.Point(3, 325);
+            this.tplContent.Margin = new System.Windows.Forms.Padding(0);
+            this.tplContent.Name = "tplContent";
+            this.tplContent.Size = new System.Drawing.Size(861, 310);
+            this.tplContent.TabIndex = 8;
+            this.tplContent.Text = "";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 12);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "模板：";
+            // 
+            // tplComboBox
+            // 
+            this.tplComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tplComboBox.FormattingEnabled = true;
+            this.tplComboBox.Location = new System.Drawing.Point(78, 26);
+            this.tplComboBox.Name = "tplComboBox";
+            this.tplComboBox.Size = new System.Drawing.Size(137, 20);
+            this.tplComboBox.TabIndex = 9;
+            this.tplComboBox.SelectedIndexChanged += new System.EventHandler(this.tplComboBox_SelectedIndexChanged);
             // 
             // ContentForm
             // 
@@ -386,11 +353,9 @@
         private System.Windows.Forms.SaveFileDialog saveEntity;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.CheckBox cbToupperFrstword;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckBox cbEntityTableName;
+        private System.Windows.Forms.RichTextBox tplContent;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox tplComboBox;
     }
 }
