@@ -56,7 +56,7 @@ namespace Dos.Tools
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(199, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "代码生成器（v2.0.0.0）";
+            this.label3.Text = "代码生成器（v2.0.1.0）";
             // 
             // button1
             // 
