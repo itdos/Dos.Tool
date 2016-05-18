@@ -1,0 +1,36 @@
+DateTime:2016-5-18 11:09:55
+Message:获取列数据失败You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+Source:Dos.Tool
+StackTrace:   在 Dos.DbObjects.MySQL.DbObject.GetColumnInfoList(String DbName, String TableName) 位置 D:\工作\GitHub\Dos.Tools\DbDAL\MySql\DbObject.cs:行号 732
+   在 Dos.Tools.ContentForm.ContentForm_Load(Object sender, EventArgs e) 位置 D:\工作\GitHub\Dos.Tools\Forms\ContentForm.cs:行号 115
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+--------------------------------------------------------------
+DateTime:2016-5-18 11:10:10
+Message:获取列数据失败You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order' at line 1
+Source:Dos.Tool
+StackTrace:   在 Dos.DbObjects.MySQL.DbObject.GetColumnInfoList(String DbName, String TableName) 位置 D:\工作\GitHub\Dos.Tools\DbDAL\MySql\DbObject.cs:行号 732
+   在 Dos.Tools.ContentForm.ContentForm_Load(Object sender, EventArgs e) 位置 D:\工作\GitHub\Dos.Tools\Forms\ContentForm.cs:行号 115
+   在 System.Windows.Forms.Form.OnLoad(EventArgs e)
+   在 System.Windows.Forms.Form.OnCreateControl()
+   在 System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   在 System.Windows.Forms.Control.CreateControl()
+   在 System.Windows.Forms.Control.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   在 System.Windows.Forms.Form.WmShowWindow(Message& m)
+   在 System.Windows.Forms.Form.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+--------------------------------------------------------------

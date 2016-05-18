@@ -197,7 +197,10 @@
     <Compile Include="Model\Sysconfig.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="Template\业务逻辑.tpl">
+    <None Include="Template\中级demo_业务逻辑层.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\实体类_仅FromSql用.tpl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Template\实体类_最新.tpl">
@@ -206,19 +209,19 @@
     <None Include="Template\实体类_v1.10.2.7及以下.tpl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Template\缓存处理.tpl">
+    <None Include="Template\中级demo_仓库层.tpl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Template\前端JavaScript.tpl">
+    <None Include="Template\中级demo_缓存处理层.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\中级demo_前端JavaScript.tpl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Template\实体类_v1.10.5.5及以下.tpl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Template\参数.tpl">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Template\仓库.tpl">
+    <None Include="Template\中级demo_参数类.tpl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <EmbeddedResource Include="Forms\About.resx">
