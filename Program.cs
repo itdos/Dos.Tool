@@ -20,21 +20,6 @@ namespace Dos.Tools
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            #region 检查最新版
-            try
-            {
-                var serverVersion = HttpHelper.Get("http://123.57.75.168:8001/DosToolsEntityDesign.txt");
-                string thisVersion = Application.ProductVersion;
-                if (Convert.ToInt32(serverVersion.Replace("v", "").Replace(".", "")) > Convert.ToInt32(thisVersion.Replace(".", "")))
-                {
-                    var cv = new CheckVersion();
-                    cv.ShowDialog();
-                }
-            }
-            catch (Exception)
-            {
-            }
-            #endregion
             Application.Run(new MainForm());
         }
 

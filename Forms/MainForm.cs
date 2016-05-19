@@ -19,6 +19,21 @@ namespace Dos.Tools
         public MainForm()
         {
             InitializeComponent();
+            #region 检查最新版
+            try
+            {
+                var serverVersion = HttpHelper.Get("http://www.itdos.net/Content/DosToolVersion.txt");
+                string thisVersion = Application.ProductVersion;
+                if (Convert.ToInt32(serverVersion.Replace("v", "").Replace(".", "")) > Convert.ToInt32(thisVersion.Replace(".", "")))
+                {
+                    var cv = new CheckVersion(serverVersion);
+                    cv.ShowDialog();
+                }
+            }
+            catch (Exception)
+            {
+            }
+            #endregion
         }
 
         #region 打开数据库视图

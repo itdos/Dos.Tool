@@ -13,6 +13,7 @@ namespace Dos.Tools
         public About()
         {
             InitializeComponent();
+            label3.Text = "Dos.Tool代码生成器（v"+ Application.ProductVersion + "）";
         }
 
         private void button1_Click(object sender, EventArgs e)
