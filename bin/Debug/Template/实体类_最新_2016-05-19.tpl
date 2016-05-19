@@ -80,6 +80,14 @@ namespace @Model.NameSpace
 }
 			};
         }
+        /// <summary>
+        /// 是否是v1.10.5.6及以上版本实体。
+        /// </summary>
+        /// <returns></returns>
+        public override bool V1_10_5_6_Plus()
+        {
+            return true;
+        }
         #endregion
 
 		#region _Field

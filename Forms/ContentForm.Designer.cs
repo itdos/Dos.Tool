@@ -32,8 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContentForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tp1 = new System.Windows.Forms.TabPage();
+            this.tplContent = new System.Windows.Forms.RichTextBox();
+            this.contextMenuStripSave = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tplComboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.cbEntityTableName = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.cbToupperFrstword = new System.Windows.Forms.CheckBox();
             this.btnRemovePrimarykey = new System.Windows.Forms.Button();
             this.btnAddPrimarykey = new System.Windows.Forms.Button();
@@ -43,23 +49,17 @@
             this.txtnamespace = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbPrimarykey = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.gridColumns = new System.Windows.Forms.DataGridView();
             this.tp2 = new System.Windows.Forms.TabPage();
             this.txtContent = new System.Windows.Forms.RichTextBox();
-            this.contextMenuStripSave = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.saveEntity = new System.Windows.Forms.SaveFileDialog();
-            this.tplContent = new System.Windows.Forms.RichTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tplComboBox = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tp1.SuspendLayout();
+            this.contextMenuStripSave.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridColumns)).BeginInit();
             this.tp2.SuspendLayout();
-            this.contextMenuStripSave.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -91,6 +91,32 @@
             this.tp1.Text = "生成设置";
             this.tp1.UseVisualStyleBackColor = true;
             // 
+            // tplContent
+            // 
+            this.tplContent.ContextMenuStrip = this.contextMenuStripSave;
+            this.tplContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tplContent.Location = new System.Drawing.Point(3, 325);
+            this.tplContent.Margin = new System.Windows.Forms.Padding(0);
+            this.tplContent.Name = "tplContent";
+            this.tplContent.Size = new System.Drawing.Size(861, 310);
+            this.tplContent.TabIndex = 8;
+            this.tplContent.Text = "";
+            // 
+            // contextMenuStripSave
+            // 
+            this.contextMenuStripSave.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.保存ToolStripMenuItem});
+            this.contextMenuStripSave.Name = "contextMenuStripSave";
+            this.contextMenuStripSave.Size = new System.Drawing.Size(145, 26);
+            // 
+            // 保存ToolStripMenuItem
+            // 
+            this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
+            this.保存ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.保存ToolStripMenuItem.Text = "保存";
+            this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tplComboBox);
@@ -114,6 +140,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "生成配置";
             // 
+            // tplComboBox
+            // 
+            this.tplComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tplComboBox.FormattingEnabled = true;
+            this.tplComboBox.Location = new System.Drawing.Point(78, 26);
+            this.tplComboBox.Name = "tplComboBox";
+            this.tplComboBox.Size = new System.Drawing.Size(209, 20);
+            this.tplComboBox.TabIndex = 9;
+            this.tplComboBox.SelectedIndexChanged += new System.EventHandler(this.tplComboBox_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 12);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "模板：";
+            // 
             // cbEntityTableName
             // 
             this.cbEntityTableName.AutoSize = true;
@@ -127,10 +172,22 @@
             this.cbEntityTableName.UseVisualStyleBackColor = true;
             this.cbEntityTableName.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.Location = new System.Drawing.Point(642, 61);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "生成代码";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // cbToupperFrstword
             // 
             this.cbToupperFrstword.AutoSize = true;
-            this.cbToupperFrstword.Location = new System.Drawing.Point(450, 65);
+            this.cbToupperFrstword.Location = new System.Drawing.Point(549, 66);
             this.cbToupperFrstword.Name = "cbToupperFrstword";
             this.cbToupperFrstword.Size = new System.Drawing.Size(84, 16);
             this.cbToupperFrstword.TabIndex = 6;
@@ -139,7 +196,7 @@
             // 
             // btnRemovePrimarykey
             // 
-            this.btnRemovePrimarykey.Location = new System.Drawing.Point(543, 25);
+            this.btnRemovePrimarykey.Location = new System.Drawing.Point(642, 24);
             this.btnRemovePrimarykey.Name = "btnRemovePrimarykey";
             this.btnRemovePrimarykey.Size = new System.Drawing.Size(75, 23);
             this.btnRemovePrimarykey.TabIndex = 3;
@@ -149,7 +206,7 @@
             // 
             // btnAddPrimarykey
             // 
-            this.btnAddPrimarykey.Location = new System.Drawing.Point(450, 25);
+            this.btnAddPrimarykey.Location = new System.Drawing.Point(549, 24);
             this.btnAddPrimarykey.Name = "btnAddPrimarykey";
             this.btnAddPrimarykey.Size = new System.Drawing.Size(75, 23);
             this.btnAddPrimarykey.TabIndex = 2;
@@ -159,15 +216,15 @@
             // 
             // txtClassName
             // 
-            this.txtClassName.Location = new System.Drawing.Point(285, 63);
+            this.txtClassName.Location = new System.Drawing.Point(345, 62);
             this.txtClassName.Name = "txtClassName";
-            this.txtClassName.Size = new System.Drawing.Size(140, 21);
+            this.txtClassName.Size = new System.Drawing.Size(178, 21);
             this.txtClassName.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(242, 67);
+            this.label3.Location = new System.Drawing.Point(302, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 5;
@@ -186,13 +243,13 @@
             // 
             this.txtnamespace.Location = new System.Drawing.Point(78, 63);
             this.txtnamespace.Name = "txtnamespace";
-            this.txtnamespace.Size = new System.Drawing.Size(137, 21);
+            this.txtnamespace.Size = new System.Drawing.Size(209, 21);
             this.txtnamespace.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(242, 30);
+            this.label1.Location = new System.Drawing.Point(302, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 2;
@@ -202,22 +259,10 @@
             // 
             this.cbPrimarykey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPrimarykey.FormattingEnabled = true;
-            this.cbPrimarykey.Location = new System.Drawing.Point(285, 26);
+            this.cbPrimarykey.Location = new System.Drawing.Point(345, 25);
             this.cbPrimarykey.Name = "cbPrimarykey";
-            this.cbPrimarykey.Size = new System.Drawing.Size(140, 20);
+            this.cbPrimarykey.Size = new System.Drawing.Size(178, 20);
             this.cbPrimarykey.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.Location = new System.Drawing.Point(543, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "生成代码";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // gridColumns
             // 
@@ -255,57 +300,12 @@
             this.txtContent.TabIndex = 0;
             this.txtContent.Text = "";
             // 
-            // contextMenuStripSave
-            // 
-            this.contextMenuStripSave.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.保存ToolStripMenuItem});
-            this.contextMenuStripSave.Name = "contextMenuStripSave";
-            this.contextMenuStripSave.Size = new System.Drawing.Size(145, 26);
-            // 
-            // 保存ToolStripMenuItem
-            // 
-            this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-            this.保存ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.保存ToolStripMenuItem.Text = "保存";
-            this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
-            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "pz.ICO");
             this.imageList1.Images.SetKeyName(1, "cs.ICO");
-            // 
-            // tplContent
-            // 
-            this.tplContent.ContextMenuStrip = this.contextMenuStripSave;
-            this.tplContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tplContent.Location = new System.Drawing.Point(3, 325);
-            this.tplContent.Margin = new System.Windows.Forms.Padding(0);
-            this.tplContent.Name = "tplContent";
-            this.tplContent.Size = new System.Drawing.Size(861, 310);
-            this.tplContent.TabIndex = 8;
-            this.tplContent.Text = "";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 12);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "模板：";
-            // 
-            // tplComboBox
-            // 
-            this.tplComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tplComboBox.FormattingEnabled = true;
-            this.tplComboBox.Location = new System.Drawing.Point(78, 26);
-            this.tplComboBox.Name = "tplComboBox";
-            this.tplComboBox.Size = new System.Drawing.Size(137, 20);
-            this.tplComboBox.TabIndex = 9;
-            this.tplComboBox.SelectedIndexChanged += new System.EventHandler(this.tplComboBox_SelectedIndexChanged);
             // 
             // ContentForm
             // 
@@ -322,11 +322,11 @@
             this.Load += new System.EventHandler(this.ContentForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tp1.ResumeLayout(false);
+            this.contextMenuStripSave.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridColumns)).EndInit();
             this.tp2.ResumeLayout(false);
-            this.contextMenuStripSave.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -19,17 +19,17 @@ namespace Dos.Tools
             InitializeComponent();
             #region 加载模板
             var tpls = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "Template")).GetFiles("*.tpl", SearchOption.AllDirectories);
-            tplComboBox.Items.Add("实体类_最新.tpl");
             foreach (var fileInfo in tpls)
             {
-                if (fileInfo.Name == "实体类_最新.tpl")
+                if (fileInfo.Name.Contains("实体类_最新"))
                 {
+                    tplComboBox.Items.Insert(0, fileInfo.Name);
                     continue;
                 }
                 tplComboBox.Items.Add(fileInfo.Name);
             }
             tplComboBox.SelectedIndex = 0;
-            var tpl = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "Template", "实体类_最新.tpl");
+            var tpl = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "Template", tplComboBox.SelectedText);
             if (File.Exists(tpl))
             {
                 tplContent.Text = FileHelper.Read(tpl);

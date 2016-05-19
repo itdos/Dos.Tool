@@ -203,7 +203,7 @@
     <None Include="Template\实体类_仅FromSql用.tpl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Template\实体类_最新.tpl">
+    <None Include="Template\实体类_最新_2016-05-19.tpl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Template\实体类_v1.10.2.7及以下.tpl">

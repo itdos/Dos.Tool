@@ -699,20 +699,20 @@ namespace Dos.DbObjects.MySQL
                         }
                     }
                     dr["IsIdentity"] = "";
-                    if ((!Object.Equals(reader["Comment"], null)) && (!Object.Equals(reader["Comment"], System.DBNull.Value)))
+                    if ((!Object.Equals(reader["Extra"], null)) && (!Object.Equals(reader["Extra"], System.DBNull.Value)))
                     {
 
-                        string tname = reader["Comment"].GetType().Name;
+                        string tname = reader["Extra"].GetType().Name;
                         switch (tname)
                         {
                             case "Byte[]":
-                                dr["DeText"] = Encoding.Default.GetString((Byte[])reader["Comment"]);
+                                dr["DeText"] = Encoding.Default.GetString((Byte[])reader["Extra"]);
                                 break;
                             case "":
                                 dr["DeText"] = "";
                                 break;
                             default:
-                                dr["DeText"] = reader["Comment"].ToString();
+                                dr["DeText"] = reader["Extra"].ToString();
                                 break;
                         }
                         if (dr["DeText"].ToString().Trim() == "auto_increment")
