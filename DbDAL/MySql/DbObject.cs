@@ -602,7 +602,7 @@ namespace Dos.DbObjects.MySQL
                 //{               
                 //   return GetColumnInfoListSP(DbName, TableName);                
                 //}           
-                string strSql = $"SHOW FULL COLUMNS FROM `{TableName}`";
+                string strSql = String.Format("SHOW FULL COLUMNS FROM `{0}`", TableName);
                 DataTable columnsTables = CreateColumnTable();
                 DataRow dr;
                 MySqlDataReader reader = ExecuteReader(DbName, strSql);
