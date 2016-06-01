@@ -9,7 +9,7 @@ namespace @Model.NameSpace
     [Serializable]
     public partial class @Model.ClassName : Entity
     {
-		public @Model.ClassName():base("@Model.TableName") {}
+		public @(Model.ClassName)() : base("@Model.TableName") { }
 
         #region Model
 @foreach(var item in Model.Columns)
