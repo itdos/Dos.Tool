@@ -98,7 +98,7 @@ namespace @Model.NameSpace
             @:/// <summary>
 			@:/// @item.DeText
 			@:/// </summary>
-			@:public readonly static Field @item.ColumnName = new Field("@item.ColumnName", "@Model.TableName", "@item.DeText");
+			@:public readonly static Field @item.ColumnName = new Field("@item.ColumnNameRealName", "@Model.TableName", "@item.DeText");
 }
         }
         #endregion

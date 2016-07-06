@@ -71,21 +71,21 @@
         public DataTable GetColumnInfoList(string DbName, string TableName)
         {
             StringBuilder builder = new StringBuilder();
-            builder.Append("select ");
-            builder.Append("COLUMN_ID as colorder,");
-            builder.Append("COLUMN_NAME as ColumnName,");
-            builder.Append("DATA_TYPE as TypeName,");
-            builder.Append("DATA_LENGTH as Length,");
-            builder.Append("DATA_PRECISION as Preci,");
+            builder.Append("SELECT ");
+            builder.Append("A.COLUMN_ID as colorder,");
+            builder.Append("A.COLUMN_NAME as ColumnName,");
+            builder.Append("A.DATA_TYPE as TypeName,");
+            builder.Append("A.DATA_LENGTH as Length,");
+            builder.Append("A.DATA_PRECISION as Preci,");
             builder.Append("DATA_SCALE as Scale,");
             builder.Append("'' as IsIdentity,");
             builder.Append("'' as isPK,");
-            builder.Append("NULLABLE as cisNull ,");
-            builder.Append("DATA_DEFAULT as defaultVal, ");
-            builder.Append("'' as deText ");
-            builder.Append(" from USER_TAB_COLUMNS ");
-            builder.Append(" where TABLE_NAME='" + TableName + "'");
-            builder.Append(" order by COLUMN_ID");
+            builder.Append("A.NULLABLE as cisNull ,");
+            builder.Append("A.DATA_DEFAULT as defaultVal, ");
+            builder.Append("B.COMMENTS as deText ");
+            builder.Append(" FROM USER_TAB_COLUMNS A, USER_COL_COMMENTS B ");
+            builder.Append(" WHERE A.TABLE_NAME = B.TABLE_NAME AND A.COLUMN_NAME = B.COLUMN_NAME AND  A.TABLE_NAME ='" + TableName + "'");
+            builder.Append(" ORDER BY COLUMN_ID");
             DataTable alldt = this.Query("", builder.ToString()).Tables[0];
             DataTable keydt = Query("", "select column_name from user_constraints c,user_cons_columns col where c.constraint_name=col.constraint_name and c.constraint_type='P' and c.table_name='" + TableName + "'").Tables[0];
 
