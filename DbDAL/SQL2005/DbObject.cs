@@ -1,4 +1,6 @@
-﻿namespace Dos.DbObjects.SQL2005
+﻿using System.Linq;
+
+namespace Dos.DbObjects.SQL2005
 {
     
     using System;
@@ -210,7 +212,25 @@
             builder.Append("AND C.column_id=IDX.column_id  ");
             builder.Append("WHERE O.name=N'" + TableName + "' ) as t ");
             builder.Append("ORDER BY colorder,ColumnName  ");
-            return this.Query(DbName, builder.ToString()).Tables[0];
+            DataTable dt = this.Query(DbName, builder.ToString()).Tables[0];
+            if (dt != null)
+            {
+                DataRow[] rows = dt.Select("is_user_defined=1");
+                if (rows.Count() > 0)
+                {
+                    //如果存在自定义数据类型则查找原始数据类型
+                    string sql_DOMAINS = "select * from information_schema.DOMAINS where DOMAIN_CATALOG='" + DbName + "'";
+                    DataTable domains = this.Query(DbName, sql_DOMAINS).Tables[0]; //获取所有自定义域 TODO:可以写入缓存减少读取频率 由于使用的不是很频繁这里暂时不处理
+                    foreach (DataRow row in rows)
+                    {
+                        string Domain = row["TypeName"].ToString();
+                        DataRow[] realType = domains.Select("DOMAIN_NAME='" + Domain + "'");
+                        row["TypeName"] = realType[0]["DATA_TYPE"];//更改为系统基础类型
+                    }
+                }
+            }
+            return dt;
+           // return this.Query(DbName, builder.ToString()).Tables[0];
         }
 
         public DataTable GetColumnInfoListSP(string DbName, string TableName)
