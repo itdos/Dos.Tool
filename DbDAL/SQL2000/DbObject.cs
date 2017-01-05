@@ -291,7 +291,7 @@ namespace Dos.DbObjects.SQL2000
 
         public DataTable GetDBList()
         {
-            string sQLString = "select name,user_name() cuser,'DB' type,crdate dates from sysdatabases";
+            string sQLString = "select name,user_name() cuser,'DB' type,crdate dates from sysdatabases  order by name";
             return this.Query("master", sQLString).Tables[0];
         }
 
