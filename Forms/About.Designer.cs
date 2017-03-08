@@ -46,6 +46,7 @@ namespace Dos.Tools
             this.linkLabel8 = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -56,7 +57,7 @@ namespace Dos.Tools
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(199, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "代码生成器（v2.0.5.1）";
+            this.label3.Text = "代码生成器（v2.0.6.0）";
             // 
             // button1
             // 
@@ -201,11 +202,21 @@ namespace Dos.Tools
             this.linkLabel9.Text = "iKuo";
             this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(447, 154);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 12);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Tease";
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 394);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.linkLabel8);
@@ -252,5 +263,6 @@ namespace Dos.Tools
         private LinkLabel linkLabel8;
         private Label label7;
         private LinkLabel linkLabel9;
+        private Label label1;
     }
 }
