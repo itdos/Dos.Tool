@@ -200,6 +200,9 @@
     <None Include="Template\中级demo_业务逻辑层.tpl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Template\实体类_最新_2016-07-06-WCF用.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Template\实体类_最新_2016-07-06.tpl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

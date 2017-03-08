@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using Dos.DbObjects;
+using Dos.Common;
 
 namespace Dos.Tools
 {
@@ -15,8 +16,29 @@ namespace Dos.Tools
         public BatchForm()
         {
             InitializeComponent();
+            #region 加载模板
+            var tpls = new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "Template")).GetFiles("*.tpl", SearchOption.AllDirectories);
+            foreach (var fileInfo in tpls)
+            {
+                if (fileInfo.Name.Contains("实体类_最新"))
+                {
+                    tplComboBox.Items.Insert(0, fileInfo.Name);
+                    continue;
+                }
+                tplComboBox.Items.Add(fileInfo.Name);
+            }
+            tplComboBox.SelectedIndex = 0;
+            var tpl = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "Template", tplComboBox.SelectedText);
+            if (File.Exists(tpl))
+            {
+                TplContent = FileHelper.Read(tpl);
+            }
+            #endregion
         }
-
+        /// <summary>
+        /// 模板选择变化时存储模板的内容
+        /// </summary>
+        private string TplContent { get; set; }
 
         private string databaseName;
         public string DatabaseName
@@ -241,7 +263,14 @@ namespace Dos.Tools
             backgroundWorker1.RunWorkerAsync();
 
         }
-
+        private void tplComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var tpl = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "Template", tplComboBox.SelectedItem.ToString());
+            if (File.Exists(tpl))
+            {
+                TplContent = FileHelper.Read(tpl);
+            }
+        }
 
         /// <summary>
         /// 开始
@@ -252,7 +281,7 @@ namespace Dos.Tools
         {
 
             EntityBuilder builder;
-
+            
             foreach (string o in lbright.Items)
             {
                 var ro = !string.IsNullOrWhiteSpace(txtTableStar.Text.Trim())
@@ -266,8 +295,7 @@ namespace Dos.Tools
                     Utils.GetColumnInfos(dbObject.GetColumnInfoList(DatabaseName, o)),
                     tableview[o],
                     cbToupperFrstword.Checked,
-                    ConnectionModel.DbType,
-                    cbEntityTableName.Checked);
+                    ConnectionModel.DbType);
                 var path = txtPath.Text + "\\" + txt_wjj.Text.Trim();
                 //修改后效果：自动生成路劲文件夹 by kelyljk 2016-2-2
                 if (!Directory.Exists(path))
@@ -279,7 +307,7 @@ namespace Dos.Tools
                     false,
                     Encoding.UTF8))
                 {
-                    sw.Write(builder.Builder());
+                    sw.Write(builder.Builder(TplContent));
                     sw.Close();
                 }
 
@@ -403,5 +431,7 @@ namespace Dos.Tools
 
             }
         }
+
+        
     }
 }

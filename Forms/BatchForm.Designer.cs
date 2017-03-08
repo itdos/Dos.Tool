@@ -46,10 +46,12 @@
             this.btnback = new System.Windows.Forms.Button();
             this.lbright = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt_wjj = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtTableStar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbEntityTableName = new System.Windows.Forms.CheckBox();
             this.cbToupperFrstword = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.txtNamaspace = new System.Windows.Forms.TextBox();
@@ -61,9 +63,8 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.pbar = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.txt_wjj = new System.Windows.Forms.TextBox(); //创建类子文件夹  例com_aa  这里填写com  生成com文件夹
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.tplComboBox = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panelbtns.SuspendLayout();
@@ -235,13 +236,14 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.tplComboBox);
+            this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.txt_wjj);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.txtTableStar);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.cbEntityTableName);
             this.groupBox3.Controls.Add(this.cbToupperFrstword);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.txtNamaspace);
@@ -258,9 +260,33 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "参数设置";
             // 
+            // txt_wjj
+            // 
+            this.txt_wjj.Location = new System.Drawing.Point(285, 32);
+            this.txt_wjj.Name = "txt_wjj";
+            this.txt_wjj.Size = new System.Drawing.Size(120, 21);
+            this.txt_wjj.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(338, 29);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 12);
+            this.label9.TabIndex = 17;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(210, 35);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 12);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "子文件夹名:";
+            // 
             // txtTableStar
             // 
-            this.txtTableStar.Location = new System.Drawing.Point(111, 64);    //去除表头 列数据库表Com_aa 填写Com_  生成的文件将是aa 
+            this.txtTableStar.Location = new System.Drawing.Point(111, 64);
             this.txtTableStar.Name = "txtTableStar";
             this.txtTableStar.Size = new System.Drawing.Size(170, 21);
             this.txtTableStar.TabIndex = 12;
@@ -278,21 +304,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(6, 67);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 12);
+            this.label8.Size = new System.Drawing.Size(95, 12);
             this.label8.TabIndex = 13;
             this.label8.Text = "去掉表名中字符:";
-            // 
-            // cbEntityTableName
-            // 
-            this.cbEntityTableName.AutoSize = true;
-            this.cbEntityTableName.Checked = true;
-            this.cbEntityTableName.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbEntityTableName.Location = new System.Drawing.Point(389, 67);
-            this.cbEntityTableName.Name = "cbEntityTableName";
-            this.cbEntityTableName.Size = new System.Drawing.Size(174, 16);
-            this.cbEntityTableName.TabIndex = 11;
-            this.cbEntityTableName.Text = "生成v1.10.3及以上版本实体";
-            this.cbEntityTableName.UseVisualStyleBackColor = true;
             // 
             // cbToupperFrstword
             // 
@@ -381,29 +395,24 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // txt_wjj
+            // tplComboBox
             // 
-            this.txt_wjj.Location = new System.Drawing.Point(285, 32);
-            this.txt_wjj.Name = "txt_wjj";
-            this.txt_wjj.Size = new System.Drawing.Size(120, 21);
-            this.txt_wjj.TabIndex = 15;
+            this.tplComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tplComboBox.FormattingEnabled = true;
+            this.tplComboBox.Location = new System.Drawing.Point(354, 66);
+            this.tplComboBox.Name = "tplComboBox";
+            this.tplComboBox.Size = new System.Drawing.Size(209, 20);
+            this.tplComboBox.TabIndex = 19;
+            this.tplComboBox.SelectedIndexChanged += new System.EventHandler(this.tplComboBox_SelectedIndexChanged);
             // 
-            // label9
+            // label11
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(338, 29);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 12);
-            this.label9.TabIndex = 17;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(210, 35);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 12);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "子文件夹名:";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(307, 69);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 12);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "模板：";
             // 
             // BatchForm
             // 
@@ -466,12 +475,13 @@
         private System.Windows.Forms.Panel panelbtns;
         private System.Windows.Forms.CheckBox chbView;
         private System.Windows.Forms.CheckBox cbToupperFrstword;
-        private System.Windows.Forms.CheckBox cbEntityTableName;
         private System.Windows.Forms.TextBox txtTableStar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_wjj;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox tplComboBox;
+        private System.Windows.Forms.Label label11;
     }
 }

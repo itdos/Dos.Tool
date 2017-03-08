@@ -38,7 +38,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tplComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbEntityTableName = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.cbToupperFrstword = new System.Windows.Forms.CheckBox();
             this.btnRemovePrimarykey = new System.Windows.Forms.Button();
@@ -121,7 +120,6 @@
             // 
             this.groupBox1.Controls.Add(this.tplComboBox);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.cbEntityTableName);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.cbToupperFrstword);
             this.groupBox1.Controls.Add(this.btnRemovePrimarykey);
@@ -158,19 +156,6 @@
             this.label4.Size = new System.Drawing.Size(41, 12);
             this.label4.TabIndex = 8;
             this.label4.Text = "模板：";
-            // 
-            // cbEntityTableName
-            // 
-            this.cbEntityTableName.AutoSize = true;
-            this.cbEntityTableName.Checked = true;
-            this.cbEntityTableName.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbEntityTableName.Location = new System.Drawing.Point(684, 11);
-            this.cbEntityTableName.Name = "cbEntityTableName";
-            this.cbEntityTableName.Size = new System.Drawing.Size(174, 16);
-            this.cbEntityTableName.TabIndex = 7;
-            this.cbEntityTableName.Text = "生成v1.10.3及以上版本实体";
-            this.cbEntityTableName.UseVisualStyleBackColor = true;
-            this.cbEntityTableName.Visible = false;
             // 
             // button1
             // 
@@ -353,7 +338,6 @@
         private System.Windows.Forms.SaveFileDialog saveEntity;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.CheckBox cbToupperFrstword;
-        private System.Windows.Forms.CheckBox cbEntityTableName;
         private System.Windows.Forms.RichTextBox tplContent;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox tplComboBox;

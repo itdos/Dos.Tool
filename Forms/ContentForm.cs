@@ -215,7 +215,7 @@ namespace Dos.Tools
                 }
             }
 
-            EntityBuilder builder = new EntityBuilder(TableName, txtnamespace.Text, txtClassName.Text, columns, IsView, cbToupperFrstword.Checked, ConnectionModel.DbType, cbEntityTableName.Checked);
+            EntityBuilder builder = new EntityBuilder(TableName, txtnamespace.Text, txtClassName.Text, columns, IsView, cbToupperFrstword.Checked, ConnectionModel.DbType);
 
             txtContent.Text = builder.Builder(tplContent.Text);
 
