@@ -27,7 +27,7 @@ namespace @Model.NameSpace
 			@:get{ return _@item.ColumnName; }
 			@:set
 			@:{
-				@:this.OnPropertyValueChange("@item.ColumnName");
+				@:this.OnPropertyValueChange("@item.ColumnNameRealName");
 				@:this._@item.ColumnName = value;
 			@:}
 		@:}
